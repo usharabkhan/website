@@ -6,11 +6,15 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        default: ['monospace'],
+        default: ['sans-serif', 'monospace'],
       },
       colors: {
-        bgColor: '#1d4ed8'
-      }
+        background: '#03045E',
+        primary: '#0077B6',
+        secondary: '#00B4D8',
+        container: '#90E0EF',
+        textPrimary: '#CAF0F8',
+      },
     },
   },
   plugins: [],

@@ -1,11 +1,11 @@
 interface MenuItemProps {
     title: string
 }
-export default function MenuItem( { title } : MenuItemProps): JSX.Element{
+export default function MenuItem( { title } : MenuItemProps){
     return(
-        <p className="p-2 mx-2 cursor-pointer text-lg font-default h-full transition-bg duration-300 ease-in-out
-                    hover:bg-white
-                    text-white  hover:text-blue-700">
+        <p className="p-4 mx-2 cursor-pointer text-lg h-full text-textPrimary 
+                    transition-all duration-300 ease-in-out
+                     hover:text-background hover:bg-textPrimary hover:text-xl">
             {title}
         </p>
     )

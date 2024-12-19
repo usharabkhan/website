@@ -1,49 +1,56 @@
 import TechnologyPill from "./TechnologyPill"
-import { Avatar, Box, Button, Card, Flex, Text } from "@radix-ui/themes"
+import { Badge, Flex, Text } from "@radix-ui/themes"
 import { FaGithub } from "react-icons/fa"
-import { Technology } from "../../constants/type";
+import Button from "../common/button";
 
 export default function ProjectCard({...props}){
     const data = props.data;
     return(
-        <Box 
-            minWidth="400px" 
-            // maxWidth="400px" 
-            minHeight="200px" 
-            maxHeight="200px" 
-            className="hover:cursor-pointer flex flex-col justify-between">
-            <Card className="">
-                <Flex gap="3" align="center">
-                    <Avatar
-                        size="3"
-                        src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?&w=64&h=64&dpr=2&q=70&crop=focalpoint&fp-x=0.67&fp-y=0.5&fp-z=1.4&fit=crop"
-                        radius="full"
-                        fallback="T"
-                    />
-                    <Box>
-                        <Text as="div" size="2" weight="bold">
-                            {data.title}
-                        </Text>
-                        <Text as="div" size="2" color="gray">
+        <div className="flex flex-col justify-between w-full h-full 
+                        bg-secondary p-3 my-2 rounded-sm
+                        sm:w-[80%] sm:p-10 sm:justify-self-center
+                        ">
+            <div className="flex flex-col md:flex-row">
+                <div className="flex flex-col flex-1 justify-center items-center">
+                    <img src={data.image} className="max-w-[100%] max-h-[90%]  shadow-sm shadow-gray-500 rounded-lg"/>
+                </div>
+                <div className="flex-[1.5]">
+                    <Text as="div" size="6" className="text-textPrimary mb-4" align="center" weight="bold">
+                        {data.title}
+                        <Badge color={`${data.progress[0] == 'I' ? 'yellow' : 'jade'}`} variant="solid">
+                            {data.progress}
+                        </Badge>
+                    </Text>
+                    <div className=" rounded-sm h-full p-4">
+                        <Text as="div" size="3" weight="bold" className="text-textPrimary" align="left">
                             {data.description}
                         </Text>
-                        <Flex gap="3" className="mt-2 flex-wrap items-center">
-                            {data.technologies.map((tech: string) => <TechnologyPill key={tech} text={tech}/>
-                            )}
-                        </Flex>
-                    </Box>
-                    
+                        <br></br>
+                        {data.bullets.map((bullet : string) => 
+                            <p key={bullet} className="text-textPrimary font-bold">- {bullet}</p>
+                        )}
+                    </div>
+                </div>
+            </div>
+            <div className="flex flex-col md:flex-row">
+                <Flex justify="center" gap="3" align="center" wrap="wrap" className="flex-1 mt-2">
+                    {data.technologies.map((tech: string) => <TechnologyPill key={tech} text={tech}/>
+                    )}
                 </Flex>
-                <Flex justify="center" className="mt-2 pt-2 border-t-2 hover:cursor-pointer">
+                <div className="flex flex-[1.5] justify-center my-2 pt-2 gap-3">
                     <a href={data.url} target="_blank" rel="noopener noreferrer">
-                    <Button className="self-center hover:cursor-pointer">
-                        <FaGithub></FaGithub>
-                        View on GitHub
-                    </Button>
+                        <Button>
+                            <FaGithub className="mr-1"/>
+                            View on GitHub
+                        </Button>
                     </a>
-                </Flex>
-            </Card>
-           
-        </Box>
+                    <a>
+                        <Button>
+                            Live Demo
+                        </Button>
+                    </a>
+                </div>
+            </div>
+        </div> 
     )
 } 

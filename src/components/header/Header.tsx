@@ -9,9 +9,9 @@ export default function Navbar() {
   };
 
   return (
-    <header className="bg-bgColor border-b">
+    <header className="">
       {/* Desktop Menu */}
-      <div className="hidden sm:flex flex-row justify-end">
+      <div className="hidden sm:flex flex-row justify-center">
         <div className="flex flex-row mr-6">
           <MenuItem title="About" />
           <MenuItem title="Projects" />
@@ -34,7 +34,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
         <div
-        className={`fixed top-0 left-0 h-full bg-bgColor border-r shadow-lg z-50 transform ${
+        className={`fixed top-0 left-0 h-full bg-background border-r shadow-lg z-50 transform ${
             isDrawerOpen ? 'translate-x-0' : '-translate-x-full'
         } transition-transform duration-300 ease-in-out w-64`}
         >
@@ -56,7 +56,7 @@ export default function Navbar() {
         {/* Backdrop for Drawer */}
         {isDrawerOpen && (
         <div
-            className="fixed inset-0 bg-black opacity-50 z-40"
+            className="fixed inset-0 bg-container opacity-50 z-40"
             onClick={toggleDrawer}
         ></div>
         )}
