@@ -53,6 +53,9 @@ export const projects = [
     },
 ]
 
+export const toolkit = [
+    
+]
 
 export const TechnologyImages: Record<string, string> = {
     "Java" : JavaLogo,

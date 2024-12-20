@@ -20,7 +20,7 @@ export default function AboutSection(){
         }, 3000); // Change every 3 seconds
     
         return () => clearInterval(interval); // Cleanup on unmount
-        }, [roles.length]);
+        }, []);
     return(
         <div className="flex flex-col min-h-[100vh] p-6 sm:max-h-[100vh] sm:flex-row sm:p-10 ">
             <div className="flex-[1.5] text-textPrimary text-3xl mb-4">
@@ -33,7 +33,7 @@ export default function AboutSection(){
                 </Flex>
                 
                 <br></br>
-                <p>I am Usharab, an aspiring{" "} 
+                <Heading weight="regular" size="8">I am Usharab, an aspiring{" "} 
                     <span className="text-secondary font-bold">
                     <AnimatePresence mode="wait">
                         <motion.span
@@ -48,10 +48,10 @@ export default function AboutSection(){
                         </motion.span>
                     </AnimatePresence>
                     </span>
-                </p>
+                </Heading>
                 <br></br>
-                <Text size="5" weight="bold" as="div" className="mb-4">About me</Text>
-                <Text size="4">{bio}</Text>
+                <Text size="6" weight="bold" as="div" className="mb-4">About me</Text>
+                <Text size="6">{bio}</Text>
             </div>
             <div className="flex flex-col flex-1 items-center">
                 <div className="flex-1 max-h-[50%]">

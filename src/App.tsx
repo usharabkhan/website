@@ -8,7 +8,8 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen bg-background overflow-x-hidden">
       <Header />
-      <div className="flex-1">
+      <hr></hr>
+      <div className="flex-1 p-5">
         <AboutSection />
         <hr className="mx-5 opacity-70"></hr>
         <ProjectSection />

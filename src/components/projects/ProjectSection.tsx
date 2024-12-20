@@ -50,15 +50,15 @@ export default function ProjectSection() {
     useEffect(() => {
         startTimer();
         return () => pauseTimer();
-    }, [totalProjects]);
+    }, []);
 
     useEffect(() => {
         setProgress(0); // Reset progress on project change
     }, [projectIndex]);
 
     return (
-        <div className="flex flex-col min-h-fit p-4 mx-2 h-[100vh]">
-            <Heading weight="regular" size="7" className="text-textPrimary self-center mb-3">
+        <div className="flex flex-col p-4 mx-2 min-h-[100vh]">
+            <Heading weight="regular" size="8" className="text-textPrimary self-center mb-3">
                 My Projects
             </Heading>
             <div className="gap-x-3 h-[80%]">
@@ -89,9 +89,9 @@ export default function ProjectSection() {
                     </AnimatePresence>
                 </Flex>
                 
-                <div className="w-[30%] relative h-2 bg-container opacity-100 rounded mt-4 justify-self-center">
+                <div className="w-[30%] relative h-2 bg-primary rounded mt-6 justify-self-center">
                     <div
-                        className="absolute h-full bg-white rounded"
+                        className="absolute h-full bg-textPrimary rounded"
                         style={{ width: `${progress}%` }}
                     />
                 </div>

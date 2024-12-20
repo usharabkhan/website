@@ -1,5 +1,5 @@
 import TechnologyPill from "./TechnologyPill"
-import { Badge, Flex, Text } from "@radix-ui/themes"
+import { Badge, Flex, Heading, Text } from "@radix-ui/themes"
 import { FaGithub } from "react-icons/fa"
 import Button from "../common/button";
 
@@ -7,28 +7,31 @@ export default function ProjectCard({...props}){
     const data = props.data;
     return(
         <div className="flex flex-col justify-between w-full h-full 
-                        bg-secondary p-3 my-2 rounded-sm hover:cursor-pointer
+                        bg-secondary p-6 mt-2 rounded-sm hover:cursor-pointer
                         sm:w-[80%] sm:p-10 sm:justify-self-center
                         " onMouseEnter={props.onEnter} onMouseLeave={props.onLeave}>
-            <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col sm:flex-row">
                 <div className="flex flex-col flex-1 justify-center items-center">
-                    <img src={data.image} className="max-w-[100%] max-h-[90%]  shadow-sm shadow-gray-500 rounded-lg"/>
+                    <img src={data.image} className="max-w-[100%] max-h-[90%] mb-6 sm:mr-6 shadow-sm shadow-gray-500 rounded-lg"/>
                 </div>
                 <div className="flex-[1.5]">
-                    <Text as="div" size="6" className="text-white mb-4" align="center" weight="bold">
-                        {data.title}
-                        <Badge color={`${data.progress[0] == 'I' ? 'yellow' : 'jade'}`} variant="solid">
+                    <Flex className="flex-col items-center">
+                        <Heading size="7" className="text-white mb-4" align="center" weight="regular">
+                            {data.title}
+                            
+                        </Heading>
+                        <Badge color={`${data.progress[0] == 'I' ? 'yellow' : 'jade'}`} variant="solid" className="max-w-fit">
                             {data.progress}
                         </Badge>
-                    </Text>
+                    </Flex>
                     <div className=" rounded-sm h-full p-4">
-                        <Text as="div" size="3" className="text-white" align="left">
+                        <Text as="div" size="5" className="text-white" align="left">
                             {data.description}
                         </Text>
                         <br></br>
                         <div className="flex flex-col h-full">
                             {data.bullets.map((bullet : string) => 
-                                <p key={bullet} className="text-white">- {bullet}</p>
+                                <Text size="5" key={bullet} className="text-white">- {bullet}</Text>
                             )}
                         </div>
                     </div>
