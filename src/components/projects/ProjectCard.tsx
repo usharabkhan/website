@@ -7,9 +7,9 @@ export default function ProjectCard({...props}){
     const data = props.data;
     return(
         <div className="flex flex-col justify-between w-full h-full 
-                        bg-secondary p-3 my-2 rounded-sm
+                        bg-secondary p-3 my-2 rounded-sm hover:cursor-pointer
                         sm:w-[80%] sm:p-10 sm:justify-self-center
-                        ">
+                        " onMouseEnter={props.onEnter} onMouseLeave={props.onLeave}>
             <div className="flex flex-col md:flex-row">
                 <div className="flex flex-col flex-1 justify-center items-center">
                     <img src={data.image} className="max-w-[100%] max-h-[90%]  shadow-sm shadow-gray-500 rounded-lg"/>
