@@ -15,20 +15,22 @@ export default function ProjectCard({...props}){
                     <img src={data.image} className="max-w-[100%] max-h-[90%]  shadow-sm shadow-gray-500 rounded-lg"/>
                 </div>
                 <div className="flex-[1.5]">
-                    <Text as="div" size="6" className="text-textPrimary mb-4" align="center" weight="bold">
+                    <Text as="div" size="6" className="text-white mb-4" align="center" weight="bold">
                         {data.title}
                         <Badge color={`${data.progress[0] == 'I' ? 'yellow' : 'jade'}`} variant="solid">
                             {data.progress}
                         </Badge>
                     </Text>
                     <div className=" rounded-sm h-full p-4">
-                        <Text as="div" size="3" weight="bold" className="text-textPrimary" align="left">
+                        <Text as="div" size="3" className="text-white" align="left">
                             {data.description}
                         </Text>
                         <br></br>
-                        {data.bullets.map((bullet : string) => 
-                            <p key={bullet} className="text-textPrimary font-bold">- {bullet}</p>
-                        )}
+                        <div className="flex flex-col h-full">
+                            {data.bullets.map((bullet : string) => 
+                                <p key={bullet} className="text-white">- {bullet}</p>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -44,11 +46,13 @@ export default function ProjectCard({...props}){
                             View on GitHub
                         </Button>
                     </a>
-                    <a>
-                        <Button>
-                            Live Demo
-                        </Button>
-                    </a>
+                    {data.demoUrl.length > 0 &&
+                        <a>
+                            <Button>
+                                Live Demo
+                            </Button>
+                        </a>
+                    }
                 </div>
             </div>
         </div> 

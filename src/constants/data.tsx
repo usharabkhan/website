@@ -10,11 +10,25 @@ import Shad_Recruitment_Image from "../assets/screenshots/shad_recruitment.png"
 
 export const projects = [
     {
+        title: "Portfolio Website ",
+        description: "A website to share my experience, skills, and projects.",
+        technologies: ["TypeScript", "React", "Tailwind"],
+        url: "https://github.com/usharabkhan/",
+        demoUrl: "",
+        bullets: [
+            "Elegant styling and animations",
+            "Conditional rendering of elements",
+        ],
+        image: "https://media.istockphoto.com/id/844229938/vector/system-software-update-data-update-or-synchronize-with-progress-bar-on-the-screen-illustration.jpg?s=612x612&w=0&k=20&c=1pgTrigg0iit_IDj_ZMaPB5HjbX6qQVh9w4yKAjIe6o=",
+        progress: "In Progress"
+    },
+    {
         title: "Shad Recruitment Tracker Application ",
         description: "A mobile application developed for Shad Canada to track recruitment efforts"+
                         " in the city of Calgary. Spreading the word about the summer program to Canadian youth.",
         technologies: ["TypeScript", "React Native", "Expo Router", "MySQL"],
         url: "https://github.com/usharabkhan/shad_recruitment",
+        demoUrl: "",
         bullets: [
             "Dashboard to display summary",
             "Track activity with schools & teachers",
@@ -29,6 +43,7 @@ export const projects = [
                     " to streamline memberships and event registrations.",
         technologies: ["Java", "JavaFX", "SQLite"],
         url: "https://github.com/usharabkhan/pss_mms",
+        demoUrl: "n",
         bullets: [
             "Dashboard with key member statistics",
             "world",

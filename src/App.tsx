@@ -10,9 +10,12 @@ function App() {
       <Header />
       <div className="flex-1">
         <AboutSection />
+        <hr className="mx-5 opacity-70"></hr>
         <ProjectSection />
+        <hr className="mx-5 opacity-70"></hr>
         <ToolkitSection />
       </div>
+      <hr className="mx-5 opacity-70"></hr>
       <Footer />
     </div>
   );

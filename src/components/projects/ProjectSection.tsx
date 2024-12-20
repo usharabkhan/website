@@ -14,12 +14,11 @@ export default function ProjectSection(){
     const [currProject, setCurrProject] = useState<ProjectDetail>(projects[0]);
     useEffect(() => {
         setCurrProject(projects[projectIndex]);
-        // setPrevIndex(projectIndex);
     }, [projectIndex])
 
     return(
-        <div className="flex flex-col min-h-fit border-t-2 border-t-container  p-4 mx-2 h-[100vh]">
-            <Heading weight="bold" size="7" className="text-textPrimary self-center">My Projects</Heading>
+        <div className="flex flex-col min-h-fit p-4 mx-2 h-[100vh]">
+            <Heading weight="regular" size="7" className="text-textPrimary self-center mb-3">My Projects</Heading>
             <div className="gap-x-3 h-[80%]">
                 <Flex justify="center" className="h-full justify-center items-center">
                     <AnimatePresence mode="wait"> 

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import MenuItem from './MenuItem';
 
-export default function Navbar() {
+export default function Header() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
@@ -22,7 +22,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Button */}
       <div className="sm:hidden flex justify-between items-center p-4">
-        <h1 className="text-xl font-bold text-white">Usharab's Portfolio</h1>
+        <h1 className="text-xl text-textPrimary">Portfolio.</h1>
         <button
           onClick={toggleDrawer}
           className="text-xl focus:outline-none text-white"
