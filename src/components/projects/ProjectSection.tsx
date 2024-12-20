@@ -1,5 +1,5 @@
 import ProjectCard from "./ProjectCard";
-import { Heading, Progress } from "@radix-ui/themes";
+import { Heading } from "@radix-ui/themes";
 import { Flex } from "@radix-ui/themes";
 import { projects } from "../../constants/data";
 import { useEffect, useRef, useState } from "react";
