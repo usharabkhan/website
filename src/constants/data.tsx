@@ -54,7 +54,9 @@ export const projects = [
 ]
 
 export const toolkit = [
-    
+    ["React.js", "React Native", "HTML", "CSS", "JavaScript", "TypeScript", "WordPress"],
+    ["Java", "Python", "REST API", "MySQL", "SQLite", "PostgreSQL", "Node.js", "Express.js"],
+    ["JavaFX", "Pandas", "Django", "Tailwind CSS", "Vite", "Git"],
 ]
 
 export const TechnologyImages: Record<string, string> = {
@@ -66,4 +68,28 @@ export const TechnologyImages: Record<string, string> = {
     "React Native" : ReactNativeLogo,
     "Tailwind" : TailwindLogo,
     "SQLite" : SQLiteLogo
+}
+export const baseUrl = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/"
+export const ToolkitImages: Record<string, string> = {
+    "Java" : "java/java-original.svg",
+    "Python" : "python/python-original.svg",
+    "REST API" : "",
+    "MySQL" : "mysql/mysql-original.svg",
+    "SQLite" : "sqlite/sqlite-original.svg",
+    "PostgreSQL" : "postgresql/postgresql-original.svg",
+    "Node.js" : "nodejs/nodejs-original.svg",
+    "Express.js" : "express/express-original.svg",
+    "React.js" : "react/react-original.svg",
+    "React Native" : "react/react-original.svg",
+    "HTML" : "html5/html5-original.svg",
+    "CSS" : "css3/css3-original.svg",
+    "JavaScript" : "javascript/javascript-original.svg",
+    "TypeScript" : "typescript/typescript-original.svg",
+    "WordPress" : "wordpress/wordpress-plain.svg",
+    "JavaFX" : "java/java-original.svg",
+    "Pandas" : "pandas/pandas-original.svg",
+    "Django" : "django/django-plain.svg",
+    "Tailwind CSS" : "tailwindcss/tailwindcss-original.svg",
+    "Vite" : "vitejs/vitejs-original.svg",
+    "Git" : "git/git-original.svg",
 }

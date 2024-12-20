@@ -32,7 +32,7 @@ export default function ProjectSection() {
         if (!progressRef.current) {
             progressRef.current = window.setInterval(() => {
                 setProgress((prev) => (prev < 100 ? prev + 1 : 0));
-            }, 50); // Increment progress every 100ms
+            }, 50); // Increment progress every 50ms
         }
     };
 
@@ -44,6 +44,7 @@ export default function ProjectSection() {
         if (progressRef.current) {
             clearInterval(progressRef.current);
             progressRef.current = null;
+            setProgress(0);
         }
     };
 
