@@ -1,7 +1,12 @@
 import { useState } from 'react';
 import MenuItem from './MenuItem';
 
-export default function Header() {
+interface MenuProps{
+  AboutView: () => void,
+  ProjectsView: () => void,
+  SkillsView: () => void,
+}
+export default function Header(props : MenuProps) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
@@ -13,10 +18,10 @@ export default function Header() {
       {/* Desktop Menu */}
       <div className="hidden sm:flex flex-row justify-center">
         <div className="flex flex-row mr-6">
-          <MenuItem title="About" />
-          <MenuItem title="Projects" />
-          <MenuItem title="Skills" />
-          <MenuItem title="Contact" />
+          <MenuItem title="About" scrollTo={props.AboutView}/>
+          <MenuItem title="Projects" scrollTo={props.ProjectsView}/>
+          <MenuItem title="Skills" scrollTo={props.SkillsView}/>
+          {/* <MenuItem title="Contact" /> */}
         </div>
       </div>
 
@@ -46,10 +51,11 @@ export default function Header() {
             ✕
         </button>
         <nav className="flex flex-col items-start p-4">
-            <MenuItem title="About" />
-            <MenuItem title="Projects" />
-            <MenuItem title="Skills" />
-            <MenuItem title="Contact" />
+            
+          <MenuItem title="About" scrollTo={props.AboutView}/>
+          <MenuItem title="Projects" scrollTo={props.ProjectsView}/>
+          <MenuItem title="Skills" scrollTo={props.SkillsView}/>
+          {/* <MenuItem title="Contact" /> */}
         </nav>
         </div>
 

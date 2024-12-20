@@ -4,8 +4,9 @@ import { MdOutlineMail, MdDownload, MdOutlineWavingHand  } from "react-icons/md"
 import Button from "../common/button";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import React from "react";
 
-export default function AboutSection(){
+const AboutSection = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
     const imgUrl = "https://static.vecteezy.com/system/resources/previews/011/961/865/non_2x/programmer-icon-line-color-illustration-vector.jpg"
     const roles = ["Fullstack Developer", "Cloud Architect", "Cloud Developer"]
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,7 +23,7 @@ export default function AboutSection(){
         return () => clearInterval(interval); // Cleanup on unmount
         }, []);
     return(
-        <div className="flex flex-col min-h-[100vh] p-6 sm:max-h-[100vh] sm:flex-row sm:p-10 ">
+        <div ref={ref} className="flex flex-col min-h-[100vh] p-6 sm:max-h-[100vh] sm:flex-row sm:p-10 ">
             <div className="flex-[1.5] text-textPrimary text-3xl mb-4">
                 <img src={imgUrl} className="max-h-[50%] max-w-[50%] sm:hidden justify-self-center mb-5 rounded-3xl"/>
                 <Flex gap="4" align="center">  
@@ -78,5 +79,7 @@ export default function AboutSection(){
                 </div>
             </div>
         </div>
-    )
-}
+    );
+});
+
+export default AboutSection;

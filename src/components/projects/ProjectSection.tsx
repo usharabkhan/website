@@ -7,8 +7,9 @@ import { ProjectDetail } from "../../constants/type";
 import Button from "../common/button";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import { AnimatePresence, motion } from "framer-motion";
+import React from "react";
 
-export default function ProjectSection() {
+const ProjectSection = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
     const totalProjects = projects.length;
     const [projectIndex, setProjectIndex] = useState(0);
     const [prevIndex, setPrevIndex] = useState(projectIndex);
@@ -58,7 +59,7 @@ export default function ProjectSection() {
     }, [projectIndex]);
 
     return (
-        <div className="flex flex-col p-4 mx-2 min-h-[100vh]">
+        <div ref={ref} className="flex flex-col p-4 mx-2 min-h-[100vh]">
             <Heading weight="regular" size="8" className="text-textPrimary self-center mb-3">
                 My Projects
             </Heading>
@@ -124,4 +125,6 @@ export default function ProjectSection() {
             </div>
         </div>
     );
-}
+})
+
+export default ProjectSection
