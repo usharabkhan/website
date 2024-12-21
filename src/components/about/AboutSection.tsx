@@ -17,48 +17,63 @@ export default function AboutSection() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % roles.length);
-        }, 3000); // Change every 3 seconds
+        }, 3000);
     
-        return () => clearInterval(interval); // Cleanup on unmount
+        return () => clearInterval(interval); 
         }, []);
     return(
-        <div id="home" className="flex flex-col min-h-[100vh] p-6 sm:max-h-[100vh] sm:flex-row sm:p-10 ">
-            <div className="flex-[1.5] text-textPrimary text-3xl mb-4">
-                <img src={MyImage} className="max-h-[50%] max-w-[50%] sm:hidden justify-self-center mb-5"/>
-                <Flex gap="4" align="center">  
-                    <Heading  size="9" weight="regular">
+        <div id="home" className="flex flex-col p-5 min-h-fit sm:flex-row sm:p-10 sm:h-[100vh]">
+            <div className="flex flex-col flex-[1.5] items-center sm:items-start text-textPrimary">
+                {/* MOBILE IMAGE */}
+                <img src={MyImage} className="max-h-[50%] max-w-[50%] sm:hidden"/>
+                <br></br>
+
+                {/* HEADING */}
+                <Text as="div" className="text-4xl sm:text-6xl">
+                    <Flex gap="4" align="center">      
                         Hi there!
-                    </Heading>
-                    <MdOutlineWavingHand className="text-yellow-200 animate-wave"/>
-                </Flex>
+                        <MdOutlineWavingHand className="text-yellow-200 animate-wave"/>
+                    </Flex>
+                </Text>
+                <br></br>
                 
-                <br></br>
-                <Heading weight="regular" size="8">I am Usharab, an aspiring{" "} 
-                    <span className="text-heading font-bold">
-                    <AnimatePresence mode="wait">
-                        <motion.span
-                            key={currentIndex} // Key ensures Framer Motion detects a change
-                            initial={{ y: "50%", opacity: 0 }} // Start below the view
-                            animate={{ y: "0%", opacity: 1 }} // Roll into view
-                            exit={{ y: "-50%", opacity: 0 }} // Roll out of view
-                            transition={{ duration: 0.5, ease: "easeInOut" }}
-                            className="inline-block"
-                        >
-                            {roles[currentIndex]}.
-                        </motion.span>
-                    </AnimatePresence>
+                {/* SUB HEADING */}
+                <Flex align="center" justify="center" className="flex-wrap text-2xl sm:text-4xl">
+                    <span >
+                        I am Usharab, an aspiring&nbsp;
                     </span>
-                </Heading>
+                    <span className="text-heading font-bold">
+                        <AnimatePresence mode="wait">
+                            <motion.span
+                                key={currentIndex} // Key ensures Framer Motion detects a change
+                                initial={{ y: "50%", opacity: 0 }} // Start below the view
+                                animate={{ y: "0%", opacity: 1 }} // Roll into view
+                                exit={{ y: "-50%", opacity: 0 }} // Roll out of view
+                                transition={{ duration: 0.5, ease: "easeInOut" }}
+                                className="inline-block"
+                            >
+                                {roles[currentIndex]}.
+                            </motion.span>
+                        </AnimatePresence>
+                    </span>
+                </Flex>
                 <br></br>
-                <Text size="6" weight="bold" as="div" className="mb-4">About me</Text>
-                <Text size="6">{bio}</Text>
-            </div>
-            <div className="flex flex-col flex-1 items-center">
-                <div className="flex-1 max-h-[50%]">
-                    <img src={MyImage} className="max-h-full hidden sm:flex"/>
+
+                {/* ABOUT ME */}
+                <div className="flex flex-col text-xl sm:text-2xl items-center sm:items-start">
+                    <Text weight="bold" className="mb-5">About me</Text>
+                    <Text className="text-justify">{bio}</Text>
                 </div>
-                <div className="flex flex-col flex-1 ">
-                    <Flex justify="center" align="center" gap="6" className="my-5" >
+            </div>
+            <div className="flex flex-col flex-1 items-center justify-center gap-y-5">
+                {/* DESKTOP IMAGE */}
+                <div className="flex-1 max-h-[50%] hidden sm:flex">
+                    <img src={MyImage} className="max-h-full"/>
+                </div>
+
+                {/* MY SOCIALS */}
+                <div className="flex flex-col justify-center items-center gap-5 py-5">
+                    <Flex justify="center" align="center" gap="6" >
                         <Button customStyle="rounded-full text-2xl" href="https://www.linkedin.com/in/usharabkhan/">
                             <AiOutlineLinkedin/>
                         </Button>

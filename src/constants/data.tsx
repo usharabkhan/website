@@ -1,10 +1,3 @@
-import JavaLogo from "../assets/logos/Java.webp";
-import TypeScriptLogo from "../assets/logos/Typescript.png";
-import ReactLogo from "../assets/logos/React.png";
-import ReactNativeLogo from "../assets/logos/ReactNative.svg";
-import TailwindLogo from "../assets/logos/Tailwind.svg";
-import MySQLLogo from "../assets/logos/Mysql.svg";
-import SQLiteLogo from "../assets/logos/SQLite.png";
 import PSS_MSS_Image from "../assets/screenshots/pss_mss.png"
 import Shad_Recruitment_Image from "../assets/screenshots/shad_recruitment.png"
 
@@ -56,19 +49,9 @@ export const projects = [
 export const toolkit = [
     ["React.js", "React Native", "HTML", "CSS", "JavaScript", "TypeScript", "WordPress"],
     ["Java", "Python", "REST API", "MySQL", "SQLite", "PostgreSQL", "Node.js", "Express.js"],
-    ["JavaFX", "Pandas", "Django", "Tailwind CSS", "Vite", "Git"],
+    ["JavaFX", "Pandas", "Django", "Tailwind CSS", "Vite", "Git", "VSCode", "IntelliJ", "Eclipse"],
 ]
 
-export const TechnologyImages: Record<string, string> = {
-    "Java" : JavaLogo,
-    "JavaFX" : JavaLogo,
-    "MySQL" : MySQLLogo,
-    "TypeScript" : TypeScriptLogo,
-    "React" : ReactLogo,
-    "React Native" : ReactNativeLogo,
-    "Tailwind" : TailwindLogo,
-    "SQLite" : SQLiteLogo
-}
 export const baseUrl = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/"
 export const ToolkitImages: Record<string, string> = {
     "Java" : "java/java-original.svg",
@@ -92,4 +75,7 @@ export const ToolkitImages: Record<string, string> = {
     "Tailwind CSS" : "tailwindcss/tailwindcss-original.svg",
     "Vite" : "vitejs/vitejs-original.svg",
     "Git" : "git/git-original.svg",
+    "VSCode" : "vscode/vscode-original.svg",
+    "IntelliJ" : "intellij/intellij-original.svg",
+    "Eclipse" : "eclipse/eclipse-original.svg",
 }
