@@ -5,15 +5,17 @@ import { projects } from "../../constants/data";
 import { useEffect, useRef, useState } from "react";
 import { ProjectDetail } from "../../constants/type";
 import Button from "../common/button";
+import MyHeading from "../common/heading";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import { AnimatePresence, motion } from "framer-motion";
+import { FaRegCirclePause } from "react-icons/fa6";
 
 function ProjectSection() {
     const totalProjects = projects.length;
     const [projectIndex, setProjectIndex] = useState(0);
     const [prevIndex, setPrevIndex] = useState(projectIndex);
     const [currProject, setCurrProject] = useState<ProjectDetail>(projects[0]);
-    const [progress, setProgress] = useState(0);
+    const [progress, setProgress] = useState(1);
 
     const timerRef = useRef<number | null>(null);
     const progressRef = useRef<number | null>(null);
@@ -31,7 +33,7 @@ function ProjectSection() {
 
         if (!progressRef.current) {
             progressRef.current = window.setInterval(() => {
-                setProgress((prev) => (prev < 100 ? prev + 1 : 0));
+                setProgress((prev) => (prev < 100 ? prev + 1 : 1));
             }, 50); // Increment progress every 50ms
         }
     };
@@ -58,11 +60,11 @@ function ProjectSection() {
     }, [projectIndex]);
 
     return (
-        <div id="projects" className="flex flex-col p-4 mx-2 min-h-[100vh]">
-            <Heading weight="regular" size="8" className="text-textPrimary self-center mb-3">
-                My Projects
-            </Heading>
-            <div className="gap-x-3 h-[80%]">
+        <div id="projects" className="flex flex-col items-center my-2 min-h-[100vh] ">
+            <MyHeading type="h2" title="My Projects" customStyle="text-textPrimary self-center mb-3"/>
+            <div className="flex flex-col items-center gap-x-3 h-[80%] w-[100%] border-2">
+
+                {/* PROJECT CARD */}
                 <Flex justify="center" className="h-full justify-center items-center">
                     <AnimatePresence mode="wait">
                         <motion.div
@@ -70,13 +72,11 @@ function ProjectSection() {
                             initial={{
                                 opacity: 0,
                                 x: projectIndex > prevIndex ? 100 : -100,
-                                y: 0,
                             }}
                             animate={{ opacity: 1, x: 0, y: 0 }}
                             exit={{
                                 opacity: 0,
                                 x: projectIndex > prevIndex ? 100 : -100,
-                                y: 0,
                             }}
                             transition={{ duration: 0.3, ease: "easeInOut" }}
                             className="w-full h-full"
@@ -90,18 +90,32 @@ function ProjectSection() {
                     </AnimatePresence>
                 </Flex>
                 
-                <div className="w-[30%] relative h-2 bg-primary rounded mt-6 justify-self-center">
-                    <div
-                        className="absolute h-full bg-textPrimary rounded"
-                        style={{ width: `${progress}%` }}
-                    />
+                {/* PROGRESS BAR */}
+                <div className="w-[30%] relative h-2 mt-6">
+                    {timerRef.current ? (
+                        <div className="h-full w-full bg-primary rounded" >
+                            <div
+                                className="absolute h-full bg-textPrimary rounded"
+                                style={{ width: `${progress}%` }}
+                            />
+                        </div>
+                    ):( 
+                        <div className="flex justify-center w-full text-textPrimary text-xl">
+                            <FaRegCirclePause/>
+                        </div>
+
+                    )}
                 </div>
+                
+                {/* PROJECT NAVIGATION */}
                 <Flex gap="5" align="center" justify="center" className="mt-6">
                     <Button
                         disabled={projectIndex === 0}
                         onPress={() => {
                             setPrevIndex(projectIndex);
                             setProjectIndex((prev) => prev - 1);
+                            pauseTimer();
+                            startTimer();
                         }}
                     >
                         <GrPrevious />
@@ -115,6 +129,8 @@ function ProjectSection() {
                         onPress={() => {
                             setPrevIndex(projectIndex);
                             setProjectIndex((prev) => prev + 1);
+                            pauseTimer();
+                            startTimer();
                         }}
                     >
                         Next

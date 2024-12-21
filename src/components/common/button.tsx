@@ -1,4 +1,5 @@
 import { ReactNode } from "react"
+import { twMerge } from 'tailwind-merge'
 
 interface ButtonProps {
     children : ReactNode,
@@ -9,6 +10,7 @@ interface ButtonProps {
 }
 export default function Button( {...props} : ButtonProps){
     const onPress = props.onPress;
+
     const styles = "flex flex-row self-center items-center p-2 " +
                     "bg-white text-background rounded-xl shadow-md" + 
                     "hover:cursor-pointer hover:bg-button hover:text-black hover:scale-105 " + 
@@ -17,7 +19,7 @@ export default function Button( {...props} : ButtonProps){
     return (
         <a href={props.href} target="_blank" rel="noreferrer">
             <button 
-                className={styles + props.customStyle}
+                className={twMerge(styles, props.customStyle)}
                 onClick={onPress ? onPress : () => null}
                 disabled={props.disabled ? props.disabled : false}
             >

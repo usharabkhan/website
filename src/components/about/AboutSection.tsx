@@ -1,10 +1,12 @@
-import { Flex, Heading, Text } from "@radix-ui/themes"
+import { Flex, Text } from "@radix-ui/themes"
 import { AiOutlineLinkedin, AiOutlineGithub } from "react-icons/ai";
 import { MdOutlineMail, MdDownload, MdOutlineWavingHand  } from "react-icons/md";
 import Button from "../common/button";
+import MyHeading from "../common/heading";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import MyImage from "../../assets/image/me.png"
+
 
 export default function AboutSection() {
     const roles = ["Fullstack Developer", "Cloud Architect", "Cloud Developer"]
@@ -22,19 +24,17 @@ export default function AboutSection() {
         return () => clearInterval(interval); 
         }, []);
     return(
-        <div id="home" className="flex flex-col p-5 min-h-fit sm:flex-row sm:p-10 sm:h-[100vh]">
+        <div id="home" className="flex flex-col p-5 min-h-fit sm:flex-row sm:p-10 sm:h-[100vh] border-2">
             <div className="flex flex-col flex-[1.5] items-center sm:items-start text-textPrimary">
                 {/* MOBILE IMAGE */}
                 <img src={MyImage} className="max-h-[50%] max-w-[50%] sm:hidden"/>
                 <br></br>
 
                 {/* HEADING */}
-                <Text as="div" className="text-4xl sm:text-6xl">
-                    <Flex gap="4" align="center">      
-                        Hi there!
-                        <MdOutlineWavingHand className="text-yellow-200 animate-wave"/>
-                    </Flex>
-                </Text>
+                {/* <Text as="div" className="text-4xl sm:text-6xl"> */}
+                <MyHeading type="h1" title="Hi there!"> 
+                    <MdOutlineWavingHand className="text-yellow-200 animate-wave"/>
+                </MyHeading>
                 <br></br>
                 
                 {/* SUB HEADING */}
