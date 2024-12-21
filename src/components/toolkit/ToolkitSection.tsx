@@ -1,4 +1,3 @@
-import { Heading } from "@radix-ui/themes";
 import { toolkit } from "../../constants/data";
 import ToolkitSubSection from "./ToolkitSubSection";
 import MyHeading from "../common/heading";
@@ -12,7 +11,6 @@ function ToolkitSection () {
                 <ToolkitSubSection title="Back End" tools={toolkit[1]} />
                 <br></br>
                 <ToolkitSubSection title="Frameworks & Tools" tools={toolkit[2]} />
-                
             </div>
         </div>
     )

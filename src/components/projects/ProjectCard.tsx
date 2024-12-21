@@ -8,7 +8,7 @@ export default function ProjectCard({...props}){
     return(
         <div className="flex flex-col justify-between w-full h-full shadow-md
                         bg-container p-6 mt-2 rounded-sm hover:cursor-pointer
-                        sm:w-[80%] sm:p-10 sm:justify-self-center
+                         sm:p-10 sm:justify-self-center border-l-4 border-l-textPrimary
                         " onMouseEnter={props.onEnter} onMouseLeave={props.onLeave}>
             <div className="flex flex-col sm:flex-row">
                 <div className="flex flex-col flex-1 justify-center items-center">

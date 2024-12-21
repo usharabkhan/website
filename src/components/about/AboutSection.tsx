@@ -24,7 +24,7 @@ export default function AboutSection() {
         return () => clearInterval(interval); 
         }, []);
     return(
-        <div id="home" className="flex flex-col p-5 min-h-fit sm:flex-row sm:p-10 sm:h-[100vh] border-2">
+        <div id="home" className="flex flex-col p-5 min-h-fit sm:flex-row sm:p-10 sm:h-[100vh]">
             <div className="flex flex-col flex-[1.5] items-center sm:items-start text-textPrimary">
                 {/* MOBILE IMAGE */}
                 <img src={MyImage} className="max-h-[50%] max-w-[50%] sm:hidden"/>

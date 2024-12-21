@@ -62,10 +62,10 @@ function ProjectSection() {
     return (
         <div id="projects" className="flex flex-col items-center my-2 min-h-[100vh] ">
             <MyHeading type="h2" title="My Projects" customStyle="text-textPrimary self-center mb-3"/>
-            <div className="flex flex-col items-center gap-x-3 h-[80%] w-[100%] border-2">
+            <div className="flex flex-col items-center gap-x-3 h-[80%] w-full">
 
                 {/* PROJECT CARD */}
-                <Flex justify="center" className="h-full justify-center items-center">
+                <Flex justify="center" className="h-full w-full justify-center items-center sm:p-5">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={projectIndex}
