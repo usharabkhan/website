@@ -24,7 +24,7 @@ export default function AboutSection() {
     return(
         <div id="home" className="flex flex-col min-h-[100vh] p-6 sm:max-h-[100vh] sm:flex-row sm:p-10 ">
             <div className="flex-[1.5] text-textPrimary text-3xl mb-4">
-                <img src={MyImage} className="max-h-[50%] max-w-[50%] sm:hidden justify-self-center mb-5 rounded-3xl"/>
+                <img src={MyImage} className="max-h-[50%] max-w-[50%] sm:hidden justify-self-center mb-5"/>
                 <Flex gap="4" align="center">  
                     <Heading  size="9" weight="regular">
                         Hi there!
@@ -55,17 +55,17 @@ export default function AboutSection() {
             </div>
             <div className="flex flex-col flex-1 items-center">
                 <div className="flex-1 max-h-[50%]">
-                    <img src={MyImage} className="max-h-full hidden sm:flex rounded-3xl"/>
+                    <img src={MyImage} className="max-h-full hidden sm:flex"/>
                 </div>
-                <div className="flex flex-col flex-1 justify-center">
+                <div className="flex flex-col flex-1 ">
                     <Flex justify="center" align="center" gap="6" className="my-5" >
-                        <Button customStyle="rounded-3xl text-2xl">
+                        <Button customStyle="rounded-full text-2xl">
                             <AiOutlineLinkedin/>
                         </Button>
-                        <Button customStyle="rounded-3xl text-2xl">
+                        <Button customStyle="rounded-full text-2xl">
                             <AiOutlineGithub/>
                         </Button>
-                        <Button customStyle="rounded-3xl text-2xl">
+                        <Button customStyle="rounded-full text-2xl">
                             <MdOutlineMail/>
                         </Button>
                     </Flex>

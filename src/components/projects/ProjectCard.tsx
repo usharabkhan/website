@@ -6,7 +6,7 @@ import Button from "../common/button";
 export default function ProjectCard({...props}){
     const data = props.data;
     return(
-        <div className="flex flex-col justify-between w-full h-full 
+        <div className="flex flex-col justify-between w-full h-full shadow-md
                         bg-container p-6 mt-2 rounded-sm hover:cursor-pointer sm:hover:scale-105
                         sm:w-[80%] sm:p-10 sm:justify-self-center transition-all ease-in-out duration-400
                         " onMouseEnter={props.onEnter} onMouseLeave={props.onLeave}>
