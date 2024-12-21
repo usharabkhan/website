@@ -7,9 +7,8 @@ import { ProjectDetail } from "../../constants/type";
 import Button from "../common/button";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import { AnimatePresence, motion } from "framer-motion";
-import React from "react";
 
-const ProjectSection = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
+function ProjectSection() {
     const totalProjects = projects.length;
     const [projectIndex, setProjectIndex] = useState(0);
     const [prevIndex, setPrevIndex] = useState(projectIndex);
@@ -125,6 +124,6 @@ const ProjectSection = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
             </div>
         </div>
     );
-})
+}
 
 export default ProjectSection

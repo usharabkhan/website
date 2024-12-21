@@ -1,4 +1,4 @@
-import { Box, Heading } from "@radix-ui/themes";
+import { Heading } from "@radix-ui/themes";
 import { toolkit } from "../../constants/data";
 import ToolkitSubSection from "./ToolkitSubSection";
 

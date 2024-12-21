@@ -4,7 +4,6 @@ import { MdOutlineMail, MdDownload, MdOutlineWavingHand  } from "react-icons/md"
 import Button from "../common/button";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import React from "react";
 import MyImage from "../../assets/image/me.png"
 
 export default function AboutSection() {
