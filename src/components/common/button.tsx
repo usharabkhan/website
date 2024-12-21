@@ -5,6 +5,7 @@ interface ButtonProps {
     onPress? : () => void,
     disabled? : boolean,
     customStyle?: string,
+    href?: string,
 }
 export default function Button( {...props} : ButtonProps){
     const onPress = props.onPress;
@@ -14,12 +15,14 @@ export default function Button( {...props} : ButtonProps){
                     "transition-all duration-300 ease-in-out "+ 
                     "disabled:bg-white disabled:opacity-50 disabled:text-container disabled:cursor-default ";
     return (
-        <button 
-            className={styles + props.customStyle}
-            onClick={onPress ? onPress : () => null}
-            disabled={props.disabled ? props.disabled : false}
-        >
-            {props.children}
-        </button>
+        <a href={props.href} target="_blank" rel="noreferrer">
+            <button 
+                className={styles + props.customStyle}
+                onClick={onPress ? onPress : () => null}
+                disabled={props.disabled ? props.disabled : false}
+            >
+                {props.children}
+            </button>
+        </a>
     )
 }

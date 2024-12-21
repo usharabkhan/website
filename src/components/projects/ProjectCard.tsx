@@ -43,12 +43,10 @@ export default function ProjectCard({...props}){
                     )}
                 </Flex>
                 <div className="flex flex-[1.5] justify-center my-2 pt-2 gap-3">
-                    <a href={data.url} target="_blank" rel="noopener noreferrer">
-                        <Button>
-                            <FaGithub className="mr-1"/>
-                            View on GitHub
-                        </Button>
-                    </a>
+                    <Button href={data.url}>
+                        <FaGithub className="mr-1"/>
+                        View on GitHub
+                    </Button>
                     {data.demoUrl.length > 0 &&
                         <a>
                             <Button>

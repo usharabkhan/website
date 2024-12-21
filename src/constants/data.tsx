@@ -13,7 +13,7 @@ export const projects = [
         title: "Portfolio Website ",
         description: "A website to share my experience, skills, and projects.",
         technologies: ["TypeScript", "React.js", "Tailwind CSS"],
-        url: "https://github.com/usharabkhan/",
+        url: "https://github.com/usharabkhan/website",
         demoUrl: "",
         bullets: [
             "Elegant styling and animations",

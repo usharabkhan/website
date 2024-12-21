@@ -59,13 +59,13 @@ export default function AboutSection() {
                 </div>
                 <div className="flex flex-col flex-1 ">
                     <Flex justify="center" align="center" gap="6" className="my-5" >
-                        <Button customStyle="rounded-full text-2xl">
+                        <Button customStyle="rounded-full text-2xl" href="https://www.linkedin.com/in/usharabkhan/">
                             <AiOutlineLinkedin/>
                         </Button>
-                        <Button customStyle="rounded-full text-2xl">
+                        <Button customStyle="rounded-full text-2xl" href="https://github.com/usharabkhan/" >
                             <AiOutlineGithub/>
                         </Button>
-                        <Button customStyle="rounded-full text-2xl">
+                        <Button customStyle="rounded-full text-2xl" href="mailto:usharabkhan@gmail.com">
                             <MdOutlineMail/>
                         </Button>
                     </Flex>
