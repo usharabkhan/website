@@ -9,11 +9,13 @@ module.exports = {
         default: ['sans-serif', 'monospace'],
       },
       colors: {
-        background: '#03045E',
-        primary: '#0077B6',
-        secondary: '#00B4D8',
-        container: '#90E0EF',
-        textPrimary: '#CAF0F8',
+        background: '#002833',
+        primary: '#002029',
+        container: '#245C6A',
+        subContainer: '#90E0EF',
+        textPrimary: 'white',
+        heading: '#54DAFF',
+        button: '#C0D4D8',
       },
       keyframes: {
         wave: {

@@ -1,12 +1,7 @@
 import { useState } from 'react';
 import MenuItem from './MenuItem';
 
-interface MenuProps{
-  AboutView: () => void,
-  ProjectsView: () => void,
-  SkillsView: () => void,
-}
-export default function Header(props : MenuProps) {
+export default function Header({ className }: { className: string }) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
@@ -14,13 +9,13 @@ export default function Header(props : MenuProps) {
   };
 
   return (
-    <header className="">
+    <header className={className}>
       {/* Desktop Menu */}
       <div className="hidden sm:flex flex-row justify-center">
         <div className="flex flex-row mr-6">
-          <MenuItem title="About" scrollTo={props.AboutView}/>
-          <MenuItem title="Projects" scrollTo={props.ProjectsView}/>
-          <MenuItem title="Skills" scrollTo={props.SkillsView}/>
+          <MenuItem title="About" scrollTo="home" />
+          <MenuItem title="Projects" scrollTo="projects" />
+          <MenuItem title="Skills" scrollTo="skills" />
           {/* <MenuItem title="Contact" /> */}
         </div>
       </div>
@@ -38,35 +33,35 @@ export default function Header(props : MenuProps) {
       </div>
 
       {/* Mobile Drawer */}
-        <div
-        className={`fixed top-0 left-0 h-full bg-background border-r shadow-lg z-50 transform ${
-            isDrawerOpen ? 'translate-x-0' : '-translate-x-full'
-        } transition-transform duration-300 ease-in-out w-64`}
-        >
+      <div
+        className={`fixed top-0 left-0 w-full bg-background border-b shadow-lg z-50 transform ${
+          isDrawerOpen ? 'translate-y-0' : '-translate-y-full'
+        } transition-transform duration-300 ease-in-out`}
+      >
         <button
-            onClick={toggleDrawer}
-            className="text-xl p-4 focus:outline-none text-white"
-            aria-label="Close Menu"
+          onClick={toggleDrawer}
+          className="text-xl p-4 focus:outline-none text-white"
+          aria-label="Close Menu"
         >
-            ✕
+          ✕
         </button>
         <nav className="flex flex-col items-start p-4">
-            
-          <MenuItem title="About" scrollTo={props.AboutView}/>
-          <MenuItem title="Projects" scrollTo={props.ProjectsView}/>
-          <MenuItem title="Skills" scrollTo={props.SkillsView}/>
+          <MenuItem title="About" scrollTo="home" onPress={toggleDrawer}/>
+          <MenuItem title="Projects" scrollTo="projects" onPress={toggleDrawer}/>
+          <MenuItem title="Skills" scrollTo="skills" onPress={toggleDrawer}/>
           {/* <MenuItem title="Contact" /> */}
         </nav>
-        </div>
+      </div>
 
         {/* Backdrop for Drawer */}
         {isDrawerOpen && (
         <div
-            className="fixed inset-0 bg-container opacity-50 z-40"
-            onClick={toggleDrawer}
+          className="fixed inset-0 bg-black opacity-50 z-40"
+          onClick={toggleDrawer}
         ></div>
-        )}
-
+      )}
+      
+      <hr></hr>
     </header>
   );
 }

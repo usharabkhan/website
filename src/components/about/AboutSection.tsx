@@ -5,9 +5,9 @@ import Button from "../common/button";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import React from "react";
+import MyImage from "../../assets/image/me.png"
 
-const AboutSection = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
-    const imgUrl = "https://static.vecteezy.com/system/resources/previews/011/961/865/non_2x/programmer-icon-line-color-illustration-vector.jpg"
+export default function AboutSection() {
     const roles = ["Fullstack Developer", "Cloud Architect", "Cloud Developer"]
     const [currentIndex, setCurrentIndex] = useState(0);
     const bio = `
@@ -23,9 +23,9 @@ const AboutSection = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
         return () => clearInterval(interval); // Cleanup on unmount
         }, []);
     return(
-        <div ref={ref} className="flex flex-col min-h-[100vh] p-6 sm:max-h-[100vh] sm:flex-row sm:p-10 ">
+        <div id="home" className="flex flex-col min-h-[100vh] p-6 sm:max-h-[100vh] sm:flex-row sm:p-10 ">
             <div className="flex-[1.5] text-textPrimary text-3xl mb-4">
-                <img src={imgUrl} className="max-h-[50%] max-w-[50%] sm:hidden justify-self-center mb-5 rounded-3xl"/>
+                <img src={MyImage} className="max-h-[50%] max-w-[50%] sm:hidden justify-self-center mb-5 rounded-3xl"/>
                 <Flex gap="4" align="center">  
                     <Heading  size="9" weight="regular">
                         Hi there!
@@ -35,7 +35,7 @@ const AboutSection = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
                 
                 <br></br>
                 <Heading weight="regular" size="8">I am Usharab, an aspiring{" "} 
-                    <span className="text-secondary font-bold">
+                    <span className="text-heading font-bold">
                     <AnimatePresence mode="wait">
                         <motion.span
                             key={currentIndex} // Key ensures Framer Motion detects a change
@@ -56,7 +56,7 @@ const AboutSection = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
             </div>
             <div className="flex flex-col flex-1 items-center">
                 <div className="flex-1 max-h-[50%]">
-                    <img src={imgUrl} className="max-h-full hidden sm:flex rounded-3xl"/>
+                    <img src={MyImage} className="max-h-full hidden sm:flex rounded-3xl"/>
                 </div>
                 <div className="flex flex-col flex-1 justify-center">
                     <Flex justify="center" align="center" gap="6" className="my-5" >
@@ -80,6 +80,4 @@ const AboutSection = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
             </div>
         </div>
     );
-});
-
-export default AboutSection;
+}

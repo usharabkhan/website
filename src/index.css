@@ -5,3 +5,6 @@
 * {
     font-family: sans-serif !important;
   }
+html {
+  scroll-behavior: smooth;
+}

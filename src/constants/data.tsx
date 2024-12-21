@@ -12,7 +12,7 @@ export const projects = [
     {
         title: "Portfolio Website ",
         description: "A website to share my experience, skills, and projects.",
-        technologies: ["TypeScript", "React", "Tailwind"],
+        technologies: ["TypeScript", "React.js", "Tailwind CSS"],
         url: "https://github.com/usharabkhan/",
         demoUrl: "",
         bullets: [
@@ -73,7 +73,7 @@ export const baseUrl = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icon
 export const ToolkitImages: Record<string, string> = {
     "Java" : "java/java-original.svg",
     "Python" : "python/python-original.svg",
-    "REST API" : "",
+    // "REST API" : "",
     "MySQL" : "mysql/mysql-original.svg",
     "SQLite" : "sqlite/sqlite-original.svg",
     "PostgreSQL" : "postgresql/postgresql-original.svg",

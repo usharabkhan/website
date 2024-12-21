@@ -1,11 +1,10 @@
 import { Box, Heading } from "@radix-ui/themes";
 import { toolkit } from "../../constants/data";
 import ToolkitSubSection from "./ToolkitSubSection";
-import React from "react";
 
-const ToolkitSection = React.forwardRef<HTMLDivElement, {}>( (props, ref) => {
+function ToolkitSection () {
     return(
-        <div ref={ref} className="flex flex-col p-4 mx-2 min-h-[100vh]">
+        <div id="skills" className="flex flex-col p-4 mx-2 min-h-[100vh]">
             <Heading weight="regular" size="7" className="text-textPrimary self-center mb-3">My Toolkit</Heading>
             <div className="flex flex-col h-full">
                 <ToolkitSubSection title="Front End" tools={toolkit[0]} />
@@ -17,6 +16,6 @@ const ToolkitSection = React.forwardRef<HTMLDivElement, {}>( (props, ref) => {
             </div>
         </div>
     )
-})
+}
 
 export default ToolkitSection
