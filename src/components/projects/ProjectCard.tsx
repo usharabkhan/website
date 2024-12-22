@@ -12,7 +12,7 @@ export default function ProjectCard({...props}){
                         " onMouseEnter={props.onEnter} onMouseLeave={props.onLeave}>
             <div className="flex flex-col sm:flex-row">
                 <div className="flex flex-col flex-1 justify-center items-center">
-                    <img src={data.image} className="max-w-[100%] max-h-[90%] mb-6 sm:mr-6 shadow-sm shadow-gray-500 rounded-lg"/>
+                    <img src={data.image} className="max-w-[100%] max-h-[90%] mb-6 sm:mr-6 rounded"/>
                 </div>
                 <div className="flex-[1.5]">
                     <Flex className="flex-col items-center">

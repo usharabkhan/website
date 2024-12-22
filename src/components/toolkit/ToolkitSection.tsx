@@ -3,7 +3,7 @@ import ToolkitSubSection from "./ToolkitSubSection";
 import MyHeading from "../common/heading";
 function ToolkitSection () {
     return(
-        <div id="skills" className="flex flex-col items-center my-2 min-h-[100vh]">
+        <div id="skills" className="flex flex-col items-center justify-center my-2 min-h-fit">
             <MyHeading type="h2" title="My Toolkit" customStyle="text-textPrimary self-center"/>
             <div className="flex flex-col h-full w-full">
                 <ToolkitSubSection title="Front End" tools={toolkit[0]} />

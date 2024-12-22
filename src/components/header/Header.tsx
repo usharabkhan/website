@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import MenuItem from './MenuItem';
+import { IoCloseOutline } from "react-icons/io5";
+import Button from '../common/button';
 
 export default function Header({ className }: { className: string }) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -40,12 +42,13 @@ export default function Header({ className }: { className: string }) {
       >
         <button
           onClick={toggleDrawer}
-          className="text-xl p-4 focus:outline-none text-white"
+          className="text-xl focus:outline-none text-white mx-4 pt-4"
           aria-label="Close Menu"
         >
-          ✕
+          <IoCloseOutline />
         </button>
-        <nav className="flex flex-col items-start p-4">
+
+        <nav className="flex flex-col items-start ">
           <MenuItem title="About" scrollTo="home" onPress={toggleDrawer}/>
           <MenuItem title="Projects" scrollTo="projects" onPress={toggleDrawer}/>
           <MenuItem title="Skills" scrollTo="skills" onPress={toggleDrawer}/>

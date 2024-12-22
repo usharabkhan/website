@@ -60,7 +60,7 @@ function ProjectSection() {
     }, [projectIndex]);
 
     return (
-        <div id="projects" className="flex flex-col items-center my-2 min-h-[100vh] ">
+        <div id="projects" className="flex flex-col items-center justify-center my-2 min-h-fit ">
             <MyHeading type="h2" title="My Projects" customStyle="text-textPrimary self-center mb-3"/>
             <div className="flex flex-col items-center gap-x-3 h-[80%] w-full">
 
@@ -69,15 +69,9 @@ function ProjectSection() {
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={projectIndex}
-                            initial={{
-                                opacity: 0,
-                                x: projectIndex > prevIndex ? 100 : -100,
-                            }}
+                            initial={{ opacity: 0, x: 100 }}
                             animate={{ opacity: 1, x: 0, y: 0 }}
-                            exit={{
-                                opacity: 0,
-                                x: projectIndex > prevIndex ? 100 : -100,
-                            }}
+                            exit={{ opacity: 0, x: -100 }}
                             transition={{ duration: 0.3, ease: "easeInOut" }}
                             className="w-full h-full"
                         >
