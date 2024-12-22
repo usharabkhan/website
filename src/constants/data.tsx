@@ -1,6 +1,6 @@
 import PSS_MSS_Image from "../assets/screenshots/pss_mss.png"
 import Shad_Recruitment_Image from "../assets/screenshots/shad_recruitment.png"
-
+import ucalgary_social_media from "../assets/screenshots/ucalgary_social_media.png"
 export const projects = [
     {
         title: "Portfolio Website ",
@@ -14,6 +14,16 @@ export const projects = [
         ],
         image: "https://media.istockphoto.com/id/844229938/vector/system-software-update-data-update-or-synchronize-with-progress-bar-on-the-screen-illustration.jpg?s=612x612&w=0&k=20&c=1pgTrigg0iit_IDj_ZMaPB5HjbX6qQVh9w4yKAjIe6o=",
         progress: "In Progress"
+    },
+    {
+        title: "University of Calgary Social Media",
+        description: "A social media platform for students at the University of Calgary to connect and share experiences.",
+        technologies: ["TypeScript", "React.js", "Tailwind CSS"],
+        url: "https://github.com/ManrajSingh6/CPSC481-Social-Media-Network",
+        demoUrl: "https://manrajsingh6.github.io/CPSC481-Social-Media-Network/#/login",
+        bullets: [],
+        image: ucalgary_social_media,
+        progress: "December 2024", 
     },
     {
         title: "Shad Recruitment Tracker Application ",
@@ -78,4 +88,12 @@ export const ToolkitImages: Record<string, string> = {
     "VSCode" : "vscode/vscode-original.svg",
     "IntelliJ" : "intellij/intellij-original.svg",
     "Eclipse" : "eclipse/eclipse-original.svg",
+}
+
+export const OtherLogos: Record<string, string> = {
+    "uni" : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/University_of_Calgary_coat_of_arms_without_motto_scroll.svg/640px-University_of_Calgary_coat_of_arms_without_motto_scroll.svg.png",
+    "class": "https://static-00.iconduck.com/assets.00/graduation-cap-icon-2048x1341-x1cubwfl.png",
+    "compsci" : "https://cdn-icons-png.flaticon.com/512/6840/6840478.png",
+    "datasci" : "https://cdn-icons-png.flaticon.com/512/2029/2029234.png",
+    "microsoft" : "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
 }

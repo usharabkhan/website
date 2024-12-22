@@ -48,11 +48,9 @@ export default function ProjectCard({...props}){
                         View on GitHub
                     </Button>
                     {data.demoUrl.length > 0 &&
-                        <a>
-                            <Button>
-                                Live Demo
-                            </Button>
-                        </a>
+                        <Button href={data.demoUrl}>
+                            Live Demo
+                        </Button>
                     }
                 </div>
             </div>

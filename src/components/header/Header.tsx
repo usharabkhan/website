@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import MenuItem from './MenuItem';
 import { IoCloseOutline } from "react-icons/io5";
-import Button from '../common/button';
 
 export default function Header({ className }: { className: string }) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);

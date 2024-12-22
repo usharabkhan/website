@@ -2,7 +2,7 @@ import ProjectCard from "./ProjectCard";
 import { Heading } from "@radix-ui/themes";
 import { Flex } from "@radix-ui/themes";
 import { projects } from "../../constants/data";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { ProjectDetail } from "../../constants/type";
 import Button from "../common/button";
 import MyHeading from "../common/heading";
@@ -19,11 +19,40 @@ function ProjectSection() {
 
     const timerRef = useRef<number | null>(null);
     const progressRef = useRef<number | null>(null);
+    const sectionRef = useRef<HTMLDivElement>(null);
+
+    const handleIntersection = useCallback((entries: IntersectionObserverEntry[]) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+            startTimer();
+        } else {
+            pauseTimer();
+        }
+    }, []);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(handleIntersection, {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.1,
+        });
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current);
+            }
+        };
+    }, [handleIntersection]);
 
     useEffect(() => {
         setCurrProject(projects[projectIndex]);
+        setProgress(0);
     }, [projectIndex]);
-
+    
     const startTimer = () => {
         if (!timerRef.current) {
             timerRef.current = window.setInterval(() => {
@@ -55,12 +84,8 @@ function ProjectSection() {
         return () => pauseTimer();
     }, []);
 
-    useEffect(() => {
-        setProgress(0); // Reset progress on project change
-    }, [projectIndex]);
-
     return (
-        <div id="projects" className="flex flex-col items-center justify-center my-2 min-h-fit ">
+        <div ref={sectionRef} id="projects" className="flex flex-col items-center justify-center my-2 min-h-fit ">
             <MyHeading type="h2" title="My Projects" customStyle="text-textPrimary self-center mb-3"/>
             <div className="flex flex-col items-center gap-x-3 h-[80%] w-full">
 

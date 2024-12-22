@@ -5,6 +5,8 @@ import Button from "../common/button";
 import MyHeading from "../common/heading";
 import MyImage from "../../assets/image/me.png"
 import RollingText from "./RollingText";
+import TechnologyPill from "../projects/TechnologyPill";
+import { OtherLogos } from "../../constants/data";
 
 
 export default function AboutSection() {
@@ -33,7 +35,14 @@ export default function AboutSection() {
 
                 {/* ABOUT ME */}
                 <div className="flex flex-col text-xl sm:text-2xl items-center sm:items-start">
-                    <Text weight="bold" className="mb-5">About me</Text>
+                    <Text weight="bold" className="mb-4">About me</Text>
+                    <Flex gap="5" className="mb-5" wrap="wrap" align="center" justify="center">
+                        <TechnologyPill text="University of Calgary" img={OtherLogos["uni"]}/>
+                        <TechnologyPill text="Class of 2025" img={OtherLogos["class"]}/>
+                        <TechnologyPill text="Computer Science" img={OtherLogos["compsci"]}/>
+                        {/* <TechnologyPill text="Data Science" img={OtherLogos["datasci"]}/> */}
+                        <TechnologyPill text="Microsoft Certified" img={OtherLogos["microsoft"]}/>
+                    </Flex>
                     <Text className="text-justify">{bio}</Text>
                 </div>
             </div>
