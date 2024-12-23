@@ -11,19 +11,16 @@ import { OtherLogos } from "../../constants/data";
 
 export default function AboutSection() {
     const bio = `
-                I am fourth year Computer Science student at the University of Calgary, Canada.
-                As an award winning student on the dean's honor list, I have immense curiosity to  
-                constantly learn new technologies and skills. 
-                `
+    
+    `;
     return(
-        <div id="home" className="flex flex-col p-5 min-h-fit sm:flex-row sm:p-10 sm:h-[100vh]">
+        <div id="home" className="flex flex-col p-5 min-h-fit sm:flex-row sm:p-10 sm:min-h-[100vh]">
             <div className="flex flex-col flex-[1.5] items-center sm:items-start text-textPrimary">
                 {/* MOBILE IMAGE */}
                 <img src={MyImage} className="max-h-[50%] max-w-[50%] sm:hidden"/>
                 <br></br>
 
                 {/* HEADING */}
-                {/* <Text as="div" className="text-4xl sm:text-6xl"> */}
                 <MyHeading type="h1" title="Hi there!"> 
                     <MdOutlineWavingHand className="text-yellow-200 animate-wave"/>
                 </MyHeading>
@@ -40,7 +37,6 @@ export default function AboutSection() {
                         <TechnologyPill text="University of Calgary" img={OtherLogos["uni"]}/>
                         <TechnologyPill text="Class of 2025" img={OtherLogos["class"]}/>
                         <TechnologyPill text="Computer Science" img={OtherLogos["compsci"]}/>
-                        {/* <TechnologyPill text="Data Science" img={OtherLogos["datasci"]}/> */}
                         <TechnologyPill text="Microsoft Certified" img={OtherLogos["microsoft"]}/>
                     </Flex>
                     <Text className="text-justify">{bio}</Text>

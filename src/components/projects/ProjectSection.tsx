@@ -1,5 +1,5 @@
 import ProjectCard from "./ProjectCard";
-import { Heading } from "@radix-ui/themes";
+import { Heading, Progress } from "@radix-ui/themes";
 import { Flex } from "@radix-ui/themes";
 import { projects } from "../../constants/data";
 import { useEffect, useRef, useState, useCallback } from "react";
@@ -112,12 +112,7 @@ function ProjectSection() {
                 {/* PROGRESS BAR */}
                 <div className="w-[30%] relative h-2 mt-6">
                     {timerRef.current ? (
-                        <div className="h-full w-full bg-primary rounded" >
-                            <div
-                                className="absolute h-full bg-textPrimary rounded"
-                                style={{ width: `${progress}%` }}
-                            />
-                        </div>
+                        <Progress value={progress} max={100} color="sky" variant="soft"/>
                     ):( 
                         <div className="flex justify-center w-full text-textPrimary text-xl">
                             <FaRegCirclePause/>

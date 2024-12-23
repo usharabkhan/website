@@ -13,6 +13,7 @@ export const projects = [
             "Conditional rendering of elements",
         ],
         image: "https://media.istockphoto.com/id/844229938/vector/system-software-update-data-update-or-synchronize-with-progress-bar-on-the-screen-illustration.jpg?s=612x612&w=0&k=20&c=1pgTrigg0iit_IDj_ZMaPB5HjbX6qQVh9w4yKAjIe6o=",
+        logo: "",
         progress: "In Progress"
     },
     {
@@ -23,12 +24,12 @@ export const projects = [
         demoUrl: "https://manrajsingh6.github.io/CPSC481-Social-Media-Network/#/login",
         bullets: [],
         image: ucalgary_social_media,
+        logo: "",
         progress: "December 2024", 
     },
     {
-        title: "Shad Recruitment Tracker Application ",
-        description: "A mobile application developed for Shad Canada to track recruitment efforts"+
-                        " in the city of Calgary. Spreading the word about the summer program to Canadian youth.",
+        title: "Recruitment Tracker Application",
+        description: "A mobile application to track summer program recruitment efforts",
         technologies: ["TypeScript", "React Native", "Expo Router", "MySQL"],
         url: "https://github.com/usharabkhan/shad_recruitment",
         demoUrl: "",
@@ -38,12 +39,13 @@ export const projects = [
             "View and update visits' information",
         ],
         image: Shad_Recruitment_Image,
+        logo: "https://www.shad.ca/wp-content/uploads/2023/08/Logo-footer.png",
+        logoName: "Shad Canada",
         progress: "November 2024"
     },
     {
-        title: "PSS Membership Management System ",
-        description: "A desktop application for Pakistani Students' Society at the University of Calgary"+
-                    " to streamline memberships and event registrations.",
+        title: "Membership Management System",
+        description: "A desktop application to streamline memberships and event registrations.",
         technologies: ["Java", "JavaFX", "SQLite"],
         url: "https://github.com/usharabkhan/pss_mms",
         demoUrl: "n",
@@ -52,6 +54,8 @@ export const projects = [
             "world",
         ],
         image: PSS_MSS_Image,
+        logo: "",
+        logoName: "Pakistani Students' Society",
         progress: "October 2024",
     },
 ]
