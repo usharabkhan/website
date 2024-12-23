@@ -1,11 +1,18 @@
 import { Flex, Text } from "@radix-ui/themes"
-import { baseUrl, ToolkitImages } from "../../constants/data"
+import { baseUrl, OtherLogos, ToolkitImages } from "../../constants/data"
 interface TechnologyPillProps {
     text : string
     img? : string
 }
 export default function TechnologyPill ({text, img} : TechnologyPillProps ){
-    const url = ToolkitImages[text] ? baseUrl + ToolkitImages[text] : "";
+    var url = "" 
+    
+    if (ToolkitImages[text]) {
+        url = baseUrl + ToolkitImages[text];
+    } else if (OtherLogos[text]) {
+        url = OtherLogos[text]; 
+    }
+
     return(
         <div className="bg-subContainer w-fit h-fit px-2 py-1 rounded-xl shadow-md">
             <Flex gap="2" className="items-center">    

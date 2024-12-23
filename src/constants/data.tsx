@@ -1,6 +1,8 @@
 import PSS_MSS_Image from "../assets/screenshots/pss_mss.png"
 import Shad_Recruitment_Image from "../assets/screenshots/shad_recruitment.png"
 import ucalgary_social_media from "../assets/screenshots/ucalgary_social_media.png"
+import PSS_Logo from "../assets/logos/pss.jpg"
+
 export const projects = [
     {
         title: "Portfolio Website ",
@@ -22,7 +24,10 @@ export const projects = [
         technologies: ["TypeScript", "React.js", "Tailwind CSS"],
         url: "https://github.com/ManrajSingh6/CPSC481-Social-Media-Network",
         demoUrl: "https://manrajsingh6.github.io/CPSC481-Social-Media-Network/#/login",
-        bullets: [],
+        bullets: [
+            "",
+            "",
+        ],
         image: ucalgary_social_media,
         logo: "",
         progress: "December 2024", 
@@ -30,11 +35,11 @@ export const projects = [
     {
         title: "Recruitment Tracker Application",
         description: "A mobile application to track summer program recruitment efforts",
-        technologies: ["TypeScript", "React Native", "Expo Router", "MySQL"],
+        technologies: ["TypeScript", "React Native", "Node.js", "Expo Router", "MySQL"],
         url: "https://github.com/usharabkhan/shad_recruitment",
         demoUrl: "",
         bullets: [
-            "Dashboard to display summary",
+            "Cross platform mobile application",
             "Track activity with schools & teachers",
             "View and update visits' information",
         ],
@@ -54,7 +59,7 @@ export const projects = [
             "world",
         ],
         image: PSS_MSS_Image,
-        logo: "",
+        logo: PSS_Logo,
         logoName: "Pakistani Students' Society",
         progress: "October 2024",
     },
@@ -76,8 +81,8 @@ export const ToolkitImages: Record<string, string> = {
     "PostgreSQL" : "postgresql/postgresql-original.svg",
     "Node.js" : "nodejs/nodejs-original.svg",
     "Express.js" : "express/express-original.svg",
-    "React.js" : "react/react-original.svg",
-    "React Native" : "react/react-original.svg",
+    // "React.js" : "react/react-original.svg",
+    // "React Native" : "react/react-original.svg",
     "HTML" : "html5/html5-original.svg",
     "CSS" : "css3/css3-original.svg",
     "JavaScript" : "javascript/javascript-original.svg",
@@ -100,4 +105,7 @@ export const OtherLogos: Record<string, string> = {
     "compsci" : "https://cdn-icons-png.flaticon.com/512/6840/6840478.png",
     "datasci" : "https://cdn-icons-png.flaticon.com/512/2029/2029234.png",
     "microsoft" : "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+    "React.js" : "https://seeklogo.com/images/R/react-logo-65B7CD91B5-seeklogo.com.png",
+    "React Native" : "https://seeklogo.com/images/R/react-logo-65B7CD91B5-seeklogo.com.png",
+    "REST API" : "https://cdn-icons-png.flaticon.com/512/8681/8681370.png"
 }

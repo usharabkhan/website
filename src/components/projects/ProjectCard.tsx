@@ -34,10 +34,10 @@ export default function ProjectCard({...props}){
                             {/* LOGO */}
                             {data.logo && <Badge variant="solid" color="sky">
                                 <img src={data.logo} className="max-w-6 max-h-6" />
-                                Shad Canada
+                                {data.logoName}
                             </Badge>}
                         </Flex>
-                        
+
                     </Flex>
 
                     {/* DESCRIPTION */}
