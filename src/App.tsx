@@ -39,7 +39,7 @@ function App() {
           <hr className="mx-5 opacity-70" />
           <ToolkitSection />
         </div>
-        <hr className="mx-5 opacity-70" />
+        <hr className="mx-10 opacity-70" />
         <Footer />
       </ScrollArea>
     </div>

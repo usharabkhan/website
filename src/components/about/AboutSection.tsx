@@ -1,8 +1,7 @@
 import { Flex, Text } from "@radix-ui/themes"
-import { AiOutlineLinkedin, AiOutlineGithub } from "react-icons/ai";
-import { MdOutlineMail, MdDownload, MdOutlineWavingHand  } from "react-icons/md";
-import Button from "../common/button";
+import { MdOutlineWavingHand  } from "react-icons/md";
 import MyHeading from "../common/heading";
+import Socials from "../common/socials";
 import MyImage from "../../assets/image/me.png"
 import RollingText from "./RollingText";
 import TechnologyPill from "../projects/TechnologyPill";
@@ -11,8 +10,8 @@ import { bio, OtherLogos } from "../../constants/data";
 
 export default function AboutSection() {
     return(
-        <div id="home" className="flex flex-col p-5 min-h-fit sm:flex-row sm:p-10 sm:min-h-[100vh]">
-            <div className="flex flex-col flex-[1.5] items-center sm:items-start text-textPrimary">
+        <div id="home" className="flex flex-col p-5 min-h-fit sm:flex-row sm:p-10">
+            <div className="flex flex-col flex-[2] items-center sm:items-start text-textPrimary">
                 {/* MOBILE IMAGE */}
                 <img src={MyImage} className="max-h-[50%] max-w-[50%] sm:hidden"/>
                 <br></br>
@@ -28,7 +27,7 @@ export default function AboutSection() {
                 <br></br>
 
                 {/* ABOUT ME */}
-                <div className="flex flex-col text-xl sm:text-2xl items-center sm:items-start">
+                <div className="flex flex-col text-xl items-center sm:items-start">
                     <Text weight="bold" className="mb-4">About me</Text>
                     <Flex gap="5" className="mb-5" wrap="wrap" align="center" justify="center">
                         <TechnologyPill text="University of Calgary" img={OtherLogos["uni"]}/>
@@ -50,25 +49,7 @@ export default function AboutSection() {
                 </div>
 
                 {/* MY SOCIALS */}
-                <div className="flex flex-col justify-center items-center gap-5 py-5">
-                    <Flex justify="center" align="center" gap="6" >
-                        <Button customStyle="rounded-full text-2xl" href="https://www.linkedin.com/in/usharabkhan/">
-                            <AiOutlineLinkedin/>
-                        </Button>
-                        <Button customStyle="rounded-full text-2xl" href="https://github.com/usharabkhan/" >
-                            <AiOutlineGithub/>
-                        </Button>
-                        <Button customStyle="rounded-full text-2xl" href="mailto:usharabkhan@gmail.com">
-                            <MdOutlineMail/>
-                        </Button>
-                    </Flex>
-                    <Flex justify="center">
-                        <Button customStyle="text-xl">
-                            <MdDownload />
-                            My Resume
-                        </Button>
-                    </Flex>
-                </div>
+                <Socials/>
             </div>
         </div>
     );
