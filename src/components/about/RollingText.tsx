@@ -1,10 +1,9 @@
 import { Flex } from '@radix-ui/themes';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-
+import { roles } from '../../constants/data';
 export default function RollingText() {
     
-    const roles = ["Fullstack Developer", "Cloud Architect", "Cloud Developer"]
     const [currentIndex, setCurrentIndex] = useState(0);
     useEffect(() => {
         const interval = setInterval(() => {

@@ -6,13 +6,10 @@ import MyHeading from "../common/heading";
 import MyImage from "../../assets/image/me.png"
 import RollingText from "./RollingText";
 import TechnologyPill from "../projects/TechnologyPill";
-import { OtherLogos } from "../../constants/data";
+import { bio, OtherLogos } from "../../constants/data";
 
 
 export default function AboutSection() {
-    const bio = `
-    
-    `;
     return(
         <div id="home" className="flex flex-col p-5 min-h-fit sm:flex-row sm:p-10 sm:min-h-[100vh]">
             <div className="flex flex-col flex-[1.5] items-center sm:items-start text-textPrimary">
@@ -39,7 +36,11 @@ export default function AboutSection() {
                         <TechnologyPill text="Computer Science" img={OtherLogos["compsci"]}/>
                         <TechnologyPill text="Microsoft Certified" img={OtherLogos["microsoft"]}/>
                     </Flex>
-                    <Text className="text-justify">{bio}</Text>
+                    <Text className="text-justify sm:text-left whitespace-pre-line">{bio}</Text>
+                    <br></br>
+                    <Text className="text-heading font-bold">
+                        Let's connect and discuss how I can be valuable for your team!
+                    </Text>
                 </div>
             </div>
             <div className="flex flex-col flex-1 items-center justify-center gap-y-5">

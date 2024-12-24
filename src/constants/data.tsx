@@ -3,16 +3,22 @@ import Shad_Recruitment_Image from "../assets/screenshots/shad_recruitment.png"
 import ucalgary_social_media from "../assets/screenshots/ucalgary_social_media.png"
 import PSS_Logo from "../assets/logos/pss.jpg"
 
+export const bio = "I am a curious individual with experience in Software and Fullstack Development, and particular interest in Cloud Computing as I actively pursue certifications in the field. Having worked and performed well in teams related to academics, extracurriculars, and work, I have proven to be a valuable team player who brings in the positive energy and the necessary skills.\n"+
+"\nAlong with 3 years of experience in Object Oriented Programming using Java, I have experience in Mobile and Web development using React.js, React Native, and TypeScript. I have also worked with relational databases like MySQL, SQLite, and PostgreSQL.\n"
+
+
+export const roles = ["Software Engineer", "Fullstack Developer", "Cloud Developer"]
 export const projects = [
     {
         title: "Portfolio Website ",
         description: "A website to share my experience, skills, and projects.",
-        technologies: ["TypeScript", "React.js", "Tailwind CSS"],
+        technologies: ["TypeScript", "React.js", "Tailwind CSS", "Git"],
         url: "https://github.com/usharabkhan/website",
         demoUrl: "",
         bullets: [
-            "Elegant styling and animations",
-            "Conditional rendering of elements",
+            "Elegant styling using a professional color palette",
+            "Response design for all devices",
+            "Animation libraries for smooth transitions",
         ],
         image: "https://media.istockphoto.com/id/844229938/vector/system-software-update-data-update-or-synchronize-with-progress-bar-on-the-screen-illustration.jpg?s=612x612&w=0&k=20&c=1pgTrigg0iit_IDj_ZMaPB5HjbX6qQVh9w4yKAjIe6o=",
         logo: "",
@@ -20,13 +26,13 @@ export const projects = [
     },
     {
         title: "University of Calgary Social Media",
-        description: "A social media platform for students at the University of Calgary to connect and share experiences.",
+        description: "A social media platform for students to connect and share experiences. (Course Project)",
         technologies: ["TypeScript", "React.js", "Tailwind CSS"],
         url: "https://github.com/ManrajSingh6/CPSC481-Social-Media-Network",
         demoUrl: "https://manrajsingh6.github.io/CPSC481-Social-Media-Network/#/login",
         bullets: [
-            "",
-            "",
+            "Developed frontend using Task Centered Design Process",
+            "Constant user feedback and iteration",
         ],
         image: ucalgary_social_media,
         logo: "",
@@ -34,12 +40,13 @@ export const projects = [
     },
     {
         title: "Recruitment Tracker Application",
-        description: "A mobile application to track summer program recruitment efforts",
+        description: "A mobile application to track summer program recruitment efforts.",
         technologies: ["TypeScript", "React Native", "Node.js", "Expo Router", "MySQL"],
         url: "https://github.com/usharabkhan/shad_recruitment",
         demoUrl: "",
         bullets: [
-            "Cross platform mobile application",
+            "Cross platform mobile application with Shad's theme",
+            "Dashboard to track and analyze recruitment progress",
             "Track activity with schools & teachers",
             "View and update visits' information",
         ],
@@ -55,8 +62,11 @@ export const projects = [
         url: "https://github.com/usharabkhan/pss_mms",
         demoUrl: "n",
         bullets: [
+            "User-centered solution and design for the Internal Affairs team",
             "Dashboard with key member statistics",
-            "world",
+            "Event registration and attendance tracking",
+            "Efficient member management using SQLite database",
+            "Import data from Excel"
         ],
         image: PSS_MSS_Image,
         logo: PSS_Logo,
@@ -73,22 +83,22 @@ export const toolkit = [
 
 export const baseUrl = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/"
 export const ToolkitImages: Record<string, string> = {
+    // BACKEND
     "Java" : "java/java-original.svg",
     "Python" : "python/python-original.svg",
-    // "REST API" : "",
     "MySQL" : "mysql/mysql-original.svg",
     "SQLite" : "sqlite/sqlite-original.svg",
     "PostgreSQL" : "postgresql/postgresql-original.svg",
     "Node.js" : "nodejs/nodejs-original.svg",
     "Express.js" : "express/express-original.svg",
-    // "React.js" : "react/react-original.svg",
-    // "React Native" : "react/react-original.svg",
+    // FRONTEND
     "HTML" : "html5/html5-original.svg",
     "CSS" : "css3/css3-original.svg",
     "JavaScript" : "javascript/javascript-original.svg",
     "TypeScript" : "typescript/typescript-original.svg",
     "WordPress" : "wordpress/wordpress-plain.svg",
     "JavaFX" : "java/java-original.svg",
+    // TOOLS
     "Pandas" : "pandas/pandas-original.svg",
     "Django" : "django/django-plain.svg",
     "Tailwind CSS" : "tailwindcss/tailwindcss-original.svg",
