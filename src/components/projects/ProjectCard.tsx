@@ -14,10 +14,13 @@ export default function ProjectCard({...props}){
 
             <div className="flex flex-col sm:flex-row">
                 {/* PROJECT IMAGE */}
-                <div className="flex flex-col flex-1 justify-center items-center">
-                    <img src={data.image} className="max-w-[100%] max-h-[90%] mb-6 sm:mr-6 rounded"/>
+                <div className="flex flex-col max-h-[350px] max-w-[622px] justify-center items-center mb-5">
+                    <img 
+                        src={data.image} 
+                        className="max-h-full max-w-full object-contain rounded" 
+                    />
                 </div>
-                <div className="flex-[1.5]">
+                <div className="flex-1">
                     {/* HEADER */}
                     <Flex className="flex-col items-center">
                         {/* TITLE */}
@@ -41,25 +44,24 @@ export default function ProjectCard({...props}){
                     </Flex>
 
                     {/* DESCRIPTION */}
-                    <div className="h-full p-4">
+                    <div className="flex flex-col h-full p-4">
                         <Text as="div" size="5" className="text-white" align="left">
                             {data.description}
                         </Text>
                         <br></br>
                         {/* FEATURES */}
-                        <div className="flex flex-col h-full">
+                        <div className="flex flex-col">
                             {data.bullets.map((bullet : string) => 
                                 <Text size="5" key={bullet} className="text-white">- {bullet}</Text>
                             )}
                         </div>
-                        {/* LEARNINGS */}
                     </div>
                 </div>
             </div>
 
-            <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col sm:flex-row">
                 {/* TECHNOLOGIES */}
-                <Flex justify="center" gap="3" align="center" wrap="wrap" className="flex-1 mt-2">
+                <Flex justify="center" gap="3" align="center" wrap="wrap" className="flex-1">
                     {data.technologies.map((tech: string) => <TechnologyPill key={tech} text={tech}/>
                     )}
                 </Flex>

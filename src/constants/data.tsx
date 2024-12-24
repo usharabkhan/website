@@ -1,6 +1,7 @@
-import PSS_MSS_Image from "../assets/screenshots/pss_mss.png"
-import Shad_Recruitment_Image from "../assets/screenshots/shad_recruitment.png"
+import PSS_mms from "../assets/screenshots/pss_mms.png"
+import Shad_Recruitment_Image from "../assets/screenshots/shad_recruitment.jpg"
 import ucalgary_social_media from "../assets/screenshots/ucalgary_social_media.png"
+import portfolio_website from "../assets/screenshots/portfolio_website.png"
 import PSS_Logo from "../assets/logos/pss.jpg"
 
 export const bio = "I am a curious individual with experience in Software and Fullstack Development, and particular interest in Cloud Computing as I actively pursue certifications in the field. Having worked and performed well in teams related to academics, extracurriculars, and work, I have proven to be a valuable team player who brings in the positive energy and the necessary skills.\n"+
@@ -17,29 +18,30 @@ export const projects = [
         demoUrl: "",
         bullets: [
             "Elegant styling using a professional color palette",
-            "Response design for all devices",
+            "Responsive design for all devices",
             "Animation libraries for smooth transitions",
         ],
-        image: "https://media.istockphoto.com/id/844229938/vector/system-software-update-data-update-or-synchronize-with-progress-bar-on-the-screen-illustration.jpg?s=612x612&w=0&k=20&c=1pgTrigg0iit_IDj_ZMaPB5HjbX6qQVh9w4yKAjIe6o=",
+        image: portfolio_website,
         logo: "",
         progress: "In Progress"
     },
     {
-        title: "University of Calgary Social Media",
+        title: "Social Media Interface",
         description: "A social media platform for students to connect and share experiences. (Course Project)",
         technologies: ["TypeScript", "React.js", "Tailwind CSS"],
         url: "https://github.com/ManrajSingh6/CPSC481-Social-Media-Network",
         demoUrl: "https://manrajsingh6.github.io/CPSC481-Social-Media-Network/#/login",
         bullets: [
-            "Developed frontend using Task Centered Design Process",
-            "Constant user feedback and iteration",
+            "Developed following Task Centered Design Process",
+            "Phase-wise iteration of the design",
+            "Improved by user feedback and heuristic evaluation",
         ],
         image: ucalgary_social_media,
         logo: "",
         progress: "December 2024", 
     },
     {
-        title: "Recruitment Tracker Application",
+        title: "Recruitment Mobile Application",
         description: "A mobile application to track summer program recruitment efforts.",
         technologies: ["TypeScript", "React Native", "Node.js", "Expo Router", "MySQL"],
         url: "https://github.com/usharabkhan/shad_recruitment",
@@ -68,7 +70,7 @@ export const projects = [
             "Efficient member management using SQLite database",
             "Import data from Excel"
         ],
-        image: PSS_MSS_Image,
+        image: PSS_mms,
         logo: PSS_Logo,
         logoName: "Pakistani Students' Society",
         progress: "October 2024",
