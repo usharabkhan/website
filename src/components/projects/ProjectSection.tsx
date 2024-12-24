@@ -13,7 +13,6 @@ import { FaRegCirclePause } from "react-icons/fa6";
 function ProjectSection() {
     const totalProjects = projects.length;
     const [projectIndex, setProjectIndex] = useState(0);
-    const [prevIndex, setPrevIndex] = useState(projectIndex);
     const [currProject, setCurrProject] = useState<ProjectDetail>(projects[0]);
     const [progress, setProgress] = useState(1);
 
@@ -126,7 +125,6 @@ function ProjectSection() {
                     <Button
                         disabled={projectIndex === 0}
                         onPress={() => {
-                            setPrevIndex(projectIndex);
                             setProjectIndex((prev) => prev - 1);
                             pauseTimer();
                             startTimer();
@@ -141,7 +139,6 @@ function ProjectSection() {
                     <Button
                         disabled={projectIndex === totalProjects - 1}
                         onPress={() => {
-                            setPrevIndex(projectIndex);
                             setProjectIndex((prev) => prev + 1);
                             pauseTimer();
                             startTimer();

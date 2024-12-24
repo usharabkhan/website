@@ -1,7 +1,8 @@
 import { Flex } from '@radix-ui/themes';
-import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { roles } from '../../constants/data';
+import { gsap } from 'gsap';
+
 export default function RollingText() {
     
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -9,27 +10,38 @@ export default function RollingText() {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % roles.length);
         }, 3000);
-    
-        return () => clearInterval(interval); 
+        return () => {
+            clearInterval(interval); 
+        }
     }, []);
+
+    useEffect(() => {
+        const tl = gsap.timeline();
+
+        // Animate the old value out
+        tl.fromTo("#rolling-text", 
+            { opacity: 1, yPercent: 0 }, 
+            { duration: 0.5, opacity: 0, yPercent: -50, ease: "power1" }
+        );
+
+        // Update text content to new value
+        tl.call(() => {
+            document.querySelector("#rolling-text")!.textContent = roles[currentIndex];
+        });
+
+        // Animate the new value in
+        tl.fromTo("#rolling-text", 
+            { opacity: 0, yPercent: 50 }, 
+            { duration: 0.5, opacity: 1, yPercent: 0, ease: "power1" }
+        );
+    }, [currentIndex, roles]);
+
     return (
-        <Flex align="center" justify="center" className="flex-wrap text-2xl sm:text-4xl">
+        <Flex id="sub-heading" align="center" justify="center" className="flex-wrap text-2xl sm:text-4xl">
             <span >
                 I am Usharab, an aspiring&nbsp;
             </span>
-            <span className="text-heading font-bold">
-                <AnimatePresence mode="wait">
-                    <motion.span
-                        key={currentIndex} // Key ensures Framer Motion detects a change
-                        initial={{ y: "50%", opacity: 0 }} // Start below the view
-                        animate={{ y: "0%", opacity: 1 }} // Roll into view
-                        exit={{ y: "-50%", opacity: 0 }} // Roll out of view
-                        transition={{ duration: 0.5, ease: "easeInOut" }}
-                        className="inline-block"
-                    >
-                        {roles[currentIndex]}.
-                    </motion.span>
-                </AnimatePresence>
+            <span id="rolling-text" className="text-heading font-bold">
             </span>
         </Flex>
     );
