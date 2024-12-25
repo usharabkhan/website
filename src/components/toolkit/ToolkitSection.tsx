@@ -1,6 +1,7 @@
 import { toolkit } from "../../constants/data";
 import ToolkitSubSection from "./ToolkitSubSection";
 import MyHeading from "../common/heading";
+
 function ToolkitSection () {
     return(
         <div id="skills" className="flex flex-col items-center justify-center my-2 min-h-fit">
@@ -10,7 +11,9 @@ function ToolkitSection () {
                 <br></br>
                 <ToolkitSubSection title="Back End" tools={toolkit[1]} />
                 <br></br>
-                <ToolkitSubSection title="Frameworks & Tools" tools={toolkit[2]} />
+                <ToolkitSubSection title="Frameworks" tools={toolkit[2]} />
+                <br></br>
+                <ToolkitSubSection title="Tools" tools={toolkit[3]} />
             </div>
         </div>
     )

@@ -6,12 +6,13 @@ import MyImage from "../../assets/image/me.png"
 import RollingText from "./RollingText";
 import TechnologyPill from "../projects/TechnologyPill";
 import { bio, OtherLogos } from "../../constants/data";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { gsap } from "gsap";
 
 export default function AboutSection() {
     useEffect(() => {
         const tl = gsap.timeline();
+
         tl.fromTo("#my-image, #heading", {scale: 0.3}, {duration: 1, scale: 1, ease: "back"});
         tl.fromTo("#sub-heading", {opacity: 0, y: -50}, {duration: 1, opacity: 1, y: 0, ease: "back"});
         tl.fromTo("#about-me, #my-tags, #my-bio, #lets-connect", 

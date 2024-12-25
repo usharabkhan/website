@@ -80,7 +80,8 @@ export const projects = [
 export const toolkit = [
     ["React.js", "React Native", "HTML", "CSS", "JavaScript", "TypeScript", "WordPress"],
     ["Java", "Python", "REST API", "MySQL", "SQLite", "PostgreSQL", "Node.js", "Express.js"],
-    ["JavaFX", "Pandas", "Django", "Tailwind CSS", "Vite", "Git", "VSCode", "IntelliJ", "Eclipse"],
+    ["JavaFX", "Pandas", "PySpark", "GSAP", "Django", "Tailwind CSS"],
+    ["Azure", "Figma", "Vite", "Git", "VSCode", "IntelliJ", "Eclipse"],
 ]
 
 export const baseUrl = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/"
@@ -102,8 +103,12 @@ export const ToolkitImages: Record<string, string> = {
     "JavaFX" : "java/java-original.svg",
     // TOOLS
     "Pandas" : "pandas/pandas-original.svg",
+    "PySpark" : "apachespark/apachespark-original.svg",
     "Django" : "django/django-plain.svg",
     "Tailwind CSS" : "tailwindcss/tailwindcss-original.svg",
+    // TOOLS
+    "Figma" : "figma/figma-original.svg",
+    "Azure" : "azure/azure-original.svg",
     "Vite" : "vitejs/vitejs-original.svg",
     "Git" : "git/git-original.svg",
     "VSCode" : "vscode/vscode-original.svg",
@@ -119,5 +124,6 @@ export const OtherLogos: Record<string, string> = {
     "microsoft" : "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
     "React.js" : "https://seeklogo.com/images/R/react-logo-65B7CD91B5-seeklogo.com.png",
     "React Native" : "https://seeklogo.com/images/R/react-logo-65B7CD91B5-seeklogo.com.png",
-    "REST API" : "https://cdn-icons-png.flaticon.com/512/8681/8681370.png"
+    "REST API" : "https://cdn-icons-png.flaticon.com/512/8681/8681370.png",
+    "GSAP" : "https://cdn.icon-icons.com/icons2/2389/PNG/512/greensock_logo_icon_145217.png",
 }
