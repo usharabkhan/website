@@ -12,7 +12,7 @@ import { FaRegCirclePause } from "react-icons/fa6";
 
 function ProjectSection() {
     const totalProjects = projects.length;
-    const [projectIndex, setProjectIndex] = useState(0);
+    const [projectIndex, setProjectIndex] = useState(3);
     const [currProject, setCurrProject] = useState<ProjectDetail>(projects[0]);
     const [progress, setProgress] = useState(1);
 
@@ -28,6 +28,32 @@ function ProjectSection() {
             pauseTimer();
         }
     }, []);
+
+    const startTimer = () => {
+        if (!timerRef.current) {
+            // timerRef.current = window.setInterval(() => {
+            //     setProjectIndex((prev) => (prev + 1) % totalProjects);
+            // }, 5000);
+        }
+
+        if (!progressRef.current) {
+            progressRef.current = window.setInterval(() => {
+                setProgress((prev) => (prev < 100 ? prev + 1 : 1));
+            }, 50); // Increment progress every 50ms
+        }
+    };
+
+    const pauseTimer = () => {
+        if (timerRef.current) {
+            clearInterval(timerRef.current);
+            timerRef.current = null;
+        }
+        if (progressRef.current) {
+            clearInterval(progressRef.current);
+            progressRef.current = null;
+            setProgress(0);
+        }
+    };
 
     useEffect(() => {
         const observer = new IntersectionObserver(handleIntersection, {
@@ -52,32 +78,6 @@ function ProjectSection() {
         setProgress(0);
     }, [projectIndex]);
     
-    const startTimer = () => {
-        if (!timerRef.current) {
-            timerRef.current = window.setInterval(() => {
-                setProjectIndex((prev) => (prev + 1) % totalProjects);
-            }, 5000);
-        }
-
-        if (!progressRef.current) {
-            progressRef.current = window.setInterval(() => {
-                setProgress((prev) => (prev < 100 ? prev + 1 : 1));
-            }, 50); // Increment progress every 50ms
-        }
-    };
-
-    const pauseTimer = () => {
-        if (timerRef.current) {
-            clearInterval(timerRef.current);
-            timerRef.current = null;
-        }
-        if (progressRef.current) {
-            clearInterval(progressRef.current);
-            progressRef.current = null;
-            setProgress(0);
-        }
-    };
-
     useEffect(() => {
         startTimer();
         return () => pauseTimer();

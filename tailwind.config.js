@@ -29,6 +29,9 @@ module.exports = {
       animation: {
         wave: "wave 2.5s infinite",
       },
+      screens: {
+        '3xl': '1920px', // Custom breakpoint for very large screens
+      },
     },
   },
   plugins: [],

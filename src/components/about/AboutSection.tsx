@@ -10,9 +10,9 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 
 export default function AboutSection() {
+
     useEffect(() => {
         const tl = gsap.timeline();
-
         tl.fromTo("#my-image, #heading", {scale: 0.3}, {duration: 1, scale: 1, ease: "back"});
         tl.fromTo("#sub-heading", {opacity: 0, y: -50}, {duration: 1, opacity: 1, y: 0, ease: "back"});
         tl.fromTo("#about-me, #my-tags, #my-bio, #lets-connect", 
@@ -52,7 +52,12 @@ export default function AboutSection() {
                         <TechnologyPill text="Computer Science" img={OtherLogos["compsci"]}/>
                         <TechnologyPill text="Microsoft Certified" img={OtherLogos["microsoft"]}/>
                     </Flex>
-                    <Text id="my-bio" className="text-justify sm:text-left whitespace-pre-line">{bio}</Text>
+                    <Text id="my-bio" className="text-justify sm:text-left whitespace-pre-line">
+                        
+                    </Text>
+                    <div id="my-bio">
+
+                    </div>
                     <br></br>
                     <Text id="lets-connect" className="text-heading font-bold">
                         Let's connect and discuss how I can be valuable for your team!

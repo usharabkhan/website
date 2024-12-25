@@ -1,17 +1,18 @@
 import TechnologyPill from "./TechnologyPill"
-import { Badge, Flex, Heading, Text } from "@radix-ui/themes"
+import { Badge, Flex, Text } from "@radix-ui/themes"
 import { FaGithub } from "react-icons/fa"
 import { LuView } from "react-icons/lu";
 import Button from "../common/button";
+import MyHeading from "../common/heading";
 
 export default function ProjectCard({...props}){
     const data = props.data;
     return(
-        <div className="flex flex-col justify-between w-full h-full shadow-md
+        <div className="flex flex-col justify-between shadow-md
+                        w-full h-fit 2xl:w-[85vw] 2xl:h-[70vh] 3xl:w-[70vw] 3xl:h-[60vh]
                         bg-container p-6 mt-2 rounded-sm hover:cursor-pointer
                          sm:p-10 sm:justify-self-center border-l-4 border-l-textPrimary
                         " onMouseEnter={props.onEnter} onMouseLeave={props.onLeave}>
-
             <div className="flex flex-col sm:flex-row">
                 {/* PROJECT IMAGE */}
                 <div className="flex flex-col max-h-[350px] max-w-[622px] justify-center items-center mb-5">
@@ -24,10 +25,7 @@ export default function ProjectCard({...props}){
                     {/* HEADER */}
                     <Flex className="flex-col items-center">
                         {/* TITLE */}
-                        <Heading size="7" className="text-white mb-4" align="center" weight="regular">
-                            {data.title}
-                            
-                        </Heading>
+                        <MyHeading type="h3" title={data.title} customStyle="text-white mb-4 text-center" />
                         
                         <Flex className="flex-row gap-2 items-center justify-center">
                             {/* PROGRESS */}
@@ -44,15 +42,15 @@ export default function ProjectCard({...props}){
                     </Flex>
 
                     {/* DESCRIPTION */}
-                    <div className="flex flex-col h-full p-4">
-                        <Text as="div" size="5" className="text-white" align="left">
+                    <div className="flex flex-col p-4 text-md sm:text-lg">
+                        <Text as="div" className="text-white" align="left">
                             {data.description}
                         </Text>
                         <br></br>
                         {/* FEATURES */}
                         <div className="flex flex-col">
                             {data.bullets.map((bullet : string) => 
-                                <Text size="5" key={bullet} className="text-white">- {bullet}</Text>
+                                <Text key={bullet} className="text-white">- {bullet}</Text>
                             )}
                         </div>
                     </div>
@@ -67,7 +65,7 @@ export default function ProjectCard({...props}){
                 </Flex>
 
                 {/* GIT AND DEMO BUTTON */}
-                <div className="flex flex-[1.5] justify-center my-2 pt-2 gap-3">
+                <div className="flex flex-1 justify-center my-2 pt-2 gap-3">
                     <Button href={data.url}>
                         <FaGithub className="mr-1"/>
                         View on GitHub
