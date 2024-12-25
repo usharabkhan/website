@@ -31,9 +31,9 @@ function ProjectSection() {
 
     const startTimer = () => {
         if (!timerRef.current) {
-            // timerRef.current = window.setInterval(() => {
-            //     setProjectIndex((prev) => (prev + 1) % totalProjects);
-            // }, 5000);
+            timerRef.current = window.setInterval(() => {
+                setProjectIndex((prev) => (prev + 1) % totalProjects);
+            }, 5000);
         }
 
         if (!progressRef.current) {
