@@ -13,7 +13,7 @@ export default function Button( {...props} : ButtonProps){
 
     const styles = "flex flex-row self-center items-center p-2 " +
                     "bg-white text-background rounded-xl shadow-md" + 
-                    "hover:cursor-pointer hover:bg-button hover:text-black hover:scale-105 " + 
+                    "hover:cursor-pointer hover:bg-container hover:text-white hover:scale-105 " + 
                     "transition-all duration-300 ease-in-out "+ 
                     "disabled:bg-white disabled:opacity-50 disabled:text-container disabled:cursor-default ";
     return (

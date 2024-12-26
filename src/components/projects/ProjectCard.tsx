@@ -70,7 +70,7 @@ export default function ProjectCard({...props}){
 
                     {/* GIT BUTTON */}
                     {data.url.length > 0 &&
-                        <Button href={data.url}>
+                        <Button href={data.url} customStyle="hover:bg-button hover:text-black">
                             <FaGithub className="mr-1"/>
                             View on GitHub
                         </Button>
@@ -78,7 +78,7 @@ export default function ProjectCard({...props}){
 
                     {/* DEMO BUTTON */}
                     {data.demoUrl.length > 0 &&
-                        <Button href={data.demoUrl}>
+                        <Button href={data.demoUrl} customStyle="hover:bg-button hover:text-black">
                             <LuView className="mr-1"/>
                             Live Demo
                         </Button>
