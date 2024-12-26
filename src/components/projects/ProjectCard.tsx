@@ -9,7 +9,7 @@ export default function ProjectCard({...props}){
     const data = props.data;
     return(
         <div 
-            className="flex flex-col justify-self-center p-5 gap-y-5 hover:cursor-pointer
+            className="flex flex-col justify-self-center gap-y-5 hover:cursor-pointer
                      bg-container border-l-4 border-l-textPrimary rounded-sm shadow-md
                         w-full lg:w-[80vw] 3xl:h-[50vh] 3xl:w-[60vw] justify-evenly
             "
