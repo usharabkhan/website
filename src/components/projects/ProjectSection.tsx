@@ -31,9 +31,9 @@ function ProjectSection() {
 
     const startTimer = () => {
         if (!timerRef.current) {
-            timerRef.current = window.setInterval(() => {
-                setProjectIndex((prev) => (prev + 1) % totalProjects);
-            }, 5000);
+            // timerRef.current = window.setInterval(() => {
+            //     setProjectIndex((prev) => (prev + 1) % totalProjects);
+            // }, 5000);
         }
 
         if (!progressRef.current) {
@@ -89,7 +89,7 @@ function ProjectSection() {
             <div className="flex flex-col items-center gap-x-3 h-[80%] w-full">
 
                 {/* PROJECT CARD */}
-                <Flex justify="center" className="h-full w-full justify-center items-center sm:p-5">
+                <Flex justify="center" align="center" className="h-full w-full sm:p-5">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={projectIndex}

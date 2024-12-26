@@ -53,11 +53,8 @@ export default function AboutSection() {
                         <TechnologyPill text="Microsoft Certified" img={OtherLogos["microsoft"]}/>
                     </Flex>
                     <Text id="my-bio" className="text-justify sm:text-left whitespace-pre-line">
-                        
+                        {bio}
                     </Text>
-                    <div id="my-bio">
-
-                    </div>
                     <br></br>
                     <Text id="lets-connect" className="text-heading font-bold">
                         Let's connect and discuss how I can be valuable for your team!

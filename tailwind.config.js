@@ -30,6 +30,7 @@ module.exports = {
         wave: "wave 2.5s infinite",
       },
       screens: {
+        'xs': '480px', // Custom breakpoint for small screens
         '3xl': '1920px', // Custom breakpoint for very large screens
       },
     },
