@@ -3,38 +3,12 @@ import { Flex, Text } from "@radix-ui/themes"
 import { FaGithub } from "react-icons/fa"
 import { LuView } from "react-icons/lu";
 import Button from "../common/button";
-import { useEffect, useState } from "react";
 import ProjectTitle from "./ProjectTitle";
 
 export default function ProjectCard({...props}){
     const data = props.data;
-    const [dimensions, setDimensions] = useState({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    
-      useEffect(() => {
-        const handleResize = () => {
-          setDimensions({
-            width: window.innerWidth,
-            height: window.innerHeight,
-          });
-        };
-    
-        window.addEventListener('resize', handleResize);
-    
-        return () => {
-          window.removeEventListener('resize', handleResize);
-        };
-      }, []);
     return(
         <div 
-            // className="flex flex-col justify-space shadow-md
-            //             w-max-full w-fit h-fit 2xl:w-[85vw] 2xl:h-[70vh] 3xl:w-[70vw] 3xl:h-[60vh]
-            //             bg-container p-6 mt-2 rounded-sm hover:cursor-pointer
-            //              sm:p-10 sm:justify-self-center 
-            //              border-l-4 border-l-textPrimary
-            //             " 
             className="flex flex-col justify-self-center p-5 gap-y-5 hover:cursor-pointer
                      bg-container border-l-4 border-l-textPrimary rounded-sm shadow-md
                         w-full lg:w-[80vw] 3xl:h-[50vh] 3xl:w-[60vw] justify-evenly

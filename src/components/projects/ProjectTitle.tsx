@@ -2,7 +2,7 @@ import { Flex, Badge } from "@radix-ui/themes";
 import MyHeading from "../common/heading";
 export default function ProjecTitle( { data } : any) {
     return(
-        <Flex direction="column" align="center" className="border-2">
+        <Flex gap="2" direction="column" align="center">
             {/* TITLE */}
             <MyHeading type="h3" title={data.title} customStyle="text-white text-center" />
             
@@ -12,10 +12,12 @@ export default function ProjecTitle( { data } : any) {
                     {data.progress}
                 </Badge>
                 {/* LOGO */}
-                {data.logo && <Badge variant="solid" color="sky">
-                    <img src={data.logo} className="max-w-6 max-h-6" />
-                    {data.logoName}
-                </Badge>}
+                {data.logo && 
+                    <Badge variant="solid" color="sky">
+                        <img src={data.logo} className="max-w-6 max-h-6" />
+                        {data.logoName}
+                    </Badge>
+                }
             </Flex>
 
         </Flex>
