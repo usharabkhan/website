@@ -44,7 +44,7 @@ export default function AboutSection() {
                 <br></br>
 
                 {/* ABOUT ME */}
-                <div className="flex flex-col text-xl items-center sm:items-start">
+                <div className="flex flex-col text-md sm:text-lg xl:text-xl items-center sm:items-start">
                     <Text id="about-me" weight="bold" className="mb-4">About me</Text>
                     <Flex id="my-tags" gap="5" className="mb-5" wrap="wrap" align="center" justify="center">
                         <TechnologyPill text="University of Calgary" img={OtherLogos["uni"]}/>
@@ -56,7 +56,7 @@ export default function AboutSection() {
                         {bio}
                     </Text>
                     <br></br>
-                    <Text id="lets-connect" className="text-heading font-bold">
+                    <Text id="lets-connect" className="text-justify text-heading font-bold">
                         Let's connect and discuss how I can be valuable for your team!
                     </Text>
                 </div>
