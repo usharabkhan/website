@@ -17,7 +17,7 @@ export default function Header({ className }: { className: string }) {
           <MenuItem title="About" scrollTo="home" />
           <MenuItem title="Projects" scrollTo="projects" />
           <MenuItem title="Skills" scrollTo="skills" />
-          {/* <MenuItem title="Contact" /> */}
+          <MenuItem title="Contributions" scrollTo='contributions' />
         </div>
       </div>
 
@@ -51,7 +51,7 @@ export default function Header({ className }: { className: string }) {
           <MenuItem title="About" scrollTo="home" onPress={toggleDrawer}/>
           <MenuItem title="Projects" scrollTo="projects" onPress={toggleDrawer}/>
           <MenuItem title="Skills" scrollTo="skills" onPress={toggleDrawer}/>
-          {/* <MenuItem title="Contact" /> */}
+          <MenuItem title="Contributions" scrollTo='contributions' onPress={toggleDrawer}/>
         </nav>
       </div>
 

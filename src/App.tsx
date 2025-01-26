@@ -5,6 +5,7 @@ import ToolkitSection from './components/toolkit/ToolkitSection';
 import AboutSection from './components/about/AboutSection';
 import { useEffect, useState } from 'react';
 import { ScrollArea } from '@radix-ui/themes';
+import ContributionSection from './components/contributions/ContributionSection';
 
 function App() {
   const [showHeader, setShowHeader] = useState(true);
@@ -35,6 +36,9 @@ function App() {
           <br />
           <hr className="mx-5 opacity-70" />
           <ProjectSection />
+          <br />
+          <hr className="mx-5 opacity-70" />
+          <ContributionSection />
           <br />
           <hr className="mx-5 opacity-70" />
           <ToolkitSection />
