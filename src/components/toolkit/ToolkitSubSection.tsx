@@ -4,7 +4,7 @@ import MyHeading from "../common/heading";
 import { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import ChevronButton from "../common/chevron";
 
 interface ToolkitSubSectionProps {
   title: string;
@@ -52,12 +52,7 @@ export default function ToolkitSubSection(props: ToolkitSubSectionProps) {
           title={props.title}
           customStyle="text-textPrimary self-center"
         />
-        <div
-            className={`w-6 h-6 text-textPrimary transition-transform duration-300 ease-in-out transform  ${
-                isOpen ? "rotate-0" : "rotate-180"
-            }`}>
-            <ChevronUp className="hover:bg-container rounded-full transition-all duration-300 ease-linear"/>
-        </div>
+        <ChevronButton isOpen={isOpen} />
       </div>
       
       <hr className="border border-lg w-full opacity-30"/>
