@@ -122,8 +122,8 @@ export const OtherLogos: Record<string, string> = {
     "compsci" : "https://cdn-icons-png.flaticon.com/512/6840/6840478.png",
     "datasci" : "https://cdn-icons-png.flaticon.com/512/2029/2029234.png",
     "microsoft" : "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
-    "React.js" : "https://seeklogo.com/images/R/react-logo-65B7CD91B5-seeklogo.com.png",
-    "React Native" : "https://seeklogo.com/images/R/react-logo-65B7CD91B5-seeklogo.com.png",
+    "React.js" : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
+    "React Native" : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
     "REST API" : "https://cdn-icons-png.flaticon.com/512/8681/8681370.png",
-    "GSAP" : "https://cdn.icon-icons.com/icons2/2389/PNG/512/greensock_logo_icon_145217.png",
+    "GSAP" : "https://i.vimeocdn.com/portrait/34768143_640x640?sig=f177f398fbd6f943578b3368c2fc677a1cafac361651c4b8c693f228a59fc819&v=1",
 }
