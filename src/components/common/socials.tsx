@@ -17,12 +17,12 @@ export default function Socials(){
                     <MdOutlineMail/>
                 </MyButton>
             </Flex>
-            <Flex justify="center">
+            {/* <Flex justify="center">
                 <MyButton customStyle="text-xl">
                     <MdDownload />
                     My Resume
                 </MyButton>
-            </Flex>
+            </Flex> */}
         </div>
     )
 }

@@ -4,7 +4,7 @@ import ProjectSection from './components/projects/ProjectSection';
 import ToolkitSection from './components/toolkit/ToolkitSection';
 import AboutSection from './components/about/AboutSection';
 import { useEffect, useState } from 'react';
-import { ScrollArea } from '@radix-ui/themes';
+import { Flex, ScrollArea } from '@radix-ui/themes';
 import ContributionSection from './components/contributions/ContributionSection';
 
 function App() {
@@ -30,18 +30,18 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen bg-background overflow-x-hidden">
       <Header className={`fixed top-0 left-0 w-full z-10 bg-background transition-transform duration-300 ${showHeader ? 'translate-y-0' : '-translate-y-full'}`} />
+      
+      <AboutSection />
       <ScrollArea className="mt-16"> {/* Adjust the margin-top to the height of the header */}
         <div className="flex-1 p-5">
-          <AboutSection />
-          <br />
-          <hr className="mx-5 opacity-70" />
-          <ProjectSection />
-          <br />
-          <hr className="mx-5 opacity-70" />
-          <ContributionSection />
-          <br />
-          <hr className="mx-5 opacity-70" />
-          <ToolkitSection />
+            <hr className="mx-5 opacity-70" />
+            <ProjectSection />
+            <br />
+            <hr className="mx-5 opacity-70" />
+            <ContributionSection />
+            <br />
+            <hr className="mx-5 opacity-70" />
+            <ToolkitSection />
         </div>
         <hr className="mx-10 opacity-70" />
         <Footer />

@@ -11,24 +11,24 @@ import { gsap } from "gsap";
 
 export default function AboutSection() {
 
-    useEffect(() => {
-        const tl = gsap.timeline();
-        tl.fromTo("#my-image, #heading", {scale: 0.3}, {duration: 1, scale: 1, ease: "back"});
-        tl.fromTo("#sub-heading", {opacity: 0, y: -50}, {duration: 1, opacity: 1, y: 0, ease: "back"});
-        tl.fromTo("#about-me, #my-tags, #my-bio, #lets-connect", 
-            {opacity: 0, x: -50}, 
-            {duration: 1, opacity: 1, x: 0, ease: "power3.inOut", stagger: 1} );
-        return () => {
+    // useEffect(() => {
+    //     const tl = gsap.timeline();
+    //     tl.fromTo("#my-image, #heading", {scale: 0.3}, {duration: 1, scale: 1, ease: "back"});
+    //     tl.fromTo("#sub-heading", {opacity: 0, y: -50}, {duration: 1, opacity: 1, y: 0, ease: "back"});
+    //     tl.fromTo("#about-me, #my-tags, #my-bio, #lets-connect", 
+    //         {opacity: 0, x: -50}, 
+    //         {duration: 1, opacity: 1, x: 0, ease: "power3.inOut", stagger: 1} );
+    //     return () => {
             
-            tl.kill();
-            console.log("Killed");
-        }
-    }, []);
+    //         tl.kill();
+    //         console.log("Killed");
+    //     }
+    // }, []);
     return(
         <div id="home" className="flex flex-col p-5 min-h-fit sm:flex-row sm:p-10">
             <div className="flex flex-col flex-[2] items-center sm:items-start text-textPrimary">
                 {/* MOBILE IMAGE */}
-                <img id="my-image" src={MyImage} className="max-h-[50%] max-w-[50%] sm:hidden"/>
+                <img id="my-image" src={MyImage} className="max-h-[50%] max-w-[50%] "/>
                 <br></br>
 
                 <div id="heading" className="">
@@ -63,9 +63,9 @@ export default function AboutSection() {
             </div>
             <div className="flex flex-col flex-1 items-center justify-center gap-y-5">
                 {/* DESKTOP IMAGE */}
-                <div className="flex-1 max-h-[50%] hidden sm:flex">
+                {/* <div className="flex-1 max-h-[50%] hidden sm:flex">
                     <img id="my-image" src={MyImage} className="max-h-full"/>
-                </div>
+                </div> */}
 
                 {/* MY SOCIALS */}
                 <div id="lets-connect">
