@@ -1,4 +1,4 @@
-import { Flex } from '@radix-ui/themes';
+import { Flex, Text } from '@radix-ui/themes';
 import { useEffect, useState } from 'react';
 import { roles } from '../../constants/data';
 import { gsap } from 'gsap';
@@ -38,11 +38,8 @@ export default function RollingText() {
 
     return (
         <Flex id="sub-heading" align="center"  className="flex-wrap text-xl sm:text-2xl">
-            <span >
-                I am Usharab, an aspiring&nbsp;
-            </span>
-            <p id="rolling-text" className="text-heading font-bold">
-            </p>
+            <Text as="span" size="5">I am Usharab, an aspiring&nbsp;</Text>
+            <Text id="rolling-text" as="span" size="5" className="text-heading font-bold"/>
         </Flex>
     );
 };

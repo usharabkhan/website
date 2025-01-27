@@ -5,24 +5,18 @@ import MyButton from "../common/button";
 
 export default function Socials(){
     return(
-        <div className="flex flex-col justify-center items-center gap-5 py-5">
+        <div className="flex flex-col justify-center items-center gap-5">
             <Flex justify="center" align="center" gap="6" >
-                <MyButton customStyle="rounded-full text-2xl" href="https://www.linkedin.com/in/usharabkhan/">
+                <MyButton customStyle="rounded-full text-md" href="https://www.linkedin.com/in/usharabkhan/">
                     <AiOutlineLinkedin/>
                 </MyButton>
-                <MyButton customStyle="rounded-full text-2xl" href="https://github.com/usharabkhan/" >
+                <MyButton customStyle="rounded-full text-md" href="https://github.com/usharabkhan/" >
                     <AiOutlineGithub/>
                 </MyButton>
-                <MyButton customStyle="rounded-full text-2xl" href="mailto:usharabkhan@gmail.com">
+                <MyButton customStyle="rounded-full text-md" href="mailto:usharabkhan@gmail.com">
                     <MdOutlineMail/>
                 </MyButton>
             </Flex>
-            {/* <Flex justify="center">
-                <MyButton customStyle="text-xl">
-                    <MdDownload />
-                    My Resume
-                </MyButton>
-            </Flex> */}
         </div>
     )
 }

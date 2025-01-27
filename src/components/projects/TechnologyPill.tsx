@@ -16,9 +16,9 @@ export default function TechnologyPill ({text, img} : TechnologyPillProps ){
     return(
         <div className="bg-subContainer w-fit h-fit px-2 py-1 rounded-xl shadow-md">
             <Flex gap="2" className="items-center">    
-                {url && <img src={url} height={20} width={20}/>}
-                {img && <img src={img} className="h-5 w-5"/>}
-                <Text size="2" className="text-background">{text}</Text>
+                {url && <img src={url} height={15} width={15}/>}
+                {img && <img src={img} className="h-4 w-4"/>}
+                <Text size="1" className="text-background">{text}</Text>
             </Flex>
         </div>
     )
