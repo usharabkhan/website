@@ -4,7 +4,7 @@ import ucalgary_social_media from "../assets/screenshots/ucalgary_social_media.p
 import portfolio_website from "../assets/screenshots/portfolio_website.png"
 import PSS_Logo from "../assets/logos/pss.jpg"
 
-export const bio = "I am a curious individual with experience in Software and Fullstack Development, and particular interest in Cloud Computing as I actively pursue certifications in the field. Having worked and performed well in teams related to academics, extracurriculars, and work, I have proven to be a valuable team player who brings in the positive energy and the necessary skills.\n"+
+export const bio = "I am a curious individual with experience in Software and Fullstack Development, and particular interest in Cloud Computing as I actively pursue certifications in the field. Having worked and performed well in teams related to academics, extracurriculars, and work, I have proven to be a valuable team player who brings in the positive energy and the necessary skills.\n" +
 "\nAlong with 3 years of experience in Object Oriented Programming using Java, I have experience in Mobile and Web development using React.js, React Native, and TypeScript. I have also worked with relational databases like MySQL, SQLite, and PostgreSQL.\n"
 
 

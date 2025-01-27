@@ -13,7 +13,7 @@ function ProjectSection() {
   };
 
   return (
-    <div id="projects" className="flex flex-col items-center justify-center my-2 min-h-fit p-5 sm:p-10">
+    <div id="projects" className="flex flex-col items-center justify-center my-2 min-h-fit p-5 sm:p-10 border-2">
       <MyHeading type="h2" title="My Projects" customStyle="text-textPrimary self-center mb-3" />
       <div className="flex flex-col items-center gap-x-3 h-[80%] w-full">
         {/* Project Cards */}

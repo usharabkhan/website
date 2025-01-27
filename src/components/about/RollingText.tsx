@@ -37,12 +37,12 @@ export default function RollingText() {
     }, [currentIndex, roles]);
 
     return (
-        <Flex id="sub-heading" align="center" justify="center" className="flex-wrap text-2xl sm:text-4xl">
+        <Flex id="sub-heading" align="center"  className="flex-wrap text-xl sm:text-2xl">
             <span >
                 I am Usharab, an aspiring&nbsp;
             </span>
-            <span id="rolling-text" className="text-heading font-bold">
-            </span>
+            <p id="rolling-text" className="text-heading font-bold">
+            </p>
         </Flex>
     );
 };
