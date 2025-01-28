@@ -12,12 +12,17 @@ export default function TechnologyBox ({text} : TechnologyBoxProps ){
         url = OtherLogos[text]; 
     }
     return(
-        <div className="flex items-center bg-container min-w-[120px] min-h-[120px] p-2 rounded
-         border-l-textPrimary border-l-4 shadow-md justify-center">
-            <Flex gap="2" className="items-center flex-col ">    
-                {url && <img src={url} height={70} width={70}/>}
-                <Text size="3" className="text-white">{text}</Text>
+        <Flex 
+            align="center" 
+            gap="2"
+            className="bg-container border-l-textPrimary border-l-4 rounded p-2"
+        >
+
+            {url && <img src={url} height={40} width={40}/>}
+            <Flex direction="column" className="text-textPrimary">    
+                <Text size="2">{text}</Text>
+                <Text size="2">2 years</Text>
             </Flex>
-        </div>
+        </Flex>
     )
 }

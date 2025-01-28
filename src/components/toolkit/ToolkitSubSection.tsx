@@ -1,10 +1,11 @@
-import { Box } from "@radix-ui/themes";
+import { Box, Flex } from "@radix-ui/themes";
 import TechnologyBox from "./TechnologyBox";
 import MyHeading from "../common/heading";
 import { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ChevronButton from "../common/chevron";
+import { SubTitle, Title } from "../common/title";
 
 interface ToolkitSubSectionProps {
   title: string;
@@ -16,26 +17,6 @@ export default function ToolkitSubSection(props: ToolkitSubSectionProps) {
   const [isOpen, setIsOpen] = useState(false); // State to control collapse/expand
   const contentRef = useRef<HTMLDivElement>(null); // Ref for the collapsible content
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#" + id,
-        start: "top 80%",
-        end: "bottom bottom",
-        toggleActions: "play none none none",
-      },
-    });
-    tl.fromTo(
-      "#" + id,
-      { opacity: 0, x: -50 },
-      { duration: 1.5, opacity: 1, x: 0, ease: "back", stagger: 0.5 }
-    );
-    return () => {
-      tl.kill();
-    };
-  }, []);
-
   const toggleOpen = () => {
     setIsOpen(!isOpen);
   };
@@ -43,20 +24,17 @@ export default function ToolkitSubSection(props: ToolkitSubSectionProps) {
   return (
     <Box id={id} as="div" className="gap-x-5">
       {/* Header */}
-      <div
-        className="flex items-center justify-between cursor-pointer"
+      <Flex
         onClick={toggleOpen}
+        className="cursor-pointer p-4"
+        align="center"
+        justify="between"
       >
-        <MyHeading
-          type="h3"
-          title={props.title}
-          customStyle="text-textPrimary self-center"
-        />
+        <SubTitle>{props.title}</SubTitle>
         <ChevronButton isOpen={isOpen} />
-      </div>
+      </Flex>
       
       <hr className="border border-lg w-full opacity-30"/>
-      <br />
 
       {/* Collapsible Content */}
       <div
@@ -68,11 +46,15 @@ export default function ToolkitSubSection(props: ToolkitSubSectionProps) {
             : "0px",
         }}
       >
-        <div className="flex flex-row flex-wrap gap-7 justify-around">
+        <br />
+        <Flex
+          gap="4"
+          wrap="wrap"
+        >
           {props.tools.map((tool: string) => (
             <TechnologyBox key={tool} text={tool} />
           ))}
-        </div>
+        </Flex>
       </div>
     </Box>
   );

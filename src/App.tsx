@@ -46,7 +46,7 @@ function App() {
             <ContributionSection />
             <hr className="mx-5 opacity-70" />
             <ToolkitSection />
-            <hr className="mx-10 opacity-70 mt-5" />
+            {/* <hr className="mx-10 opacity-70 mt-5" /> */}
           </div>
           
         </div>

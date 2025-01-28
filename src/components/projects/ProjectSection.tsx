@@ -4,6 +4,7 @@ import { projects } from "../../constants/data";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ChevronDown } from "lucide-react";
+import { Title } from "../common/title";
 
 function ProjectSection() {
   const projectsRef = useRef<HTMLDivElement>(null); // Ref for the collapsible content
@@ -34,13 +35,7 @@ function ProjectSection() {
   return (
     <div id="projects" className="flex flex-col items-center lg:items-start justify-center my-2 min-h-fit p-5 sm:p-10">
       {/* Title */}
-      <Text
-        size="7"
-        weight="bold"
-        className="text-white mb-6 text-center lg:text-left"
-      >
-        Projects
-      </Text>
+      <Title>Projects</Title>
       {/* Project Cards */}
       <Flex direction="column" align={{ initial: "center", lg: "start" }} gap="4" className="h-full w-full">
         {/* Always show the first ProjectCard */}

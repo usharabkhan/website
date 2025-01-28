@@ -3,6 +3,7 @@ import Shad_Recruitment_Image from "../assets/screenshots/shad_recruitment.jpg"
 import ucalgary_social_media from "../assets/screenshots/ucalgary_social_media.png"
 import portfolio_website from "../assets/screenshots/portfolio_website.png"
 import PSS_Logo from "../assets/logos/pss.jpg"
+import AASEE_Logo from "../assets/logos/aasee.jpg"
 
 export const bio = "I am a curious individual with experience in Software and Fullstack Development, and particular interest in Cloud Computing as I actively pursue certifications in the field. Having worked and performed well in teams related to academics, extracurriculars, and work, I have proven to be a valuable team player who brings in the positive energy and the necessary skills.\n" +
 "\nAlong with 3 years of experience in Object Oriented Programming using Java, I have experience in Mobile and Web development using React.js, React Native, and TypeScript. I have also worked with relational databases like MySQL, SQLite, and PostgreSQL.\n"
@@ -77,9 +78,29 @@ export const projects = [
     },
 ]
 
+export const contributions = [
+    {
+        logo: PSS_Logo,
+        title: "Muslim Students Association",
+        role: "Fullstack Web Developer",
+        date: "December 2024 - Present",
+        description: "Developing a desktop application to manage memberships and events.",
+        technologies: ["NextJS", "MongoDB", "Tailwind CSS"],
+        link: ""
+    },
+    {
+        logo: AASEE_Logo,
+        title: "Association for the Advancement of Science & Engineering",
+        role: "Web Developer",
+        date: "November 2024 - Present",
+        description: "Developing and maintaining the website for the student club.",
+        technologies: ["WordPress", "PHP", "HTML", "CSS" ],
+        link: "https://aasee.ca"
+    },
+]
 export const toolkit = [
-    ["React.js", "React Native", "HTML", "CSS", "JavaScript", "TypeScript", "WordPress"],
-    ["Java", "Python", "REST API", "MySQL", "SQLite", "PostgreSQL", "Node.js", "Express.js"],
+    ["React.js", "React Native", "HTML", "CSS", "JavaScript", "TypeScript", "WordPress", "PHP", "NextJS"],
+    ["Java", "Python", "REST API", "MySQL", "SQLite", "PostgreSQL", "MongoDB", "Node.js", "Express.js"],
     ["JavaFX", "Pandas", "PySpark", "GSAP", "Django", "Tailwind CSS"],
     ["Azure", "Figma", "Vite", "Git", "VSCode", "IntelliJ", "Eclipse"],
 ]
@@ -92,6 +113,7 @@ export const ToolkitImages: Record<string, string> = {
     "MySQL" : "mysql/mysql-original.svg",
     "SQLite" : "sqlite/sqlite-original.svg",
     "PostgreSQL" : "postgresql/postgresql-original.svg",
+    "MongoDB" : "mongodb/mongodb-original.svg",
     "Node.js" : "nodejs/nodejs-original.svg",
     "Express.js" : "express/express-original.svg",
     // FRONTEND
@@ -101,6 +123,8 @@ export const ToolkitImages: Record<string, string> = {
     "TypeScript" : "typescript/typescript-original.svg",
     "WordPress" : "wordpress/wordpress-plain.svg",
     "JavaFX" : "java/java-original.svg",
+    "NextJS" : "nextjs/nextjs-original.svg",
+    "PHP" : "php/php-original.svg",
     // TOOLS
     "Pandas" : "pandas/pandas-original.svg",
     "PySpark" : "apachespark/apachespark-original.svg",

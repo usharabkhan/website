@@ -1,6 +1,5 @@
 import { Flex, Text } from "@radix-ui/themes"
 import { MdOutlineWavingHand  } from "react-icons/md";
-import MyHeading from "../common/heading";
 import Socials from "../common/socials";
 import MyImage from "../../assets/image/me.png"
 import RollingText from "./RollingText";
