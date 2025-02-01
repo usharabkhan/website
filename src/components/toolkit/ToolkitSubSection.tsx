@@ -26,7 +26,7 @@ export default function ToolkitSubSection(props: ToolkitSubSectionProps) {
       {/* Header */}
       <Flex
         onClick={toggleOpen}
-        className="cursor-pointer p-4"
+        className="cursor-pointer p-2 bg-container border-l-2 border-l-textPrimary rounded-l-lg"
         align="center"
         justify="between"
       >
@@ -34,7 +34,7 @@ export default function ToolkitSubSection(props: ToolkitSubSectionProps) {
         <ChevronButton isOpen={isOpen} />
       </Flex>
       
-      <hr className="border border-lg w-full opacity-30"/>
+      {/* <hr className="border border-lg w-full opacity-30"/> */}
 
       {/* Collapsible Content */}
       <div
