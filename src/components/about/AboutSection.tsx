@@ -27,7 +27,7 @@ export default function AboutSection() {
         }
     }, []);
     return(
-        <div id="home" className="p-5 min-h-fit sm:p-10 w-[450px] mt-10 border-2 bg-black rounded-xl">
+        <div id="home" className="p-5 min-h-fit sm:p-10 w-[450px] mt-10 bg-container border-l-4 border-l-textPrimary rounded-l-lg">
             <div className="flex flex-col items-center justify-center text-textPrimary gap-4">
                 <Flex gap="3" align="center">
                     {/* MOBILE IMAGE */}

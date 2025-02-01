@@ -29,16 +29,20 @@ function App() {
 
   return (
     <div className="flex flex-col min-h-screen bg-background overflow-x-hidden ">
-      <Header className={`fixed top-0 left-0 w-full z-10 bg-background transition-transform duration-300 ${showHeader ? 'translate-y-0' : '-translate-y-full'}`} />
+      <Header className={`fixed top-0 left-0 w-full z-10 bg-background`} />
       
-      <div className="flex flex-col lg:flex-row h-screen">
+      <div className="flex flex-col lg:flex-row h-screen items-center">
+        
         {/* Fixed AboutSection */}
-        <Flex width="40%" align="center" justify="end" className="p-5">
+        <Flex width="40%" align="center" justify="end" className="p-5 mt-5">
           <AboutSection />
         </Flex>
 
         {/* Scrollable Content */}
-        <div className="w-[60%] h-full overflow-y-auto bg-black">
+        <div 
+          className="w-[60%] min-h-full lg:h-full 
+                      overflow-y-hidden lg:overflow-y-auto 
+                    bg-background border-l-2">
           <div className="p-5">
             <hr className="mx-5 opacity-70" />
             <ProjectSection />
@@ -48,10 +52,9 @@ function App() {
             <ToolkitSection />
             {/* <hr className="mx-10 opacity-70 mt-5" /> */}
           </div>
-          
         </div>
-      </div>
 
+      </div>
 
     </div>
   );
