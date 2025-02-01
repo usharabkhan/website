@@ -83,7 +83,7 @@ export const contributions = [
         logo: PSS_Logo,
         title: "Muslim Students Association",
         role: "Fullstack Web Developer",
-        date: "December 2024 - Present",
+        date: "Dec 2024 - Present",
         description: "Developing a desktop application to manage memberships and events.",
         technologies: ["NextJS", "MongoDB", "Tailwind CSS"],
         link: ""
@@ -92,7 +92,7 @@ export const contributions = [
         logo: AASEE_Logo,
         title: "Association for the Advancement of Science & Engineering",
         role: "Web Developer",
-        date: "November 2024 - Present",
+        date: "Nov 2024 - Present",
         description: "Developing and maintaining the website for the student club.",
         technologies: ["WordPress", "PHP", "HTML", "CSS" ],
         link: "https://aasee.ca"

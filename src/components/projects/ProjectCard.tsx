@@ -10,6 +10,7 @@ export default function ProjectCard({...props}){
             direction={{initial: "column-reverse", md: "row"}}
             className="w-full bg-container border-l-4 border-l-textPrimary rounded-lg"
             maxHeight={{initial: "auto", md: "200px"}}
+            width="100%"
         >
             <Flex direction="column" justify="between" className="w-full mr-2 p-2" gap="2">
                 <Flex direction="column" className="w-full" gap="2">

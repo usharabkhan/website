@@ -8,9 +8,11 @@ export default function ProjecTitle( { data } : any) {
             <Flex direction="row" align="center" gap="2" justify={{initial: "center", md: "start"}} 
                 className="w-full text-white font-bold hover:underline hover:cursor-pointer">
                 {/* TITLE */}
-                <Text size="4" as="span" className=" text-white">{data.title}</Text>
-                {/* GIT BUTTON */}
-                <IoOpenOutline className=" text-white"/>
+                <Text size="4" as="span" className=" text-white">
+                    {data.title}
+                    {/* GIT BUTTON */}
+                    <IoOpenOutline/>    
+                </Text>
             </Flex>
         </Link>
     )

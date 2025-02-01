@@ -37,9 +37,9 @@ export default function RollingText() {
     }, [currentIndex, roles]);
 
     return (
-        <Flex id="sub-heading" align="center"  className="flex-wrap text-xl sm:text-2xl">
-            <Text as="span" size="5">I am Usharab, an aspiring&nbsp;</Text>
-            <Text id="rolling-text" as="span" size="5" className="text-heading font-bold"/>
+        <Flex id="sub-heading" align="center"  className="flex-wrap">
+            <Text as="span" size={{initial: "4", md: "5"}}>I am Usharab, an aspiring&nbsp;</Text>
+            <Text id="rolling-text" as="span" size={{initial: "4", md: "5"}} className="text-heading font-bold"/>
         </Flex>
     );
 };

@@ -13,7 +13,7 @@ export default function ContributionCard({data} : {data: Contribution}){
             {/* OTHER DETAILS */}
             <Flex direction="column" gap="3" className="w-full">
                 {/* HEADER */}
-                <Flex justify="between" gap="3">
+                <Flex justify="between" gap={{initial: "0", md: "2"}} direction={{initial: "column", md: "row"}} className="border-b-2">
                     {/* TITLE */}
                     <Flex className="" direction="column">
                         <Link href={data.link} target="_blank" >
@@ -24,23 +24,23 @@ export default function ContributionCard({data} : {data: Contribution}){
                         <Text>
                             {data.role}
                         </Text>
-                        <hr className="mt-1"/>
                     </Flex>
                     {/* DATE */}
-                    <Flex className="" justify="end">
+                    <Flex className="" justify={{initial: "start", md: "end"}}>
                         <Text  weight="bold">
                             {data.date}
                         </Text>
                     </Flex>
+                    {/* <hr className="mt-1"/> */}
                 </Flex>
                 {/* BODY */}
-                <Flex gap="3" justify="between">
+                <Flex gap="3" justify="between" direction={{initial: "column", md: "row"}}>
                     {/* DESCRIPTION */}
                     <Flex>
                         {data.description}
                     </Flex>
                     {/* TECH STACK */}
-                    <Flex gap="2" wrap="wrap" justify="end" >
+                    <Flex gap="2" wrap="wrap" justify={{initial: "start", md:"end"}} >
                         {data.technologies.map((tech, index) => (
                             <TechnologyPill key={index} text={tech}/>
                         ))}

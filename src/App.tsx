@@ -34,15 +34,15 @@ function App() {
       <div className="flex flex-col lg:flex-row h-screen items-center">
         
         {/* Fixed AboutSection */}
-        <Flex width="40%" align="center" justify="end" className="p-5 mt-5">
+        <Flex width={{md: "40%"}} align="center" justify="end" className="p-10 lg:p-5 mt-5">
           <AboutSection />
         </Flex>
 
         {/* Scrollable Content */}
         <div 
-          className="w-[60%] min-h-full lg:h-full 
-                      overflow-y-hidden lg:overflow-y-auto 
-                    bg-background border-l-2">
+          className="lg:w-[60%] min-h-full lg:h-full 
+                      lg:overflow-y-auto 
+                    bg-background lg:border-l-2">
           <div className="p-5">
             <hr className="mx-5 opacity-70" />
             <ProjectSection />

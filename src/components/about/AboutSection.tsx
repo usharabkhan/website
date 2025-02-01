@@ -10,28 +10,29 @@ import { gsap } from "gsap";
 
 export default function AboutSection() {
 
-    useEffect(() => {
-        const tl = gsap.timeline();
-        tl.fromTo("#my-image", 
-            {opacity: 0, x: -50}, 
-            {duration: 1, opacity: 1, x: 0, ease: "power3.inOut"}
-        );
-        tl.fromTo("#heading, #sub-heading, #my-tags, #lets-connect", 
-            {opacity: 0, x: +50}, 
-            {duration: 0.8, opacity: 1, x: 0, ease: "power3.inOut", stagger: 0.4, delay: -1} 
-        );
-        return () => {
+    // useEffect(() => {
+    //     const tl = gsap.timeline();
+    //     tl.fromTo("#my-image", 
+    //         {opacity: 0, x: -50}, 
+    //         {duration: 1, opacity: 1, x: 0, ease: "power3.inOut"}
+    //     );
+    //     tl.fromTo("#heading, #sub-heading, #my-tags, #lets-connect", 
+    //         {opacity: 0, x: +50}, 
+    //         {duration: 0.8, opacity: 1, x: 0, ease: "power3.inOut", stagger: 0.4, delay: -1} 
+    //     );
+    //     return () => {
             
-            tl.kill();
-            console.log("Killed");
-        }
-    }, []);
+    //         tl.kill();
+    //         console.log("Killed");
+    //     }
+    // }, []);
     return(
-        <div id="home" className="p-5 min-h-fit sm:p-10 w-[450px] mt-10 bg-container border-l-4 border-l-textPrimary rounded-l-lg">
-            <div className="flex flex-col items-center justify-center text-textPrimary gap-4">
-                <Flex gap="3" align="center">
-                    {/* MOBILE IMAGE */}
-                    <img id="my-image" src={MyImage} className="h-[150px] "/>
+        <div id="home" className="p-5 min-h-fit sm:p-10 w-auto lg:w-[450px] mt-10 bg-container border-l-4 border-l-textPrimary rounded-l-lg">
+            <Flex direction="column" align="center" justify="center" gap="4" className="text-textPrimary">
+
+                <Flex gap="3" align="center" >
+                    {/* MY IMAGE */}
+                    <img id="my-image" src={MyImage} className="h-[100px] lg:h-[150px] "/>
 
                     <div id="heading" className="">
                         {/* HEADING */}
@@ -56,7 +57,7 @@ export default function AboutSection() {
                 <div id="lets-connect" className="">
                     <Socials/>
                 </div>
-            </div>
+            </Flex>
         </div>
     );
 }
