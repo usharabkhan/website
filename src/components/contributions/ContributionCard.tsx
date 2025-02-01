@@ -4,7 +4,7 @@ import TechnologyPill from "../projects/TechnologyPill";
 
 export default function ContributionCard({data} : {data: Contribution}){
     return (
-        <Flex className="w-full bg-container text-textPrimary p-3 border-l-4 border-l-textPrimary rounded-lg" gap="3">
+        <Flex className="w-full bg-container text-textPrimary p-3 border-l-2 border-l-textPrimary rounded-l-lg" gap="3">
             {/* LOGO */}
             <Flex>
                 <img src={data.logo} className="h-[40px] rounded-full"/>

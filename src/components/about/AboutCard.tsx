@@ -27,10 +27,10 @@ export default function AboutSection() {
     //     }
     // }, []);
     return(
-        <div id="home" className="p-5 min-h-fit sm:p-10 w-auto lg:w-[450px] mt-10 bg-container border-l-4 border-l-textPrimary rounded-l-lg">
+        <div id="home" className="p-5 min-h-fit sm:p-10 w-auto lg:w-[450px] mt-10 bg-container border-l-2 border-l-textPrimary rounded-l-lg">
             <Flex direction="column" align="center" justify="center" gap="4" className="text-textPrimary">
 
-                <Flex gap="3" align="center" >
+                <Flex gap="3" align="center">
                     {/* MY IMAGE */}
                     <img id="my-image" src={MyImage} className="h-[100px] lg:h-[150px] "/>
 

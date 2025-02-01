@@ -2,7 +2,7 @@ import Footer from './components/Footer';
 import Header from './components/header/Header';
 import ProjectSection from './components/projects/ProjectSection';
 import ToolkitSection from './components/toolkit/ToolkitSection';
-import AboutSection from './components/about/AboutSection';
+import AboutSection from './components/about/AboutCard';
 import { useEffect, useState } from 'react';
 import { Flex, ScrollArea } from '@radix-ui/themes';
 import ContributionSection from './components/contributions/ContributionSection';

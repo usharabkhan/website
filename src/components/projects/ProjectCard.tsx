@@ -8,7 +8,7 @@ export default function ProjectCard({...props}){
     return(
         <Flex 
             direction={{initial: "column-reverse", md: "row"}}
-            className="w-full bg-container border-l-4 border-l-textPrimary rounded-lg"
+            className="w-full bg-container border-l-2 border-l-textPrimary rounded-l-lg"
             maxHeight={{initial: "auto", md: "200px"}}
             width="100%"
         >
