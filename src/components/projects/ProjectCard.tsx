@@ -45,7 +45,7 @@ export default function ProjectCard({...props}){
             <Flex direction="column" >
                 <img 
                     src={data.image} 
-                    className="max-h-[100%] max-w-[300px] object-contain " 
+                    className="max-h-[100%] max-w-[100%] lg:max-w-[300px] object-contain " 
                 />
             </Flex>
         </Flex>

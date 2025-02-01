@@ -37,7 +37,7 @@ function ProjectSection() {
       {/* Title */}
       <Title>Projects</Title>
       {/* Project Cards */}
-      <Flex direction="column" align={{ initial: "center", lg: "start" }} gap="4" className="h-full w-full">
+      <Flex direction="column" align={{ initial: "center", lg: "start" }} gap={{initial: "5", md: "4"}} className="h-full w-full">
         {/* Always show the first ProjectCard */}
         <ProjectCard data={projects[0]} key={0} />
 
@@ -45,7 +45,7 @@ function ProjectSection() {
         <Flex
           ref={projectsRef}
           direction="column"
-          gap="4"
+          gap={{initial: "5", md: "4"}}
           overflow="hidden"
           maxHeight="0"
           className="w-full"

@@ -10,9 +10,9 @@ export default function ProjecTitle( { data } : any) {
                 {/* TITLE */}
                 <Text size="4" as="span" className=" text-white">
                     {data.title}
+                </Text>
                     {/* GIT BUTTON */}
                     <IoOpenOutline/>    
-                </Text>
             </Flex>
         </Link>
     )
