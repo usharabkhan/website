@@ -1,9 +1,9 @@
-import MyHeading from "./common/heading";
 import { FaHandPointUp } from "react-icons/fa";
 import Socials from "./common/socials";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
+import { Heading } from "./common/heading";
 
 export default function Footer(): JSX.Element{
     useEffect(() => {
@@ -27,7 +27,7 @@ export default function Footer(): JSX.Element{
     }, []);
     return(
         <div className="flex flex-col items-center justify-center p-5 text-white w-full h-fit" >
-            <MyHeading type="h2" title="Hire Me!" />
+            <Heading>Hire Me!</Heading>
             <Socials />
             <FaHandPointUp id="hand" size="50" className="text-yellow-400"/>
         </div>

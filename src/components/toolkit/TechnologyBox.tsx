@@ -21,7 +21,7 @@ export default function TechnologyBox ({text} : TechnologyBoxProps ){
             {url && <img src={url} height={40} width={40}/>}
             <Flex direction="column" className="text-regular">    
                 <Text weight="light" size="2">{text}</Text>
-                <Text weight="light" size="2">2 years</Text>
+                {/* <Text weight="light" size="2">2 years</Text> */}
             </Flex>
         </Flex>
     )

@@ -15,7 +15,7 @@ function App() {
             transition-opacity duration-300`} />
 
       
-      <div className="flex flex-col lg:flex-row h-screen items-center">
+      <div className="flex flex-col h-auto lg:flex-row lg:h-screen items-center">
         
         {/* Fixed AboutCard */}
         <Flex width={{md: "40%"}} align="center" justify="end" className="p-10 lg:p-5 mt-5">

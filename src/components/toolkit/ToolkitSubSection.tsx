@@ -7,16 +7,13 @@ import { SubHeading, Heading } from "../common/heading";
 interface ToolkitSubSectionProps {
   title: string;
   tools: string[];
+  isOpen: boolean;
+  toggleOpen: () => void;
 }
 
-export default function ToolkitSubSection(props: ToolkitSubSectionProps) {
-  const id = props.title.toLowerCase().replace(/ /g, "-") + "-sub";
-  const [isOpen, setIsOpen] = useState(false); // State to control collapse/expand
+export default function ToolkitSubSection({ title, tools, isOpen, toggleOpen }: ToolkitSubSectionProps) {
+  const id = title.toLowerCase().replace(/ /g, "-") + "-sub";
   const contentRef = useRef<HTMLDivElement>(null); // Ref for the collapsible content
-
-  const toggleOpen = () => {
-    setIsOpen(!isOpen);
-  };
 
   return (
     <Box id={id} as="div" className="gap-x-5">
@@ -27,7 +24,7 @@ export default function ToolkitSubSection(props: ToolkitSubSectionProps) {
         align="center"
         justify="between"
       >
-        <SubHeading>{props.title}</SubHeading>
+        <SubHeading>{title}</SubHeading>
         <ChevronButton isOpen={isOpen} />
       </Flex>
 
@@ -47,7 +44,7 @@ export default function ToolkitSubSection(props: ToolkitSubSectionProps) {
           wrap="wrap"
           justify={{initial: "center", md: "start"}}
         >
-          {props.tools.map((tool: string) => (
+          {tools.map((tool: string) => (
             <TechnologyBox key={tool} text={tool} />
           ))}
         </Flex>

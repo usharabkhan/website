@@ -2,9 +2,16 @@ import { toolkit } from "../../constants/data";
 import ToolkitSubSection from "./ToolkitSubSection";
 import { Flex } from "@radix-ui/themes";
 import { Heading } from "../common/heading";
+import { useState } from "react";
 
-function ToolkitSection () {
-    return(
+function ToolkitSection() {
+    const [openSection, setOpenSection] = useState(0); // First section open by default
+
+    const toggleSection = (index: number) => {
+        setOpenSection(prev => (prev === index ? -1 : index)); // Close if same, else open
+    };
+
+    return (
         <Flex 
             id="skills"
             direction="column"
@@ -15,18 +22,21 @@ function ToolkitSection () {
             <Flex
                 direction="column"
                 className="h-full"
-                maxWidth={{initial: "350px", md: "750px"}}
+                gap="5"
+                maxWidth={{ initial: "350px", md: "750px" }}
             >
-                <ToolkitSubSection title="Front End" tools={toolkit[0]} />
-                <br></br>
-                <ToolkitSubSection title="Back End" tools={toolkit[1]} />
-                <br></br>
-                <ToolkitSubSection title="Frameworks" tools={toolkit[2]} />
-                <br></br>
-                <ToolkitSubSection title="Tools" tools={toolkit[3]} />
+                {["Front End", "Back End", "Frameworks", "Tools"].map((title, index) => (
+                    <ToolkitSubSection 
+                        key={index}
+                        title={title} 
+                        tools={toolkit[index]} 
+                        isOpen={openSection === index} 
+                        toggleOpen={() => toggleSection(index)}
+                    />
+                ))}
             </Flex>
         </Flex>
-    )
+    );
 }
 
-export default ToolkitSection
+export default ToolkitSection;
