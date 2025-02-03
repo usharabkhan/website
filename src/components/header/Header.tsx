@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import MenuItem from './MenuItem';
 import { IoCloseOutline } from "react-icons/io5";
+import { OtherLogos } from '../../constants/data';
+import { Flex } from '@radix-ui/themes';
 
 export default function Header({ className }: { className: string }) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -13,12 +15,13 @@ export default function Header({ className }: { className: string }) {
     <header className={className}>
       {/* Desktop Menu */}
       <div className="hidden sm:flex flex-row justify-center">
-        <div className="flex flex-row mr-6">
-          <MenuItem title="About" scrollTo="about" />
-          <MenuItem title="Projects" scrollTo="projects" />
-          <MenuItem title="Contributions" scrollTo='contributions' />
-          <MenuItem title="Skills" scrollTo="skills" />
-        </div>
+          <Flex className="mr-6" align="center">
+            <MenuItem title="About" scrollTo="about" />
+            <MenuItem title="Projects" scrollTo="projects" />
+            <img src={OtherLogos['compsci']}  className="max-h-[30px] max-w-[30px]"/>
+            <MenuItem title="Contributions" scrollTo='contributions' />
+            <MenuItem title="Skills" scrollTo="skills" />
+          </Flex>
       </div>
 
       {/* Mobile Menu Button */}
