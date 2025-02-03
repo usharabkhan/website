@@ -14,10 +14,10 @@ export default function Header({ className }: { className: string }) {
       {/* Desktop Menu */}
       <div className="hidden sm:flex flex-row justify-center">
         <div className="flex flex-row mr-6">
-          <MenuItem title="About" scrollTo="home" />
+          <MenuItem title="About" scrollTo="about" />
           <MenuItem title="Projects" scrollTo="projects" />
-          <MenuItem title="Skills" scrollTo="skills" />
           <MenuItem title="Contributions" scrollTo='contributions' />
+          <MenuItem title="Skills" scrollTo="skills" />
         </div>
       </div>
 
@@ -48,10 +48,10 @@ export default function Header({ className }: { className: string }) {
         </button>
 
         <nav className="flex flex-col items-start ">
-          <MenuItem title="About" scrollTo="home" onPress={toggleDrawer}/>
+          <MenuItem title="About" scrollTo="about" onPress={toggleDrawer}/>
           <MenuItem title="Projects" scrollTo="projects" onPress={toggleDrawer}/>
-          <MenuItem title="Skills" scrollTo="skills" onPress={toggleDrawer}/>
           <MenuItem title="Contributions" scrollTo='contributions' onPress={toggleDrawer}/>
+          <MenuItem title="Skills" scrollTo="skills" onPress={toggleDrawer}/>
         </nav>
       </div>
 
