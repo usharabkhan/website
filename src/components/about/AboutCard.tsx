@@ -10,25 +10,25 @@ import { gsap } from "gsap";
 
 export default function AboutSection() {
 
-    // useEffect(() => {
-    //     const tl = gsap.timeline();
-    //     tl.fromTo("#my-image", 
-    //         {opacity: 0, x: -50}, 
-    //         {duration: 1, opacity: 1, x: 0, ease: "power3.inOut"}
-    //     );
-    //     tl.fromTo("#heading, #sub-heading, #my-tags, #lets-connect", 
-    //         {opacity: 0, x: +50}, 
-    //         {duration: 0.8, opacity: 1, x: 0, ease: "power3.inOut", stagger: 0.4, delay: -1} 
-    //     );
-    //     return () => {
+    useEffect(() => {
+        const tl = gsap.timeline();
+        tl.fromTo("#my-image", 
+            {opacity: 0, x: -50}, 
+            {duration: 1, opacity: 1, x: 0, ease: "power3.inOut"}
+        );
+        tl.fromTo("#heading, #sub-heading, #my-tags, #lets-connect", 
+            {opacity: 0, x: +50}, 
+            {duration: 0.8, opacity: 1, x: 0, ease: "power3.inOut", stagger: 0.4, delay: -1} 
+        );
+        return () => {
             
-    //         tl.kill();
-    //         console.log("Killed");
-    //     }
-    // }, []);
+            tl.kill();
+            console.log("Killed");
+        }
+    }, []);
     return(
-        <div id="home" className="p-5 min-h-fit sm:p-10 w-auto lg:w-[450px] mt-10 bg-container border-l-2 border-l-textPrimary rounded-l-lg">
-            <Flex direction="column" align="center" justify="center" gap="4" className="text-textPrimary">
+        <div id="home" className="p-5 min-h-fit sm:p-10 w-auto lg:w-[450px] mt-10 bg-container border-l-2 border-borderColor">
+            <Flex direction="column" align="center" justify="center" gap="4" className="text-regular">
 
                 <Flex gap="3" align="center">
                     {/* MY IMAGE */}
@@ -36,7 +36,7 @@ export default function AboutSection() {
 
                     <div id="heading" className="">
                         {/* HEADING */}
-                        <Text id="heading" as="div" size="6" weight="bold" className="flex flex-row items-center gap-x-2"> 
+                        <Text id="heading" as="div" size="6" className="flex flex-row items-center gap-x-2 text-subHeading"> 
                             Hi there!
                             <MdOutlineWavingHand className="text-yellow-200 animate-wave"/>
                         </Text>

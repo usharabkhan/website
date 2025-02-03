@@ -7,11 +7,12 @@ export default function ProjectCard({...props}){
 
     return(
         <Flex 
-            direction={{initial: "column-reverse", md: "row"}}
-            className="w-full bg-container border-l-2 border-l-textPrimary rounded-l-lg"
-            maxHeight={{initial: "auto", md: "200px"}}
+            direction={{ initial: "column-reverse", md: "row" }}
+            className="w-full bg-container border-l-2 border-borderColor "
+            maxHeight={{ initial: "auto", md: "200px" }}
             width="100%"
         >
+
             <Flex direction="column" justify="between" className="w-full mr-2 p-2" gap="2">
                 <Flex direction="column" className="w-full" gap="2">
 
@@ -19,15 +20,17 @@ export default function ProjectCard({...props}){
                     <Flex direction={{initial: "column", md: "row" }} justify="between" align="center" className="">
                         <ProjectTitle data={data}/>
                         {/* COMPLETION */}
-                        <Badge color={`${data.progress[0] == 'I' ? 'yellow' : 'jade'}`} variant="solid">
-                            {data.progress}
+                        <Badge color={`${data.progress[0] == 'I' ? 'yellow' : 'jade'}`} variant="solid" >
+                            <Text weight="light">
+                                {data.progress}
+                            </Text>
                         </Badge>
                         
                     </Flex>
                     
                     {/* DESCRIPTION */}
                     <Flex className="">
-                        <Text className="text-white">
+                        <Text weight="light" className="text-regular">
                             {data.description}
                         </Text>
                     </Flex>

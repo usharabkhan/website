@@ -1,29 +1,34 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}", // Include all source files
   ],
   theme: {
     extend: {
-      fontFamily:{
-        default: ['sans-serif', 'monospace'],
+      fontFamily: {
+        sans: ["Quicksand", "sans-serif"],
       },
       colors: {
-        background: '#002833',
-        primary: '#002029',
-        container: '#245C6A',
-        subContainer: '#90E0EF',
-        textPrimary: 'white',
-        heading: '#54DAFF',
-        button: '#C0D4D8',
+          background: 'white',
+          container: '#EDEDE9',
+          subContainer: '#FBFBFA',
+
+          heading: 'black',
+          subHeading: 'black',
+          regular: '#5B514A',
+
+          button: '#52B788',
+
+          borderColor: '#666666', 
       },
       keyframes: {
         wave: {
-          "0%": { transform: "rotate(0deg)" },
-          "25%": { transform: "rotate(15deg)" },
-          "50%": { transform: "rotate(-10deg)" },
-          "75%": { transform: "rotate(15deg)" },
-          "100%": { transform: "rotate(0deg)" },
+            "0%": { transform: "rotate(0deg)" },
+            "25%": { transform: "rotate(15deg)" },
+            "50%": { transform: "rotate(-10deg)" },
+            "75%": { transform: "rotate(15deg)" },
+            "100%": { transform: "rotate(0deg)" },
         },
       },
       animation: {

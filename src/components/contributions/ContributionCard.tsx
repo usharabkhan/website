@@ -4,7 +4,7 @@ import TechnologyPill from "../projects/TechnologyPill";
 
 export default function ContributionCard({data} : {data: Contribution}){
     return (
-        <Flex className="w-full bg-container text-textPrimary p-3 border-l-2 border-l-textPrimary rounded-l-lg" gap="3">
+        <Flex className="w-full bg-container text-regular p-3 border-l-2 border-borderColor " gap="3">
             {/* LOGO */}
             <Flex>
                 <img src={data.logo} className="h-[40px] rounded-full"/>
@@ -17,7 +17,7 @@ export default function ContributionCard({data} : {data: Contribution}){
                     {/* TITLE */}
                     <Flex className="" direction="column">
                         <Link href={data.link} target="_blank" >
-                            <Text weight="bold" className="text-textPrimary hover:underline">
+                            <Text weight="regular" className="text-subHeading hover:underline">
                                 {data.title}
                             </Text>
                         </Link>
@@ -27,7 +27,7 @@ export default function ContributionCard({data} : {data: Contribution}){
                     </Flex>
                     {/* DATE */}
                     <Flex className="" justify={{initial: "start", md: "end"}}>
-                        <Text  weight="bold">
+                        <Text weight="regular" className="text-subHeading">
                             {data.date}
                         </Text>
                     </Flex>

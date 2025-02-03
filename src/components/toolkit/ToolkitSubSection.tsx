@@ -1,9 +1,6 @@
 import { Box, Flex } from "@radix-ui/themes";
 import TechnologyBox from "./TechnologyBox";
-import MyHeading from "../common/heading";
-import { useEffect, useState, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useState, useRef } from "react";
 import ChevronButton from "../common/chevron";
 import { SubTitle, Title } from "../common/title";
 
@@ -26,15 +23,13 @@ export default function ToolkitSubSection(props: ToolkitSubSectionProps) {
       {/* Header */}
       <Flex
         onClick={toggleOpen}
-        className="cursor-pointer p-2 bg-container border-l-2 border-l-textPrimary rounded-l-lg"
+        className="cursor-pointer p-2 bg-container border-l-2 border-borderColor "
         align="center"
         justify="between"
       >
         <SubTitle>{props.title}</SubTitle>
         <ChevronButton isOpen={isOpen} />
       </Flex>
-      
-      {/* <hr className="border border-lg w-full opacity-30"/> */}
 
       {/* Collapsible Content */}
       <div

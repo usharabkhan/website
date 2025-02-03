@@ -1,6 +1,5 @@
 import { toolkit } from "../../constants/data";
 import ToolkitSubSection from "./ToolkitSubSection";
-import MyHeading from "../common/heading";
 import { Flex } from "@radix-ui/themes";
 import { Title } from "../common/title";
 

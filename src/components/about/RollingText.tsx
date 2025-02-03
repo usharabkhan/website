@@ -38,8 +38,8 @@ export default function RollingText() {
 
     return (
         <Flex id="sub-heading" align="center"  className="flex-wrap">
-            <Text as="span" size={{initial: "4", md: "5"}}>I am Usharab, an aspiring&nbsp;</Text>
-            <Text id="rolling-text" as="span" size={{initial: "4", md: "5"}} className="text-heading font-bold"/>
+            <Text as="span" weight="light" size={{initial: "4", md: "5"}}>I am Usharab, an aspiring&nbsp;</Text>
+            <Text id="rolling-text" as="span" size={{initial: "4", md: "5"}} className="text-heading"/>
         </Flex>
     );
 };

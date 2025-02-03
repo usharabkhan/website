@@ -62,8 +62,6 @@ export default function Header({ className }: { className: string }) {
           onClick={toggleDrawer}
         ></div>
       )}
-      
-      <hr></hr>
     </header>
   );
 }

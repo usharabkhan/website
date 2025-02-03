@@ -15,13 +15,13 @@ export default function TechnologyBox ({text} : TechnologyBoxProps ){
         <Flex 
             align="center" 
             gap="2"
-            className="bg-container border-l-textPrimary border-l-4 rounded p-2"
+            className="bg-container border-borderColor border-l-2 p-2"
         >
 
             {url && <img src={url} height={40} width={40}/>}
-            <Flex direction="column" className="text-textPrimary">    
-                <Text size="2">{text}</Text>
-                <Text size="2">2 years</Text>
+            <Flex direction="column" className="text-regular">    
+                <Text weight="light" size="2">{text}</Text>
+                <Text weight="light" size="2">2 years</Text>
             </Flex>
         </Flex>
     )

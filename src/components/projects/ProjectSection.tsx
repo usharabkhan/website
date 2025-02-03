@@ -60,7 +60,10 @@ function ProjectSection() {
 
         {/* Show All / Show Less Button */}
         <button
-          className="flex items-center justify-center w-full py-3 px-6 text-sm font-medium text-white bg-container rounded-lg shadow hover:opacity-80 focus:outline-none focus:ring focus:ring-indigo-300 transition-transform duration-300"
+          className="flex items-center justify-center w-full py-3 px-6 text-sm 
+          text-subHeading bg-container shadow 
+          hover:opacity-80 focus:outline-none focus:ring-1 focus:ring-borderColor 
+          transition-transform duration-300"
           onClick={() => setShowAll((prev) => !prev)}
         >
           <span>{showAll ? "Show Less" : "Show More"}</span>
