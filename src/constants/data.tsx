@@ -6,27 +6,28 @@ import PSS_Logo from "../assets/logos/pss.jpg"
 import MSA_Logo from "../assets/logos/msa-logo.jpeg"
 import AASEE_Logo from "../assets/logos/aasee.jpg"
 
-export const bio = "I am a curious individual with experience in Software and Fullstack Development, and particular interest in Cloud Computing as I actively pursue certifications in the field. Having worked and performed well in teams related to academics, extracurriculars, and work, I have proven to be a valuable team player who brings in the positive energy and the necessary skills.\n" +
-"\nAlong with 3 years of experience in Object Oriented Programming using Java, I have experience in Mobile and Web development using React.js, React Native, and TypeScript. I have also worked with relational databases like MySQL, SQLite, and PostgreSQL.\n"
+export const bio = "I'm a Full-Stack Developer with a passion for Cloud Computing and a strong background in Java, React.js, React Native, TypeScript, and Tailwind CSS. With experience in both relational and non-relational databases, I build scalable and efficient applications."+
+
+"\n\nBeyond coding, I thrive in team environments, bringing not just technical expertise but also a positive and collaborative mindset. Check out my projects below, or feel free to reach out!"
 
 
 export const roles = ["Software Engineer", "Fullstack Developer", "Cloud Developer"]
 export const projects = [
-    // {
-    //     title: "Portfolio Website ",
-    //     description: "A website to share my experience, skills, and projects.",
-    //     technologies: ["TypeScript", "React.js", "Tailwind CSS", "Git"],
-    //     url: "https://github.com/usharabkhan/website",
-    //     demoUrl: "",
-    //     bullets: [
-    //         "Elegant styling using a professional color palette",
-    //         "Responsive design for all devices",
-    //         "Animation libraries for smooth transitions",
-    //     ],
-    //     image: portfolio_website,
-    //     logo: "",
-    //     progress: "In Progress"
-    // },
+    {
+        title: "Portfolio Website ",
+        description: "A website to share my experience, skills, and projects.",
+        technologies: ["TypeScript", "React.js", "Tailwind CSS", "Git"],
+        url: "https://github.com/usharabkhan/website",
+        demoUrl: "",
+        bullets: [
+            "Elegant styling using a professional color palette",
+            "Responsive design for all devices",
+            "Animation libraries for smooth transitions",
+        ],
+        image: portfolio_website,
+        logo: "",
+        progress: "In Progress"
+    },
     {
         title: "Social Media Interface",
         description: "A social media platform for students to connect and share experiences. (Course Project)",

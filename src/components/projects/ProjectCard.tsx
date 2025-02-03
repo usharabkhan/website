@@ -11,7 +11,7 @@ export default function ProjectCard({...props}){
             className="w-full bg-container border-l-2 border-borderColor"
         >
 
-            <Flex direction="column" justify="between" className="w-full mr-2 p-2" gap="2">
+            <Flex direction="column" justify="between" className="w-full mr-2 p-2 " gap="2">
                 <Flex direction="column" className="w-full" gap="2">
 
                     {/* HEADER */}
