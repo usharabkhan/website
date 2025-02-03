@@ -1,6 +1,6 @@
 import { Box, Flex } from "@radix-ui/themes";
 import TechnologyBox from "./TechnologyBox";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import ChevronButton from "../common/chevron";
 import { SubHeading, Heading } from "../common/heading";
 
@@ -14,7 +14,16 @@ interface ToolkitSubSectionProps {
 export default function ToolkitSubSection({ title, tools, isOpen, toggleOpen }: ToolkitSubSectionProps) {
   const id = title.toLowerCase().replace(/ /g, "-") + "-sub";
   const contentRef = useRef<HTMLDivElement>(null); // Ref for the collapsible content
-
+  const [maxHeight, setMaxHeight] = useState(isOpen ? "auto" : "0px");
+  
+  useEffect(() => {
+    if (isOpen) {
+      setMaxHeight(`${contentRef.current?.scrollHeight}px`);
+    } else {
+      setMaxHeight("0px");
+    }
+  }, [isOpen]);
+  
   return (
     <Box id={id} as="div" className="gap-x-5">
       {/* Header */}
@@ -32,11 +41,7 @@ export default function ToolkitSubSection({ title, tools, isOpen, toggleOpen }: 
       <div
         ref={contentRef}
         className="overflow-hidden transition-all duration-500"
-        style={{
-          maxHeight: isOpen
-            ? `${contentRef.current?.scrollHeight}px`
-            : "0px",
-        }}
+        style={{maxHeight}}
       >
         <br />
         <Flex
