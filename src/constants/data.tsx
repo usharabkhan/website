@@ -101,11 +101,47 @@ export const contributions = [
     },
 ]
 export const toolkit = [
-    ["React.js", "React Native", "HTML", "CSS", "JavaScript", "TypeScript", "WordPress", "PHP", "NextJS"],
-    ["Java", "Python", "REST API", "MySQL", "SQLite", "PostgreSQL", "MongoDB", "Node.js", "Express.js"],
-    ["JavaFX", "Pandas", "PySpark", "GSAP", "Django", "Tailwind CSS"],
-    ["Azure", "Figma", "Vite", "Git", "VSCode", "IntelliJ", "Eclipse"],
-]
+    {
+        "HTML": "4 years",
+        "CSS": "4 years",
+        "JavaScript": "2 years",
+        "React.js": "2 years",
+        "TypeScript": "1 year",
+        "React Native": "1 year",
+        "WordPress": "< 1 year",
+        "PHP": "< 1 year",
+        "NextJS": "< 1 year"
+    },
+    {
+        "Java": "4 years",
+        "SQLite": "4 years",
+        "Python": "2 years",
+        "REST API": "2 years",
+        "MySQL": "2 years",
+        "PostgreSQL": "1 year",
+        "MongoDB": "< 1 year",
+        "Node.js": "< 1 year",
+        "Express.js": "< 1 year"
+    },
+    {
+        "JavaFX": "3 years",
+        "Django": "1 year",
+        "GSAP": "< 1 year",
+        "Pandas": "< 1 year",
+        "PySpark": "< 1 year",
+        "Tailwind CSS": "< 1 year"
+    },
+    {
+        "VSCode": "4 years",
+        "IntelliJ": "4 years",
+        "Git": "4 years",
+        "Eclipse": "3 years",
+        "Azure": "1 year",
+        "Figma": "< 1 year",
+        "Vite": "< 1 year",
+    }
+];
+
 
 export const baseUrl = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/"
 export const ToolkitImages: Record<string, string> = {

@@ -6,7 +6,7 @@ import { SubHeading, Heading } from "../common/heading";
 
 interface ToolkitSubSectionProps {
   title: string;
-  tools: string[];
+  tools: Record<string, string | undefined>;
   isOpen: boolean;
   toggleOpen: () => void;
 }
@@ -49,8 +49,8 @@ export default function ToolkitSubSection({ title, tools, isOpen, toggleOpen }: 
           wrap="wrap"
           justify={{initial: "center", md: "start"}}
         >
-          {tools.map((tool: string) => (
-            <TechnologyBox key={tool} text={tool} />
+          {Object.entries(tools).map(([key, val]) => (
+            <TechnologyBox key={key} text={key} experience={val? val : ""}/>
           ))}
         </Flex>
       </div>
