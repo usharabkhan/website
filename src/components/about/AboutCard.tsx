@@ -43,7 +43,7 @@ export default function AboutCard() {
                         {/* HEADING */}
                         <Text id="heading" as="div" size="6" className="flex flex-row items-center gap-x-2 text-subHeading"> 
                             Hi there!
-                            <MdOutlineWavingHand className="text-yellow-200 animate-wave"/>
+                            <MdOutlineWavingHand className="text-yellow-500 animate-wave"/>
                         </Text>
                         {/* SUB HEADING */}
                         <RollingText />
