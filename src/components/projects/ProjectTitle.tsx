@@ -5,14 +5,15 @@ export default function ProjecTitle( { data } : any) {
     return(
         
         <Link href={data.url} className="" >
-            <Flex direction="row" align="center" gap="2" justify={{initial: "center", md: "start"}} 
+            <Flex direction="row" align="center" justify={{initial: "center", md: "start"}} 
                 className="w-full text-subHeading hover:underline hover:cursor-pointer">
                 {/* TITLE */}
-                <Text size="4" as="span" weight="regular">
-                    {data.title}
-                </Text>
+                <Text size="4" as="div" weight="regular" align="center" className="flex items-center">
+                    {data.title}&nbsp;
                     {/* GIT BUTTON */}
-                    <IoOpenOutline/>    
+                    <span><IoOpenOutline/></span>
+                </Text>
+                      
             </Flex>
         </Link>
     )

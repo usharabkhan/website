@@ -11,21 +11,21 @@ export const bio = "I am a curious individual with experience in Software and Fu
 
 export const roles = ["Software Engineer", "Fullstack Developer", "Cloud Developer"]
 export const projects = [
-    {
-        title: "Portfolio Website ",
-        description: "A website to share my experience, skills, and projects.",
-        technologies: ["TypeScript", "React.js", "Tailwind CSS", "Git"],
-        url: "https://github.com/usharabkhan/website",
-        demoUrl: "",
-        bullets: [
-            "Elegant styling using a professional color palette",
-            "Responsive design for all devices",
-            "Animation libraries for smooth transitions",
-        ],
-        image: portfolio_website,
-        logo: "",
-        progress: "In Progress"
-    },
+    // {
+    //     title: "Portfolio Website ",
+    //     description: "A website to share my experience, skills, and projects.",
+    //     technologies: ["TypeScript", "React.js", "Tailwind CSS", "Git"],
+    //     url: "https://github.com/usharabkhan/website",
+    //     demoUrl: "",
+    //     bullets: [
+    //         "Elegant styling using a professional color palette",
+    //         "Responsive design for all devices",
+    //         "Animation libraries for smooth transitions",
+    //     ],
+    //     image: portfolio_website,
+    //     logo: "",
+    //     progress: "In Progress"
+    // },
     {
         title: "Social Media Interface",
         description: "A social media platform for students to connect and share experiences. (Course Project)",

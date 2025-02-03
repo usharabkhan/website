@@ -8,7 +8,7 @@ import { bio, OtherLogos } from "../../constants/data";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 
-export default function AboutSection() {
+export default function AboutCard() {
 
     useEffect(() => {
         const tl = gsap.timeline();
@@ -27,8 +27,14 @@ export default function AboutSection() {
         }
     }, []);
     return(
-        <div id="home" className="p-5 min-h-fit sm:p-10 w-auto lg:w-[450px] mt-10 bg-container border-l-2 border-borderColor">
-            <Flex direction="column" align="center" justify="center" gap="4" className="text-regular">
+        <div id="home" 
+            className="bg-container border-l-2 border-borderColor 
+                        p-5 mt-10 min-h-fit 
+                        max-w-[350px] lg:max-w-[450px]"
+        >
+            <Flex direction="column" align="center" justify="center" gap="4" className="text-regular"
+            // maxWidth={{initial: "350px", md: "450px"}}
+            >
 
                 <Flex gap="3" align="center">
                     {/* MY IMAGE */}

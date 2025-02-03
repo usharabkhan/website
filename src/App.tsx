@@ -41,10 +41,9 @@ function App() {
 
         {/* Scrollable Content */}
         <div 
-          className="bg-background  min-h-full  
+          className="bg-background min-h-full p-5 
                       lg:w-[60%] lg:h-full lg:overflow-y-auto 
                       lg:border-l-2 border-regular border-opacity-30">
-          <div className="p-5 border-2 border-black">
             <hr className="mx-5 opacity-70" />
             <ProjectSection />
             <hr className="mx-5 opacity-70" />
@@ -52,7 +51,6 @@ function App() {
             <hr className="mx-5 opacity-70" />
             <ToolkitSection />
             {/* <hr className="mx-10 opacity-70 mt-5" /> */}
-          </div>
         </div>
 
       </div>

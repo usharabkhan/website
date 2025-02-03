@@ -45,6 +45,7 @@ export default function ToolkitSubSection(props: ToolkitSubSectionProps) {
         <Flex
           gap="4"
           wrap="wrap"
+          justify={{initial: "center", md: "start"}}
         >
           {props.tools.map((tool: string) => (
             <TechnologyBox key={tool} text={tool} />

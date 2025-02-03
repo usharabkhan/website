@@ -9,8 +9,9 @@ export default function ProjectCard({...props}){
         <Flex 
             direction={{ initial: "column-reverse", md: "row" }}
             className="w-full bg-container border-l-2 border-borderColor "
-            maxHeight={{ initial: "auto", md: "200px" }}
-            width="100%"
+            // maxHeight={{ initial: "auto", md: "200px" }}
+            // maxWidth={{initial: "300px", md: "750px"}}
+            // width="100%"
         >
 
             <Flex direction="column" justify="between" className="w-full mr-2 p-2" gap="2">
@@ -45,7 +46,7 @@ export default function ProjectCard({...props}){
             </Flex>
 
             {/* PROJECT IMAGE */}
-            <Flex direction="column" >
+            <Flex direction="column" justify="center" className="lg:max-w-[40%]">
                 <img 
                     src={data.image} 
                     className="max-h-[100%] max-w-[100%] lg:max-w-[300px] object-contain " 

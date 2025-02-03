@@ -9,10 +9,14 @@ function ToolkitSection () {
             id="skills"
             direction="column"
             justify={{ initial: "center", lg: "start" }}
-            className="my-2 min-h-fit p-5 sm:p-10"
+            className="my-2 min-h-fit p-5 sm:p-10 w-full"
         >
             <Title>Toolkit</Title>
-            <div className="flex flex-col h-full w-full">
+            <Flex
+                direction="column"
+                className="h-full"
+                maxWidth={{initial: "350px", md: "750px"}}
+            >
                 <ToolkitSubSection title="Front End" tools={toolkit[0]} />
                 <br></br>
                 <ToolkitSubSection title="Back End" tools={toolkit[1]} />
@@ -20,7 +24,7 @@ function ToolkitSection () {
                 <ToolkitSubSection title="Frameworks" tools={toolkit[2]} />
                 <br></br>
                 <ToolkitSubSection title="Tools" tools={toolkit[3]} />
-            </div>
+            </Flex>
         </Flex>
     )
 }
