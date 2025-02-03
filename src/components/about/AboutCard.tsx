@@ -21,9 +21,7 @@ export default function AboutCard() {
             {duration: 0.8, opacity: 1, x: 0, ease: "power3.inOut", stagger: 0.4, delay: -1} 
         );
         return () => {
-            
             tl.kill();
-            console.log("Killed");
         }
     }, []);
     return(

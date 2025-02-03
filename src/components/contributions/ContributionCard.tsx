@@ -5,10 +5,10 @@ import Title from "../common/title";
 
 export default function ContributionCard({data} : {data: Contribution}){
     return (
-        <Flex className="w-full bg-container text-regular p-3 border-l-2 border-borderColor " gap="3">
-            {/* LOGO */}
+        <Flex className="w-full bg-container text-regular p-3 border-l-2 border-borderColor " gap={{initial: "0", md: "3"}}>
+            {/* LOGO FOR DESKTOP */}
             <Flex>
-                <img src={data.logo} className="h-[40px] rounded-full"/>
+                <img src={data.logo} className="h-[40px] rounded-full hidden lg:flex"/>
             </Flex>
 
             {/* OTHER DETAILS */}
@@ -16,33 +16,33 @@ export default function ContributionCard({data} : {data: Contribution}){
                 {/* HEADER */}
                 <Flex justify="between" gap={{initial: "0", md: "2"}} direction={{initial: "column", md: "row"}} className="border-b-2">
                     {/* TITLE */}
-                    <Flex className="" direction="column">
-                        {/* <Link href={data.link} target="_blank" >
-                            <Text weight="regular" className="text-subHeading hover:underline">
-                                {data.title}
-                            </Text>
-                        </Link> */}
-                        <Title title={data.title} url={data.link}/>
+                    <Flex align={{initial: "center", md: "start"}} justify="center" direction="column" >
+                        <Flex className="w-full" align="center" justify="center" gap="2">
+                            {/* MOBILE LOGO */}
+                            <img src={data.logo} className="h-[40px] w-[40px] rounded-full lg:hidden"/>
+                            <Title title={data.title} url={data.link}/>
+                        </Flex>
                         <Text>
                             {data.role}
                         </Text>
                     </Flex>
                     {/* DATE */}
-                    <Flex className="" justify={{initial: "start", md: "end"}}>
+                    <Flex className="" justify={{initial: "center", md: "end"}}>
                         <Text weight="regular" className="text-subHeading">
                             {data.date}
                         </Text>
                     </Flex>
-                    {/* <hr className="mt-1"/> */}
                 </Flex>
                 {/* BODY */}
                 <Flex gap="3" justify="between" direction={{initial: "column", md: "row"}}>
                     {/* DESCRIPTION */}
                     <Flex>
-                        {data.description}
+                        <Text align={{initial: "center", md:"left"}}>
+                            {data.description}
+                        </Text>
                     </Flex>
                     {/* TECH STACK */}
-                    <Flex gap="2" wrap="wrap" justify={{initial: "start", md:"end"}} >
+                    <Flex gap="2" wrap="wrap" justify={{initial: "center", md:"end"}} >
                         {data.technologies.map((tech, index) => (
                             <TechnologyPill key={index} text={tech}/>
                         ))}
