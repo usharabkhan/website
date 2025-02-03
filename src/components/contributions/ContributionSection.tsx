@@ -1,7 +1,7 @@
 import  ContributionCard from "./ContributionCard";
 import { Flex } from "@radix-ui/themes";
 import { contributions } from "../../constants/data";
-import { Title } from "../common/title";
+import { Heading } from "../common/heading";
 
 function ContributionSection() {
   return (
@@ -12,8 +12,7 @@ function ContributionSection() {
       className="gap-x-3 p-5 sm:p-10 w-full "
     >
 
-      <Title>Contributions</Title>
-      {/* <div className="h-[80%] w-full "> */}
+      <Heading>Contributions</Heading>
         {/* Contribution Cards */}
       <Flex direction="column" 
             align="center" justify="center" 
@@ -26,8 +25,6 @@ function ContributionSection() {
         ))}
           
       </Flex>
-      {/* </div> */}
-
     </Flex>
   );
 }

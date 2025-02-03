@@ -1,23 +1,28 @@
-import { Text } from "@radix-ui/themes"
+import { Flex, Text, Link } from "@radix-ui/themes";
+import { IoOpenOutline } from "react-icons/io5";
 
-export function Title( {children} : {children? : React.ReactNode}){
+export default function ProjecTitle( { title, url } : 
+{   
+    title: string,
+    url: string
+}) {
     return(
-        <Text
-            size="7"
-            className=" text-heading mb-6 text-center lg:text-left"
-        >
-        {children}
-      </Text>
-    )
-}
-
-export function SubTitle( {children} : {children? : React.ReactNode}){
-    return(
-        <Text
-            size="5"
-            className=" text-subHeading text-center lg:text-left"
-        >
-        {children}
-      </Text>
+        <Link href={url} className="hover:no-underline">
+            <Flex 
+                direction="row" 
+                align="center" 
+                justify={{ initial: "center", md: "start" }} 
+                className="w-full text-subHeading border-b-[1px] border-transparent hover:border-subHeading hover:cursor-pointer transition-all duration-300 ease-in-out"
+            >
+                {/* TITLE */}
+                <Text size="4" as="div" weight="regular" align="center" className="flex items-center">
+                    {title}&nbsp;
+                    {/* GIT BUTTON */}
+                    <span>
+                        <IoOpenOutline />
+                    </span>
+                </Text>
+            </Flex>
+        </Link>
     )
 }

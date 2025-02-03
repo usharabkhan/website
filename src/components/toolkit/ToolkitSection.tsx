@@ -1,7 +1,7 @@
 import { toolkit } from "../../constants/data";
 import ToolkitSubSection from "./ToolkitSubSection";
 import { Flex } from "@radix-ui/themes";
-import { Title } from "../common/title";
+import { Heading } from "../common/heading";
 
 function ToolkitSection () {
     return(
@@ -11,7 +11,7 @@ function ToolkitSection () {
             justify={{ initial: "center", lg: "start" }}
             className="my-2 min-h-fit p-5 sm:p-10 w-full"
         >
-            <Title>Toolkit</Title>
+            <Heading>Toolkit</Heading>
             <Flex
                 direction="column"
                 className="h-full"

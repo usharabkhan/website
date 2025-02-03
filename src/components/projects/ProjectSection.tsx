@@ -4,7 +4,7 @@ import { projects } from "../../constants/data";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ChevronDown } from "lucide-react";
-import { Title } from "../common/title";
+import { Heading } from "../common/heading";
 
 function ProjectSection() {
   const projectsRef = useRef<HTMLDivElement>(null); // Ref for the collapsible content
@@ -35,7 +35,7 @@ function ProjectSection() {
   return (
     <div id="projects" className="flex flex-col items-center lg:items-start justify-center my-2 min-h-fit p-5 sm:p-10">
       {/* Title */}
-      <Title>Projects</Title>
+      <Heading>Projects</Heading>
       {/* Project Cards */}
       <Flex direction="column" 
             align={{ initial: "center", lg: "start" }} 

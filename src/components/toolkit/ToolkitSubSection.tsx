@@ -2,7 +2,7 @@ import { Box, Flex } from "@radix-ui/themes";
 import TechnologyBox from "./TechnologyBox";
 import { useState, useRef } from "react";
 import ChevronButton from "../common/chevron";
-import { SubTitle, Title } from "../common/title";
+import { SubHeading, Heading } from "../common/heading";
 
 interface ToolkitSubSectionProps {
   title: string;
@@ -27,7 +27,7 @@ export default function ToolkitSubSection(props: ToolkitSubSectionProps) {
         align="center"
         justify="between"
       >
-        <SubTitle>{props.title}</SubTitle>
+        <SubHeading>{props.title}</SubHeading>
         <ChevronButton isOpen={isOpen} />
       </Flex>
 
