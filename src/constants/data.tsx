@@ -3,6 +3,7 @@ import Shad_Recruitment_Image from "../assets/screenshots/shad_recruitment.jpg"
 import ucalgary_social_media from "../assets/screenshots/ucalgary_social_media.png"
 import portfolio_website from "../assets/screenshots/portfolio_website.png"
 import PSS_Logo from "../assets/logos/pss.jpg"
+import MSA_Logo from "../assets/logos/msa-logo.jpeg"
 import AASEE_Logo from "../assets/logos/aasee.jpg"
 
 export const bio = "I am a curious individual with experience in Software and Fullstack Development, and particular interest in Cloud Computing as I actively pursue certifications in the field. Having worked and performed well in teams related to academics, extracurriculars, and work, I have proven to be a valuable team player who brings in the positive energy and the necessary skills.\n" +
@@ -80,7 +81,7 @@ export const projects = [
 
 export const contributions = [
     {
-        logo: PSS_Logo,
+        logo: MSA_Logo,
         title: "Muslim Students Association",
         role: "Fullstack Web Developer",
         date: "Dec 2024 - Present",

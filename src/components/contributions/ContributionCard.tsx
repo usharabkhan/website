@@ -1,6 +1,7 @@
 import { Flex, Link, Text } from "@radix-ui/themes";
 import { Contribution } from "../../constants/type";
 import TechnologyPill from "../projects/TechnologyPill";
+import Title from "../common/title";
 
 export default function ContributionCard({data} : {data: Contribution}){
     return (
@@ -16,11 +17,12 @@ export default function ContributionCard({data} : {data: Contribution}){
                 <Flex justify="between" gap={{initial: "0", md: "2"}} direction={{initial: "column", md: "row"}} className="border-b-2">
                     {/* TITLE */}
                     <Flex className="" direction="column">
-                        <Link href={data.link} target="_blank" >
+                        {/* <Link href={data.link} target="_blank" >
                             <Text weight="regular" className="text-subHeading hover:underline">
                                 {data.title}
                             </Text>
-                        </Link>
+                        </Link> */}
+                        <Title title={data.title} url={data.link}/>
                         <Text>
                             {data.role}
                         </Text>

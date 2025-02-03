@@ -1,7 +1,7 @@
 import { Flex, Text, Link } from "@radix-ui/themes";
 import { IoOpenOutline } from "react-icons/io5";
 
-export default function ProjecTitle( { title, url } : 
+export default function Title( { title, url } : 
 {   
     title: string,
     url: string
