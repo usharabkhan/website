@@ -27,7 +27,7 @@ export default function ProjectCard({...props}){
                     
                     {/* DESCRIPTION */}
                     <Flex className="">
-                        <Text weight="light" className="text-regular">
+                        <Text weight="light" className="text-regular text-justify lg:text-left">
                             {data.description}
                         </Text>
                     </Flex>

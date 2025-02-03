@@ -15,8 +15,8 @@ export const roles = ["Software Engineer", "Fullstack Developer", "Cloud Develop
 export const projects = [
     {
         title: "Portfolio Website ",
-        description: "A website to share my experience, skills, and projects.",
-        technologies: ["TypeScript", "React.js", "Tailwind CSS", "Git"],
+        description: "A website to highlight my experience, skills, and projects, featuring an interactive user interface with smooth animations.",
+        technologies: ["TypeScript", "React.js", "Tailwind CSS", "Git", "GSAP"],
         url: "https://github.com/usharabkhan/website",
         demoUrl: "",
         bullets: [
@@ -26,12 +26,12 @@ export const projects = [
         ],
         image: portfolio_website,
         logo: "",
-        progress: "In Progress"
+        progress: "January 2025"
     },
     {
         title: "Social Media Interface",
-        description: "A social media platform for students to connect and share experiences. (Course Project)",
-        technologies: ["TypeScript", "React.js", "Tailwind CSS"],
+        description: "Social platform for university students. Employed Task Centered System Design process to iteratively create an elegant UI/UX. (Course Project)",
+        technologies: ["TypeScript", "React.js", "Tailwind CSS", "Figma"],
         url: "https://github.com/ManrajSingh6/CPSC481-Social-Media-Network",
         demoUrl: "https://manrajsingh6.github.io/CPSC481-Social-Media-Network/#/login",
         bullets: [
@@ -45,7 +45,7 @@ export const projects = [
     },
     {
         title: "Recruitment Mobile Application",
-        description: "A mobile application to track summer program recruitment efforts.",
+        description: "Application to track school visits, emails, and recruitment progress, providing insights on students and schools reached. Integrated MySQL for backend data management.",
         technologies: ["TypeScript", "React Native", "Node.js", "Expo Router", "MySQL"],
         url: "https://github.com/usharabkhan/shad_recruitment",
         demoUrl: "",
@@ -62,7 +62,7 @@ export const projects = [
     },
     {
         title: "Membership Management System",
-        description: "A desktop application to streamline memberships and event registrations.",
+        description: "A JavaFX desktop application for the Pakistani Students' Society to manage memberships and event registrations, featuring a dashboard and member status cross-checking with SQLite integration.",
         technologies: ["Java", "JavaFX", "SQLite"],
         url: "https://github.com/usharabkhan/pss_mms",
         demoUrl: "n",
@@ -86,7 +86,7 @@ export const contributions = [
         title: "Muslim Students Association",
         role: "Fullstack Web Developer",
         date: "Dec 2024 - Present",
-        description: "Developing a desktop application to manage memberships and events.",
+        description: "Redesigning and implementing features for the club's website, focusing on enhancing functionality and user experience.",
         technologies: ["NextJS", "MongoDB", "Tailwind CSS"],
         link: ""
     },
@@ -95,7 +95,7 @@ export const contributions = [
         title: "Association for the Advancement of Science & Engineering",
         role: "Web Developer",
         date: "Nov 2024 - Present",
-        description: "Developing and maintaining the website for the student club.",
+        description: "Maintaining and updating a website that showcases STEM workshops for youth, allowing school teachers to view past work and donors to make contributions.",
         technologies: ["WordPress", "PHP", "HTML", "CSS" ],
         link: "https://aasee.ca"
     },
