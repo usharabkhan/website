@@ -12,13 +12,17 @@ export default function AboutCard() {
 
     useEffect(() => {
         const tl = gsap.timeline();
-        tl.fromTo("#my-image", 
+        tl.fromTo("#home", 
             {opacity: 0, x: -50}, 
             {duration: 1, opacity: 1, x: 0, ease: "power3.inOut"}
         );
-        tl.fromTo("#heading, #sub-heading, #my-tags, #lets-connect", 
+        tl.fromTo("#heading, #my-image, #sub-heading, #my-tags, #lets-connect", 
+            {opacity: 0, x: -50}, 
+            {duration: 0.8, opacity: 1, x: 0, ease: "power3.inOut", stagger: 0.1, delay: -1} 
+        );
+        tl.fromTo("#about, #projects, #contributions, #skills", 
             {opacity: 0, x: +50}, 
-            {duration: 0.8, opacity: 1, x: 0, ease: "power3.inOut", stagger: 0.4, delay: -1} 
+            {duration: 0.8, opacity: 1, x: 0, ease: "power3.inOut", stagger: 0.1, delay: -1} 
         );
         return () => {
             tl.kill();
@@ -30,10 +34,7 @@ export default function AboutCard() {
                         p-5 mt-10 min-h-fit 
                         max-w-[350px] lg:max-w-[450px]"
         >
-            <Flex direction="column" align="center" justify="center" gap="4" className="text-regular"
-            // maxWidth={{initial: "350px", md: "450px"}}
-            >
-
+            <Flex direction="column" align="center" justify="center" gap="4" className="text-regular">
                 <Flex gap="3" align="center">
                     {/* MY IMAGE */}
                     <img id="my-image" src={MyImage} className="h-[100px] lg:h-[150px] "/>
