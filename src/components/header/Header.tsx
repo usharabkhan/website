@@ -22,11 +22,11 @@ export default function Header({ className }: { className: string }) {
       </div>
 
       {/* Mobile Menu Button */}
-      <div className="sm:hidden flex justify-between items-center p-4">
-        <h1 className="text-xl text-textPrimary">Portfolio.</h1>
+      <div className="sm:hidden flex justify-between items-center p-4 text-heading">
+        <h1 className="text-xl">Portfolio.</h1>
         <button
           onClick={toggleDrawer}
-          className="text-xl focus:outline-none text-white"
+          className="text-xl focus:outline-none "
           aria-label="Toggle Menu"
         >
           ☰
@@ -41,7 +41,7 @@ export default function Header({ className }: { className: string }) {
       >
         <button
           onClick={toggleDrawer}
-          className="text-xl focus:outline-none text-white mx-4 pt-4"
+          className="text-xl focus:outline-none text-heading mx-4 pt-4"
           aria-label="Close Menu"
         >
           <IoCloseOutline />
