@@ -30,9 +30,14 @@ module.exports = {
             "75%": { transform: "rotate(15deg)" },
             "100%": { transform: "rotate(0deg)" },
         },
+        bounce: {
+          "0%, 100%": { transform: "translateY(0) rotate(180deg)" },
+          "50%": { transform: "translateY(-5px) rotate(180deg)" },
+        },
       },
       animation: {
         wave: "wave 2.5s infinite",
+        bounce: "bounce 2s infinite",
       },
       screens: {
         'xs': '480px', // Custom breakpoint for small screens

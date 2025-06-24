@@ -12,22 +12,23 @@ export const bio = "I'm a Full-Stack Developer with a passion for Cloud Computin
 
 
 export const roles = ["Software Engineer", "Fullstack Developer", "Cloud Developer"]
+
 export const projects = [
-    {
-        title: "Portfolio Website ",
-        description: "A website to highlight my experience, skills, and projects, featuring an interactive user interface with smooth animations.",
-        technologies: ["TypeScript", "React.js", "Tailwind CSS", "Git", "GSAP"],
-        url: "https://github.com/usharabkhan/website",
-        demoUrl: "",
-        bullets: [
-            "Elegant styling using a professional color palette",
-            "Responsive design for all devices",
-            "Animation libraries for smooth transitions",
-        ],
-        image: portfolio_website,
-        logo: "",
-        progress: "January 2025"
-    },
+    // {
+    //     title: "Portfolio Website ",
+    //     description: "A website to highlight my experience, skills, and projects, featuring an interactive user interface with smooth animations.",
+    //     technologies: ["TypeScript", "React.js", "Tailwind CSS", "Git", "GSAP"],
+    //     url: "https://github.com/usharabkhan/website",
+    //     demoUrl: "",
+    //     bullets: [
+    //         "Elegant styling using a professional color palette",
+    //         "Responsive design for all devices",
+    //         "Animation libraries for smooth transitions",
+    //     ],
+    //     image: portfolio_website,
+    //     logo: "",
+    //     progress: "January 2025"
+    // },
     {
         title: "Social Media Interface",
         description: "Social platform for university students. Employed Task Centered System Design process to iteratively create an elegant UI/UX. (Course Project)",
@@ -100,6 +101,7 @@ export const contributions = [
         link: "https://aasee.ca"
     },
 ]
+
 export const toolkit = [
     {
         "HTML": "4 years",
@@ -140,10 +142,10 @@ export const toolkit = [
         "Figma": "< 1 year",
         "Vite": "< 1 year",
     }
-];
-
+]
 
 export const baseUrl = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/"
+
 export const ToolkitImages: Record<string, string> = {
     // BACKEND
     "Java" : "java/java-original.svg",

@@ -5,6 +5,7 @@ import AboutCard from './components/about/AboutCard';
 import { Flex } from '@radix-ui/themes';
 import ContributionSection from './components/contributions/ContributionSection';
 import AboutSection from './components/about/AboutSection';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -35,7 +36,8 @@ function App() {
             <ContributionSection />
             <hr className="mx-5 opacity-70" />
             <ToolkitSection />
-            {/* <hr className="mx-10 opacity-70 mt-5" /> */}
+            <hr className="mx-10 opacity-70 mt-5" />
+            <Footer />
         </div>
 
       </div>
