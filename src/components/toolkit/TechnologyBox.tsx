@@ -22,7 +22,7 @@ export default function TechnologyBox ({text, experience} : TechnologyBoxProps )
             {url && <img src={url} height={40} width={40}/>}
             <Flex direction="column" className="text-regular">    
                 <Text weight="light" size="2">{text}</Text>
-                <Text weight="light" size="2">{experience}</Text>
+                {/* <Text weight="light" size="2">{experience}</Text> */}
             </Flex>
         </Flex>
     )

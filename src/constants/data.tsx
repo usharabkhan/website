@@ -1,11 +1,11 @@
 import PSS_mms from "../assets/screenshots/pss_mms.png"
 import Shad_Recruitment_Image from "../assets/screenshots/shad_recruitment.jpg"
 import ucalgary_social_media from "../assets/screenshots/ucalgary_social_media.png"
+import TABLEAU_Image from "../assets/screenshots/traffic_dashboard.png"
 import portfolio_website from "../assets/screenshots/portfolio_website.png"
 import PSS_Logo from "../assets/logos/pss.jpg"
 import MSA_Logo from "../assets/logos/msa-logo.jpeg"
 import AASEE_Logo from "../assets/logos/aasee.jpg"
-
 export const bio = "I'm a Full-Stack Developer with a passion for Cloud Computing and a strong background in Java, React.js, React Native, TypeScript, and Tailwind CSS. With experience in both relational and non-relational databases, I build scalable and efficient applications."+
 
 "\n\nBeyond coding, I thrive in team environments, bringing not just technical expertise but also a positive and collaborative mindset. Check out my projects below, or feel free to reach out!"
@@ -29,6 +29,19 @@ export const projects = [
     //     logo: "",
     //     progress: "January 2025"
     // },
+    {
+        title: "Traffic Incident Analysis Dashboard",
+        description: "A Tableau dashboard visualizing traffic incident data from Calgary, showcasing trends and patterns in incidents over time.",
+        technologies: ["Python", "PySpark", "Pandas", "Tableau"],
+        url: "https://public.tableau.com/app/profile/usharab.khan/viz/DATA501-Usharab_Ali/Dashboard?publish=yes",
+        demoUrl: "",
+        bullets: [
+            "",
+        ],
+        image: TABLEAU_Image,
+        logo: "",
+        progress: "April 2025", 
+    },
     {
         title: "Social Media Interface",
         description: "Social platform for university students. Employed Task Centered System Design process to iteratively create an elegant UI/UX. (Course Project)",
@@ -86,16 +99,16 @@ export const contributions = [
         logo: MSA_Logo,
         title: "Muslim Students Association",
         role: "Fullstack Web Developer",
-        date: "Dec 2024 - Present",
-        description: "Redesigning and implementing features for the club's website, focusing on enhancing functionality and user experience.",
-        technologies: ["NextJS", "MongoDB", "Tailwind CSS"],
+        date: "Jun 2025 - Present",
+        description: "Designing and implementing features for the club's website, focusing on enhancing functionality and user experience.",
+        technologies: ["NextJS", "PostgreSQL", "TypeScript", "Tailwind CSS"],
         link: ""
     },
     {
         logo: AASEE_Logo,
         title: "Association for the Advancement of Science & Engineering",
         role: "Web Developer",
-        date: "Nov 2024 - Present",
+        date: "Nov 2024 - May 2025",
         description: "Maintaining and updating a website that showcases STEM workshops for youth, allowing school teachers to view past work and donors to make contributions.",
         technologies: ["WordPress", "PHP", "HTML", "CSS" ],
         link: "https://aasee.ca"
@@ -182,7 +195,7 @@ export const ToolkitImages: Record<string, string> = {
 
 export const OtherLogos: Record<string, string> = {
     "uni" : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/University_of_Calgary_coat_of_arms_without_motto_scroll.svg/640px-University_of_Calgary_coat_of_arms_without_motto_scroll.svg.png",
-    "class": "https://static-00.iconduck.com/assets.00/graduation-cap-icon-2048x1341-x1cubwfl.png",
+    "class": "https://cdn-icons-png.flaticon.com/256/0/422.png",
     "compsci" : "https://cdn-icons-png.flaticon.com/512/6840/6840478.png",
     "datasci" : "https://cdn-icons-png.flaticon.com/512/2029/2029234.png",
     "microsoft" : "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
@@ -190,4 +203,5 @@ export const OtherLogos: Record<string, string> = {
     "React Native" : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
     "REST API" : "https://cdn-icons-png.flaticon.com/512/8681/8681370.png",
     "GSAP" : "https://i.vimeocdn.com/portrait/34768143_640x640?sig=f177f398fbd6f943578b3368c2fc677a1cafac361651c4b8c693f228a59fc819&v=1",
+    "Tableau": "https://w7.pngwing.com/pngs/815/646/png-transparent-tableau-full-logo-tech-companies-thumbnail.png",
 }
