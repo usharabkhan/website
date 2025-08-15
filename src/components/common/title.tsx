@@ -15,10 +15,10 @@ export default function Title( { title, url } :
                 className="w-full text-subHeading border-b-[1px] border-transparent hover:border-subHeading hover:cursor-pointer transition-all duration-300 ease-in-out"
             >
                 {/* TITLE */}
-                <Text size="4" as="div" weight="regular" align="center" className="flex items-center">
+                <Text size="4" as="div" weight="regular" align="center" >
                     {title}&nbsp;
                     {/* GIT BUTTON */}
-                    <span>
+                    <span className="inline-block">
                         <IoOpenOutline />
                     </span>
                 </Text>

@@ -1,6 +1,6 @@
 import  ContributionCard from "./ContributionCard";
 import { Flex } from "@radix-ui/themes";
-import { contributions } from "../../constants/data";
+import { contributions } from "../../constants/contributions";
 import { Heading } from "../common/heading";
 
 function ContributionSection() {

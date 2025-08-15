@@ -1,6 +1,7 @@
 import TechnologyPill from "./TechnologyPill"
 import { Badge, Flex, Text } from "@radix-ui/themes"
 import ProjectTitle from "../common/title"
+import { ImageOff } from "lucide-react";
 
 export default function ProjectCard({...props}){
     const data = props.data;
@@ -42,11 +43,16 @@ export default function ProjectCard({...props}){
             </Flex>
 
             {/* PROJECT IMAGE */}
-            <Flex direction="column" justify="center" className="lg:max-w-[40%]">
+            <Flex direction="column" justify="center" className="lg:max-w-[40%] w-full">
+                {data.image ? 
                 <img 
                     src={data.image} 
                     className="max-h-[100%] max-w-[100%] lg:max-w-[300px] object-contain" 
-                />
+                /> : 
+                <div>
+                    <ImageOff className="h-[50%] w-[50%] lg:max-w-[300px] object-contain mx-auto"/>
+                </div>
+                }
             </Flex>
         </Flex>
     )

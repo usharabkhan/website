@@ -1,119 +1,9 @@
-import PSS_mms from "../assets/screenshots/pss_mms.png"
-import Shad_Recruitment_Image from "../assets/screenshots/shad_recruitment.jpg"
-import ucalgary_social_media from "../assets/screenshots/ucalgary_social_media.png"
-import TABLEAU_Image from "../assets/screenshots/traffic_dashboard.png"
-import portfolio_website from "../assets/screenshots/portfolio_website.png"
-import PSS_Logo from "../assets/logos/pss.jpg"
-import MSA_Logo from "../assets/logos/msa-logo.jpeg"
-import AASEE_Logo from "../assets/logos/aasee.jpg"
 export const bio = "I'm a Full-Stack Developer with a passion for Cloud Computing and a strong background in Java, React.js, React Native, TypeScript, and Tailwind CSS. With experience in both relational and non-relational databases, I build scalable and efficient applications."+
 
 "\n\nBeyond coding, I thrive in team environments, bringing not just technical expertise but also a positive and collaborative mindset. Check out my projects below, or feel free to reach out!"
 
 
 export const roles = ["Software Engineer", "Fullstack Developer", "Cloud Developer"]
-
-export const projects = [
-    // {
-    //     title: "Portfolio Website ",
-    //     description: "A website to highlight my experience, skills, and projects, featuring an interactive user interface with smooth animations.",
-    //     technologies: ["TypeScript", "React.js", "Tailwind CSS", "Git", "GSAP"],
-    //     url: "https://github.com/usharabkhan/website",
-    //     demoUrl: "",
-    //     bullets: [
-    //         "Elegant styling using a professional color palette",
-    //         "Responsive design for all devices",
-    //         "Animation libraries for smooth transitions",
-    //     ],
-    //     image: portfolio_website,
-    //     logo: "",
-    //     progress: "January 2025"
-    // },
-    {
-        title: "Traffic Incident Analysis Dashboard",
-        description: "A Tableau dashboard visualizing traffic incident data from Calgary, showcasing trends and patterns in incidents over time.",
-        technologies: ["Python", "PySpark", "Pandas", "Tableau"],
-        url: "https://public.tableau.com/app/profile/usharab.khan/viz/DATA501-Usharab_Ali/Dashboard?publish=yes",
-        demoUrl: "",
-        bullets: [
-            "",
-        ],
-        image: TABLEAU_Image,
-        logo: "",
-        progress: "April 2025", 
-    },
-    {
-        title: "Social Media Interface",
-        description: "Social platform for university students. Employed Task Centered System Design process to iteratively create an elegant UI/UX. (Course Project)",
-        technologies: ["TypeScript", "React.js", "Tailwind CSS", "Figma"],
-        url: "https://github.com/ManrajSingh6/CPSC481-Social-Media-Network",
-        demoUrl: "https://manrajsingh6.github.io/CPSC481-Social-Media-Network/#/login",
-        bullets: [
-            "Developed following Task Centered Design Process",
-            "Phase-wise iteration of the design",
-            "Improved by user feedback and heuristic evaluation",
-        ],
-        image: ucalgary_social_media,
-        logo: "",
-        progress: "December 2024", 
-    },
-    {
-        title: "Recruitment Mobile Application",
-        description: "Application to track school visits, emails, and recruitment progress, providing insights on students and schools reached. Integrated MySQL for backend data management.",
-        technologies: ["TypeScript", "React Native", "Node.js", "Expo Router", "MySQL"],
-        url: "https://github.com/usharabkhan/shad_recruitment",
-        demoUrl: "",
-        bullets: [
-            "Cross platform mobile application with Shad's theme",
-            "Dashboard to track and analyze recruitment progress",
-            "Track activity with schools & teachers",
-            "View and update visits' information",
-        ],
-        image: Shad_Recruitment_Image,
-        logo: "https://www.shad.ca/wp-content/uploads/2023/08/Logo-footer.png",
-        logoName: "Shad Canada",
-        progress: "November 2024"
-    },
-    {
-        title: "Membership Management System",
-        description: "A JavaFX desktop application for the Pakistani Students' Society to manage memberships and event registrations, featuring a dashboard and member status cross-checking with SQLite integration.",
-        technologies: ["Java", "JavaFX", "SQLite"],
-        url: "https://github.com/usharabkhan/pss_mms",
-        demoUrl: "n",
-        bullets: [
-            "User-centered solution and design for the Internal Affairs team",
-            "Dashboard with key member statistics",
-            "Event registration and attendance tracking",
-            "Efficient member management using SQLite database",
-            "Import data from Excel"
-        ],
-        image: PSS_mms,
-        logo: PSS_Logo,
-        logoName: "Pakistani Students' Society",
-        progress: "October 2024",
-    },
-]
-
-export const contributions = [
-    {
-        logo: MSA_Logo,
-        title: "Muslim Students Association",
-        role: "Fullstack Web Developer",
-        date: "Jun 2025 - Present",
-        description: "Designing and implementing features for the club's website, focusing on enhancing functionality and user experience.",
-        technologies: ["NextJS", "PostgreSQL", "TypeScript", "Tailwind CSS"],
-        link: ""
-    },
-    {
-        logo: AASEE_Logo,
-        title: "Association for the Advancement of Science & Engineering",
-        role: "Web Developer",
-        date: "Nov 2024 - May 2025",
-        description: "Maintaining and updating a website that showcases STEM workshops for youth, allowing school teachers to view past work and donors to make contributions.",
-        technologies: ["WordPress", "PHP", "HTML", "CSS" ],
-        link: "https://aasee.ca"
-    },
-]
 
 export const toolkit = [
     {
@@ -157,8 +47,6 @@ export const toolkit = [
     }
 ]
 
-export const baseUrl = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/"
-
 export const ToolkitImages: Record<string, string> = {
     // BACKEND
     "Java" : "java/java-original.svg",
@@ -169,6 +57,8 @@ export const ToolkitImages: Record<string, string> = {
     "MongoDB" : "mongodb/mongodb-original.svg",
     "Node.js" : "nodejs/nodejs-original.svg",
     "Express.js" : "express/express-original.svg",
+    "Docker" : "docker/docker-original.svg",
+    "Firebase" : "firebase/firebase-plain.svg",
     // FRONTEND
     "HTML" : "html5/html5-original.svg",
     "CSS" : "css3/css3-original.svg",
@@ -205,3 +95,5 @@ export const OtherLogos: Record<string, string> = {
     "GSAP" : "https://i.vimeocdn.com/portrait/34768143_640x640?sig=f177f398fbd6f943578b3368c2fc677a1cafac361651c4b8c693f228a59fc819&v=1",
     "Tableau": "https://w7.pngwing.com/pngs/815/646/png-transparent-tableau-full-logo-tech-companies-thumbnail.png",
 }
+
+export const baseUrl = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/"
