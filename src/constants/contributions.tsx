@@ -3,15 +3,6 @@ import AASEE_Logo from "../assets/logos/aasee.jpg"
 
 export const contributions = [
     {
-        logo: MSA_Logo,
-        title: "Muslim Students Association",
-        role: "Fullstack Web Developer",
-        date: "Jun 2025 - Present",
-        description: "Designing and implementing features for the club's website, focusing on enhancing functionality and user experience.",
-        technologies: ["NextJS", "PostgreSQL", "TypeScript", "Tailwind CSS"],
-        link: ""
-    },
-    {
         logo: AASEE_Logo,
         title: "Association for the Advancement of Science & Engineering",
         role: "Web Developer",
