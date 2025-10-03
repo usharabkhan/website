@@ -4,7 +4,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import { OtherLogos } from '../../constants/data';
 import { Flex } from '@radix-ui/themes';
 
-export default function Header({ className }: { className: string }) {
+export default function Header({ className }: { className?: string }) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
@@ -16,11 +16,9 @@ export default function Header({ className }: { className: string }) {
       {/* Desktop Menu */}
       <div className="hidden sm:flex flex-row justify-center">
           <Flex className="mr-6" align="center">
-            <MenuItem title="About" scrollTo="about" />
-            <MenuItem title="Projects" scrollTo="projects" />
+            <MenuItem title="Home" to="/" />
             <img src={OtherLogos['compsci']}  className="max-h-[30px] max-w-[30px]"/>
-            <MenuItem title="Contributions" scrollTo='contributions' />
-            <MenuItem title="Skills" scrollTo="skills" />
+            <MenuItem title="Projects" to="/projects" />
           </Flex>
       </div>
 
@@ -51,10 +49,8 @@ export default function Header({ className }: { className: string }) {
         </button>
 
         <nav className="flex flex-col items-start ">
-          <MenuItem title="About" scrollTo="about" onPress={toggleDrawer}/>
-          <MenuItem title="Projects" scrollTo="projects" onPress={toggleDrawer}/>
-          <MenuItem title="Contributions" scrollTo='contributions' onPress={toggleDrawer}/>
-          <MenuItem title="Skills" scrollTo="skills" onPress={toggleDrawer}/>
+          <MenuItem title="Home" to="/" onPress={toggleDrawer}/>
+          <MenuItem title="Projects" to="/projects" onPress={toggleDrawer}/>
         </nav>
       </div>
 
