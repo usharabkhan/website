@@ -4,15 +4,13 @@ import ProjectTitle from "../common/title";
 import { ImageOff } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card } from "../ui/card";
+import { ProjectType } from "../../constants/projects";
+import { ProjectDetail } from "../../constants/type";
 
-export default function ProjectCard({ data }: { data: any }) {
+export default function ProjectCard( data : ProjectDetail ) {
   return (
     <Link to={data.url} className="hover:no-underline">
-      {/* <div
-        className="bg-container border border-borderColor/20 rounded-xl shadow-md p-4 flex flex-col gap-4 hover:shadow-lg transition-shadow
-                    w-full h-full max-w-sm mx-auto"
-      > */}
-      <Card className="size-full max-w-sm p-5 rounded-2xl bg-accent text-background space-y-3 border-[1px] hover:border-secondary transition-all duration-300">
+      <Card className="flex flex-col bg-accent size-full max-w-sm p-5 rounded-2xl text-background space-y-3 border-[1px] hover:border-secondary transition-all duration-300">
         {/* PROJECT IMAGE */}
         <div className="w-full aspect-video bg-muted flex items-center justify-center rounded-lg overflow-hidden">
           {data.image ? (
@@ -39,7 +37,7 @@ export default function ProjectCard({ data }: { data: any }) {
             ))}
           </div>
         </div>
-        <div className="flex items-end justify-end w-full flex-grow">
+        <div className="flex items-end justify-end w-full flex-grow ">
           <Badge
             color={data.progress[0] === "I" ? "yellow" : "jade"}
             variant="solid"
@@ -49,7 +47,6 @@ export default function ProjectCard({ data }: { data: any }) {
           </Badge>
         </div>
       </Card>
-      {/* </div> */}
     </Link>
   );
 }

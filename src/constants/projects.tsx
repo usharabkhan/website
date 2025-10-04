@@ -5,22 +5,11 @@ import TABLEAU_Image from "../assets/screenshots/traffic_dashboard.png";
 import PSS_Logo from "../assets/logos/pss.jpg";
 import portfolio_website from "../assets/screenshots/portfolio_website.png";
 import msa_website from "../assets/screenshots/msa_website.png";
+import { ProjectDetail } from "./type";
 
 export type ProjectType = "Mobile" | "Data" | "Desktop" | "Frontend" | "Backend" | "Fullstack";
 
-export const projects: {
-  title: string;
-  description: string;
-  technologies: string[];
-  url: string;
-  demoUrl: string;
-  bullets: string[];
-  image: string;
-  logo: string;
-  logoName?: string;
-  progress: string;
-  type: string[];
-}[] = [
+export const projects: ProjectDetail[] = [
 //   {
 //     title: "Portfolio Website",
 //     description: "A website to highlight my experience, skills, and projects, featuring an interactive user interface with smooth animations.",

@@ -10,7 +10,7 @@ export function Heading({ children }: { children?: React.ReactNode }) {
 
 export function SubHeading({ children }: { children?: React.ReactNode }) {
   return (
-    <Text size="5" className=" text-subHeading text-center lg:text-left">
+    <Text size="5" className=" text-white text-center lg:text-left">
       {children}
     </Text>
   );
