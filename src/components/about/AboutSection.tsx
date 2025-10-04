@@ -10,60 +10,55 @@ import { Heading } from "../common/heading";
 import { Text } from "@radix-ui/themes";
 
 export default function HeroSection() {
-  useEffect(() => {
-    const tl = gsap.timeline();
+  // useEffect(() => {
+  //   const tl = gsap.timeline();
 
-    tl.fromTo(
-      "#hero",
-      { opacity: 0, y: -30 },
-      { duration: 1, opacity: 1, y: 0, ease: "power3.out" }
-    );
+  //   tl.fromTo(
+  //     "#hero",
+  //     { opacity: 0, y: -30 },
+  //     { duration: 1, opacity: 1, y: 0, ease: "power3.out" }
+  //   );
 
-    tl.fromTo(
-      "#intro, #my-image, #sub-heading, #my-tags, #lets-connect, #bio",
-      { opacity: 0, y: 20 },
-      {
-        duration: 0.8,
-        opacity: 1,
-        y: 0,
-        ease: "power3.out",
-        stagger: 0.1,
-        delay: -0.5,
-      }
-    );
+  //   tl.fromTo(
+  //     "#intro, #my-image, #sub-heading, #my-tags, #lets-connect, #bio",
+  //     { opacity: 0, y: 20 },
+  //     {
+  //       duration: 0.8,
+  //       opacity: 1,
+  //       y: 0,
+  //       ease: "power3.out",
+  //       stagger: 0.1,
+  //       delay: -0.5,
+  //     }
+  //   );
 
-    return () => {
-      tl.kill();
-    };
-  }, []);
+  //   return () => {
+  //     tl.kill();
+  //   };
+  // }, []);
 
   return (
-    <div className="bg-container w-full p-5">
-      <div id="hero" className="grid grid-cols-1 max-w-7xl mx-auto p-5 h-[80vh]">
-        <div>
-          {/* IMAGE + HEADING */}
-          <div className="flex items-center gap-4">
-            <img
-              id="my-image"
-              src={MyImage}
-              alt="Profile"
-              className="w-40 h-40 sm:w-56 sm:h-56 lg:w-72 lg:h-72 rounded-full shadow object-cover"
-            />
-            <div id="intro">
-              <Text
-                as="div"
-                size="6"
-                className="flex flex-row items-center gap-x-2 text-subHeading"
-              >
-                Hi there!
-                <MdOutlineWavingHand className="text-yellow-500 animate-wave" />
-              </Text>
-              <RollingText />
+    <section className="bg-black w-full p-5">
+      <div id="hero" className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto p-5">
+        <div className="flex flex-col gap-4 items-center">
+          {/* IMAGE */}
+          <img
+            id="my-image"
+            src={MyImage}
+            alt="Profile"
+            className="w-40 h-40 sm:w-56 sm:h-56 lg:w-72 lg:h-72 rounded-full shadow object-cover"
+          />
+          {/* NAME & POSITION */}
+          <div id="intro" className="text-center">
+            <div className="text-2xl font-medium flex items-center gap-x-2 justify-center text-white">
+              Hi there!
+              <MdOutlineWavingHand className="text-yellow-500 animate-wave" />
             </div>
+            <RollingText />
           </div>
 
           {/* TAGS */}
-          <div id="my-tags" className="flex flex-wrap gap-2 justify-center">
+          <div id="my-tags" className="grid grid-cols-2 gap-2 justify-center items-center">
             <TechnologyPill text="University of Calgary" img={OtherLogos["uni"]} />
             <TechnologyPill text="Class of 2025" img={OtherLogos["class"]} />
             <TechnologyPill text="Computer Science" img={OtherLogos["compsci"]} />
@@ -74,19 +69,20 @@ export default function HeroSection() {
             <Socials />
           </div>
         </div>
-        <div>
-          {/* BIOGRAPHY */}
-          <div id="bio" className="max-w-[700px] flex flex-col gap-4 text-regular">
-            <Heading>About Me</Heading>
-            <Text
-              weight="regular"
-              className="text-regular text-justify whitespace-pre-line leading-relaxed"
-            >
-              {bio}
-            </Text>
-          </div>
+        {/* BIOGRAPHY */}
+        <div
+          id="bio"
+          className="flex flex-col gap-4 text-white h-full items-center justify-center"
+        >
+          <Heading>About Me</Heading>
+          <Text
+            weight="regular"
+            className="text-white text-justify whitespace-pre-line leading-relaxed"
+          >
+            {bio}
+          </Text>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

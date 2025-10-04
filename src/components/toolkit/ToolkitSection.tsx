@@ -1,42 +1,31 @@
 import { toolkit } from "../../constants/data";
-import ToolkitSubSection from "./ToolkitSubSection";
 import { Flex } from "@radix-ui/themes";
 import { Heading } from "../common/heading";
 import { useState } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
+import TechnologyBox from "./TechnologyBox";
 
 function ToolkitSection() {
-    const [openSection, setOpenSection] = useState(0); // First section open by default
-
-    const toggleSection = (index: number) => {
-        setOpenSection(prev => (prev === index ? -1 : index)); // Close if same, else open
-    };
-
-    return (
-        <Flex 
-            id="skills"
-            direction="column"
-            justify={{ initial: "center", lg: "start" }}
-            className="my-2 min-h-fit p-5 sm:p-10 w-full"
-        >
-            <Heading>Toolkit</Heading>
-            <Flex
-                direction="column"
-                className="h-full"
-                gap="5"
-                maxWidth={{ initial: "350px", md: "750px" }}
-            >
-                {["Front End", "Back End", "Frameworks", "Tools"].map((title, index) => (
-                    <ToolkitSubSection 
-                        key={index}
-                        title={title} 
-                        tools={toolkit[index]} 
-                        isOpen={openSection === index} 
-                        toggleOpen={() => toggleSection(index)}
-                    />
-                ))}
-            </Flex>
-        </Flex>
-    );
+  const sections = ["Front End", "Back End", "Frameworks", "Tools"];
+  return (
+    <section id="skills" className="max-w-7xl w-full mx-auto p-5 flex flex-col items-center">
+      <Heading>Toolkit</Heading>
+      <hr className="border-t border-gray-700 w-full " />
+      {/* Grid with all 4 sections */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {sections.map((section) => (
+          <div key={section} className="flex flex-col items-center p-4 gap-4">
+            <h3 className="font-medium text-lg text-white">{section}</h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {Object.entries(toolkit[sections.indexOf(section)]).map(([key, val]) => (
+                <TechnologyBox key={key} text={key} experience={val ? val : ""} />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }
 
 export default ToolkitSection;

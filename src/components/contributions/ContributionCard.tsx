@@ -1,54 +1,38 @@
-import { Flex, Link, Text } from "@radix-ui/themes";
+import { Flex, Text } from "@radix-ui/themes";
 import { Contribution } from "../../constants/type";
+import { Card } from "../ui/card";
 import TechnologyPill from "../projects/TechnologyPill";
 import Title from "../common/title";
+import { Link } from "react-router-dom";
 
-export default function ContributionCard({data} : {data: Contribution}){
-    return (
-        <Flex className="w-full bg-container text-regular p-3 border-l-2 border-borderColor " gap={{initial: "0", md: "3"}}>
-            {/* LOGO FOR DESKTOP */}
-            <Flex>
-                <img src={data.logo} className="h-[40px] rounded-full hidden lg:flex"/>
-            </Flex>
+export default function ContributionCard({ data }: { data: Contribution }) {
+  return (
+    <Link to={data.link}>
+      <Card className="w-full max-w-sm p-5 rounded-2xl bg-accent border-[1px] hover:border-secondary transition-all duration-300">
+        {/* Header */}
+        <div className="flex items-center gap-3 mb-4">
+          <img src={data.logo} alt={data.title} className="h-10 w-10 rounded-full object-cover" />
+          <div className="flex flex-col text-white">
+            {/* <Title title={data.title} url={data.link} /> */}
+            <p className="font-medium">{data.role}</p>
+            <Text className="text-xs font-extralight">{data.title}</Text>
+            <Text className="text-xs font-extralight">{data.date}</Text>
+          </div>
+        </div>
 
-            {/* OTHER DETAILS */}
-            <Flex direction="column" gap="3" className="w-full">
-                {/* HEADER */}
-                <Flex justify="between" gap={{initial: "0", md: "2"}} direction={{initial: "column", md: "row"}} className="border-b-2">
-                    {/* TITLE */}
-                    <Flex align={{initial: "center", md: "start"}} justify="center" direction="column" >
-                        <Flex className="w-full" align="center" justify="center" gap="2">
-                            {/* MOBILE LOGO */}
-                            <img src={data.logo} className="h-[40px] w-[40px] rounded-full lg:hidden"/>
-                            <Title title={data.title} url={data.link}/>
-                        </Flex>
-                        <Text>
-                            {data.role}
-                        </Text>
-                    </Flex>
-                    {/* DATE */}
-                    <Flex className="" justify={{initial: "center", md: "end"}}>
-                        <Text weight="regular" className="text-subHeading">
-                            {data.date}
-                        </Text>
-                    </Flex>
-                </Flex>
-                {/* BODY */}
-                <Flex gap="3" justify="between" direction={{initial: "column", md: "row"}}>
-                    {/* DESCRIPTION */}
-                    <Flex>
-                        <Text align={{initial: "center", md:"left"}}>
-                            {data.description}
-                        </Text>
-                    </Flex>
-                    {/* TECH STACK */}
-                    <Flex gap="2" wrap="wrap" justify={{initial: "center", md:"end"}} >
-                        {data.technologies.map((tech, index) => (
-                            <TechnologyPill key={index} text={tech}/>
-                        ))}
-                    </Flex>
-                </Flex>
-            </Flex>
-        </Flex>
-    )
+        {/* Body */}
+        <div className="space-y-4">
+          {/* Description */}
+          <Text className="text-white text-sm leading-relaxed">{data.description}</Text>
+
+          {/* Tech Stack */}
+          <div className="flex flex-wrap gap-2">
+            {data.technologies.map((tech, index) => (
+              <TechnologyPill key={index} text={tech} />
+            ))}
+          </div>
+        </div>
+      </Card>
+    </Link>
+  );
 }

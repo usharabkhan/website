@@ -7,10 +7,10 @@ import ProjectDetailPage from "./pages/ProjectDetailPage";
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen bg-background overflow-x-hidden ">
+    <div className="flex flex-col min-h-screen bg-black overflow-x-hidden ">
       <Header
         className="fixed top-0 left-0 w-full h-16 z-10
-               bg-background border-b-2 border-b-regular border-opacity-30"
+               bg-accent border-b-[1px] border-b-white "
       />
       <div className="mt-16">
         <Routes>

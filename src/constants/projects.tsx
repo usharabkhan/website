@@ -40,8 +40,8 @@ export const projects: {
 //   },
 
   {
-    title: "MSA Membership & Event Management Website",
-    description: "Full-stack web application for the Muslim Students' Association to manage memberships, events, and donations efficiently, with role-based access and analytics dashboard.",
+    title: "Student Engagement Hub",
+    description: "Full-stack membership & events management for the Muslim Students' Association with role-based access and analytics dashboard.",
     technologies: ["NextJS", "MongoDB", "Tailwind CSS", "TypeScript", "Azure"],
     url: "https://msaucalgary.com",
     demoUrl: "",

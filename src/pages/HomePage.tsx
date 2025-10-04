@@ -8,28 +8,10 @@ import { Flex } from "@radix-ui/themes";
 export default function HomePage() {
   return (
     <section className="w-screen min-h-screen items-center">
-        <AboutSection/>
-        <ProjectSection/>
-        <ContributionSection/>
-        <ToolkitSection/>
-      {/* Fixed AboutCard */}
-      {/* <div className="max-w-7xl mx-auto p-10">
-        <div id="about">
-          <AboutSection />
-        </div>
-        <hr className="mx-5 opacity-70" />
-        <div id="projects">
-          <ProjectSection />
-        </div>
-        <hr className="mx-5 opacity-70" />
-        <div id="contributions">
-          <ContributionSection />
-        </div>
-        <hr className="mx-5 opacity-70" />
-        <div id="skills">
-          <ToolkitSection />
-        </div>
-      </div> */}
+      <AboutSection />
+      <ProjectSection />
+      <ContributionSection />
+      <ToolkitSection />
     </section>
   );
 }
