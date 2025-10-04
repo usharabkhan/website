@@ -9,6 +9,7 @@ import { useRef, useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { ChevronDown } from "lucide-react";
 import Button from "../common/button";
+import { Link } from "react-router-dom";
 
 const categories = ["All", "Mobile", "Desktop", "Data", "Frontend", "Fullstack"];
 
@@ -40,6 +41,7 @@ export default function ProjectSection() {
             <ProjectCard key={index} {...project} />
           ))}
         </div>
+        <Button href="/projects">View All Projects</Button>
       </div>
     </section>
   );

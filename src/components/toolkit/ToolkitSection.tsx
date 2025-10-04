@@ -15,7 +15,7 @@ function ToolkitSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {sections.map((section) => (
           <div key={section} className="flex flex-col items-center p-4 gap-4">
-            <h3 className="font-medium text-lg text-white">{section}</h3>
+            <h3 className="text-lg text-secondary">{section}</h3>
             <div className="flex flex-wrap justify-center gap-4">
               {Object.entries(toolkit[sections.indexOf(section)]).map(([key, val]) => (
                 <TechnologyBox key={key} text={key} experience={val ? val : ""} />

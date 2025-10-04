@@ -7,10 +7,10 @@ import { Card } from "../ui/card";
 import { ProjectType } from "../../constants/projects";
 import { ProjectDetail } from "../../constants/type";
 
-export default function ProjectCard( data : ProjectDetail ) {
+export default function ProjectCard(data: ProjectDetail) {
   return (
     <Link to={data.url} className="hover:no-underline">
-      <Card className="flex flex-col bg-accent size-full max-w-sm p-5 rounded-2xl text-background space-y-3 border-[1px] hover:border-secondary transition-all duration-300">
+      <Card className="flex flex-col bg-accent size-full max-w-sm p-5 rounded-2xl text-background space-y-3 border border-transparent hover:border-secondary transition-all duration-300">
         {/* PROJECT IMAGE */}
         <div className="w-full aspect-video bg-muted flex items-center justify-center rounded-lg overflow-hidden">
           {data.image ? (
@@ -23,10 +23,10 @@ export default function ProjectCard( data : ProjectDetail ) {
         {/* CONTENT */}
         <div className="flex flex-col gap-3">
           {/* TITLE */}
-          <p className="text-lg font-medium">{data.title}</p>
+          <p className="text-lg font-medium text-secondary">{data.title}</p>
 
           {/* DESCRIPTION */}
-          <Text weight="light" className="text-background text-justify">
+          <Text weight="light" className="font-extralight text-sm">
             {data.description}
           </Text>
 

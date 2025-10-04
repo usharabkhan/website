@@ -38,8 +38,11 @@ export default function HeroSection() {
   // }, []);
 
   return (
-    <section className="bg-black w-full p-5">
-      <div id="hero" className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto p-5">
+    <section className=" w-full p-5">
+      <div
+        id="hero"
+        className="bg-accent rounded-lg grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto p-5 space-y-4"
+      >
         <div className="flex flex-col gap-4 items-center">
           {/* IMAGE */}
           <img
@@ -58,7 +61,7 @@ export default function HeroSection() {
           </div>
 
           {/* TAGS */}
-          <div id="my-tags" className="grid grid-cols-2 gap-2 justify-center items-center">
+          <div id="my-tags" className="grid grid-cols-2 gap-2 place-items-center">
             <TechnologyPill text="University of Calgary" img={OtherLogos["uni"]} />
             <TechnologyPill text="Class of 2025" img={OtherLogos["class"]} />
             <TechnologyPill text="Computer Science" img={OtherLogos["compsci"]} />
@@ -70,10 +73,7 @@ export default function HeroSection() {
           </div>
         </div>
         {/* BIOGRAPHY */}
-        <div
-          id="bio"
-          className="flex flex-col gap-4 text-white h-full items-center justify-center"
-        >
+        <div id="bio" className="flex flex-col gap-4 text-white h-full items-center justify-center">
           <Heading>About Me</Heading>
           <Text
             weight="regular"
