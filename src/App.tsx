@@ -11,9 +11,9 @@ function App() {
       <Header />
       <div className="mt-16">
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/projects/:id" element={<ProjectDetailPage />} />
+          <Route path="/website/" element={<HomePage />} />
+          <Route path="/website/projects" element={<ProjectsPage />} />
+          <Route path="/website/projects/:id" element={<ProjectDetailPage />} />
         </Routes>
       </div>
 
