@@ -1,6 +1,6 @@
 import { Flex, Text } from "@radix-ui/themes";
 import { useEffect, useState } from "react";
-import { roles } from "../../constants/data";
+import { roles } from "../../data/data";
 import { gsap } from "gsap";
 
 export default function RollingText() {

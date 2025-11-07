@@ -1,7 +1,7 @@
 import { useState } from "react";
 import MenuItem from "./MenuItem";
 import { IoCloseOutline } from "react-icons/io5";
-import { OtherLogos } from "../../constants/data";
+import { OtherLogos } from "../../data/data";
 import { Flex } from "@radix-ui/themes";
 
 export default function Header({ className }: { className?: string }) {

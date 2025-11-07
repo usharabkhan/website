@@ -2,7 +2,7 @@
 
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "../ui/tabs";
 import ProjectCard from "./ProjectCard";
-import { projects } from "../../constants/projects";
+import { projects } from "../../data/projects";
 import { Flex } from "@radix-ui/themes";
 import { Heading } from "../common/heading";
 import { useRef, useState, useEffect } from "react";

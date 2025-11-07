@@ -1,5 +1,5 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { projects } from '../constants/projects';
+import { projects } from '../data/projects';
 import { Heading, SubHeading } from '../components/common/heading';
 import TechnologyPill from '../components/projects/TechnologyPill';
 import { ArrowLeft, ExternalLink, Github } from 'lucide-react';

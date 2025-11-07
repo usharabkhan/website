@@ -1,4 +1,4 @@
-import { projects } from '../constants/projects';
+import { projects } from '../data/projects';
 import ProjectCard from '../components/projects/ProjectCard';
 import { Link } from 'react-router-dom';
 import { Heading, SubHeading } from '../components/common/heading';

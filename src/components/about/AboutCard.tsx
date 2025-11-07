@@ -4,7 +4,7 @@ import Socials from "../common/socials";
 import MyImage from "../../assets/image/me.png";
 import RollingText from "./RollingText";
 import TechnologyPill from "../projects/TechnologyPill";
-import { bio, OtherLogos } from "../../constants/data";
+import { bio, OtherLogos } from "../../data/data";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 

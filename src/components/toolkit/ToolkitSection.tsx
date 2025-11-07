@@ -1,4 +1,4 @@
-import { toolkit } from "../../constants/data";
+import { toolkit } from "../../data/data";
 import { Flex } from "@radix-ui/themes";
 import { Heading } from "../common/heading";
 import { useState } from "react";

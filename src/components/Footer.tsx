@@ -1,6 +1,6 @@
 import { FaHandPointUp } from "react-icons/fa";
 import { Text } from "@radix-ui/themes";
-import { baseUrl, OtherLogos, ToolkitImages } from "../constants/data";
+import { baseUrl, OtherLogos, ToolkitImages } from "../data/data";
 
 const techStack = [
   { name: "TypeScript" },

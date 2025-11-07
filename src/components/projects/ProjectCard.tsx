@@ -4,8 +4,8 @@ import ProjectTitle from "../common/title";
 import { ImageOff } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card } from "../ui/card";
-import { ProjectType } from "../../constants/projects";
-import { ProjectDetail } from "../../constants/type";
+import { ProjectType } from "../../data/projects";
+import { ProjectDetail } from "../../data/type";
 
 export default function ProjectCard(data: ProjectDetail) {
   return (

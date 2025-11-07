@@ -1,5 +1,5 @@
 import { Flex, Text } from "@radix-ui/themes";
-import { Contribution } from "../../constants/type";
+import { Contribution } from "../../data/type";
 import { Card } from "../ui/card";
 import TechnologyPill from "../projects/TechnologyPill";
 import Title from "../common/title";

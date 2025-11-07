@@ -1,5 +1,5 @@
 import { Flex, Text } from "@radix-ui/themes";
-import { baseUrl, OtherLogos, ToolkitImages } from "../../constants/data";
+import { baseUrl, OtherLogos, ToolkitImages } from "../../data/data";
 interface TechnologyPillProps {
   text: string;
   img?: string;
