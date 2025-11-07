@@ -18,18 +18,16 @@ html {
 /* Style the scrollbar track (the background area) */
 ::-webkit-scrollbar-track {
   background: white;
-  border-radius: 10px;
 }
 
 /* Style the scrollbar thumb (the draggable part) */
 ::-webkit-scrollbar-thumb {
-  background: #96968a;
-  border-radius: 10px;
+  background: #6b6b6b;
 }
 
 /* Style the scrollbar when hovered */
 ::-webkit-scrollbar-thumb:hover {
-  background: #c2c2b3;
+  background: #868686;
   cursor: pointer;
 }
 

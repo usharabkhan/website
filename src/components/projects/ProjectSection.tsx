@@ -29,19 +29,18 @@ export default function ProjectSection() {
   }, [showAll]);
 
   return (
-    <section className="">
+    <section id="projects-section" className="">
       <div
         id="projects"
         className="flex flex-col max-w-7xl mx-auto p-5 justify-center items-center "
       >
         <Heading>Featured Projects</Heading>
-        <hr className="border-t border-gray-700 w-full " />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
           {projects.slice(0, 3).map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}
         </div>
-        <Button href="/projects">View All Projects</Button>
+        <Button customStyle="mt-4" href="/projects">View All Projects</Button>
       </div>
     </section>
   );

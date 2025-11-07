@@ -13,11 +13,10 @@ export default function TechnologyBox({ text, experience }: TechnologyBoxProps) 
     url = OtherLogos[text];
   }
   return (
-    <Flex align="center" gap="2" className="bg-accent rounded-xl p-2">
-      {url && <img src={url} height={40} width={40} className="rounded-lg"/>}
+    <Flex align="center" gap="2" className="bg-black rounded-2xl p-3">
+      {url && <img src={url} height={30} width={30} className="rounded-lg"/>}
       <Flex direction="column" className="text-regular">
-        <p className="text-white">{text}</p>
-        {/* <Text weight="light" size="2">{experience}</Text> */}
+        <Text size={"3"}className="text-white">{text}</Text>
       </Flex>
     </Flex>
   );

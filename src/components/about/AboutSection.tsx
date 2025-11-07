@@ -10,38 +10,38 @@ import { Heading } from "../common/heading";
 import { Text } from "@radix-ui/themes";
 
 export default function HeroSection() {
-  // useEffect(() => {
-  //   const tl = gsap.timeline();
+  useEffect(() => {
+    const tl = gsap.timeline();
 
-  //   tl.fromTo(
-  //     "#hero",
-  //     { opacity: 0, y: -30 },
-  //     { duration: 1, opacity: 1, y: 0, ease: "power3.out" }
-  //   );
+    tl.fromTo(
+      "#hero",
+      { opacity: 0, y: -30 },
+      { duration: 1, opacity: 1, y: 0, ease: "power3.out" }
+    );
 
-  //   tl.fromTo(
-  //     "#intro, #my-image, #sub-heading, #my-tags, #lets-connect, #bio",
-  //     { opacity: 0, y: 20 },
-  //     {
-  //       duration: 0.8,
-  //       opacity: 1,
-  //       y: 0,
-  //       ease: "power3.out",
-  //       stagger: 0.1,
-  //       delay: -0.5,
-  //     }
-  //   );
+    tl.fromTo(
+      "#intro, #my-image, #sub-heading, #my-tags, #lets-connect, #bio",
+      { opacity: 0, y: 20 },
+      {
+        duration: 0.8,
+        opacity: 1,
+        y: 0,
+        ease: "power3.out",
+        stagger: 0.1,
+        delay: -0.5,
+      }
+    );
 
-  //   return () => {
-  //     tl.kill();
-  //   };
-  // }, []);
+    return () => {
+      tl.kill();
+    };
+  }, []);
 
   return (
-    <section className=" w-full p-5">
+    <section id="about-section" className=" w-full p-5">
       <div
         id="hero"
-        className="bg-accent rounded-lg grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto p-5 space-y-4"
+        className="bg-black rounded-lg grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto p-10 md:p-16 space-y-4"
       >
         <div className="flex flex-col gap-4 items-center">
           {/* IMAGE */}
@@ -77,7 +77,7 @@ export default function HeroSection() {
           <Heading>About Me</Heading>
           <Text
             weight="regular"
-            className="text-white text-justify whitespace-pre-line leading-relaxed"
+            className="text-white text-center md:text-justify whitespace-pre-line leading-relaxed"
           >
             {bio}
           </Text>

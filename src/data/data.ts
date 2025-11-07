@@ -1,8 +1,8 @@
 export const bio = `I build scalable, efficient web and mobile applications that solve real-world problems.
- With experience in Java, React.js, React Native, TypeScript, and Tailwind CSS, I bridge the gap between clean code and user-friendly design.
+ \nWith experience in Java, React.js, React Native, TypeScript, and Tailwind CSS, I bridge the gap between clean code and user-friendly design.
  \nOutside of coding, I enjoy collaborating with teams to turn ideas into impactful solutions. Check out my projects or reach out to start a conversation!`;
 
-export const roles = ["Software Engineer", "Fullstack Developer", "Cloud Developer"];
+export const roles = ["Software Engineer", "Fullstack Developer", "DevOps Engineer"];
 
 export const toolkit = [
   {

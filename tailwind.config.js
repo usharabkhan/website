@@ -16,14 +16,11 @@ module.exports = {
 			colors: {
 				text: '#090e13',
 				background: '#fbfcfd',
-				primary: '#588dbe',
-				secondary: '#9bbddc',
-				accent: '#262626',
-				// background: 'hsl(var(--background))',
+				primary: '#65BEFD',
+				secondary: '#93CEFE',
+				accent: '#1A1A1A',
 				container: '#EDEDE9',
 				subContainer: '#FBFBFA',
-				heading: 'black',
-				subHeading: 'black',
 				regular: '#5B514A',
 				button: '#52B788',
 				borderColor: '#666666',
@@ -36,22 +33,10 @@ module.exports = {
 					DEFAULT: 'hsl(var(--popover))',
 					foreground: 'hsl(var(--popover-foreground))'
 				},
-				// primary: {
-				// 	DEFAULT: 'hsl(var(--primary))',
-				// 	foreground: 'hsl(var(--primary-foreground))'
-				// },
-				// secondary: {
-				// 	DEFAULT: 'hsl(var(--secondary))',
-				// 	foreground: 'hsl(var(--secondary-foreground))'
-				// },
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
 					foreground: 'hsl(var(--muted-foreground))'
 				},
-				// accent: {
-				// 	DEFAULT: 'hsl(var(--accent))',
-				// 	foreground: 'hsl(var(--accent-foreground))'
-				// },
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'

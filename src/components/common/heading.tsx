@@ -2,7 +2,7 @@ import { Text } from "@radix-ui/themes";
 
 export function Heading({ children }: { children?: React.ReactNode }) {
   return (
-    <p className=" text-primary text-3xl mb-4 text-center font-medium">
+    <p className=" text-primary text-4xl mb-10 text-center font-bold">
       {children}
     </p>
   );

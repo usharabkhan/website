@@ -14,7 +14,7 @@ export default function TechnologyPill({ text, img }: TechnologyPillProps) {
   }
 
   return (
-    <div className="bg-black w-fit h-fit px-2 py-1 rounded-xl ">
+    <div className="bg-accent w-fit h-fit px-3 py-1.5 rounded-full border-white/30 border">
       <Flex gap="2" className="items-center">
         {url && <img src={url} height={15} width={15} />}
         {img && <img src={img} className="h-4 w-4" />}

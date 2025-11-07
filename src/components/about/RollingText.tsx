@@ -42,8 +42,8 @@ export default function RollingText() {
       id="sub-heading"
       className="flex flex-col md:flex-row flex-wrap justify-center text-white text-2xl"
     >
-      <p className="font-light">I am Usharab, an aspiring&nbsp;</p>
-      <p id="rolling-text" className="font-bold text-secondary" />
+      <p className="font-light">I am Usharab, an Early-Career&nbsp;</p>
+      <p id="rolling-text" className="font-medium text-secondary" />
     </div>
   );
 }

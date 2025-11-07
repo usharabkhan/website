@@ -1,6 +1,7 @@
 import { FaHandPointUp } from "react-icons/fa";
 import { Text } from "@radix-ui/themes";
 import { baseUrl, OtherLogos, ToolkitImages } from "../data/data";
+import { Code2 } from "lucide-react";
 
 const techStack = [
   { name: "TypeScript" },
@@ -16,7 +17,8 @@ export default function Footer(): JSX.Element {
       <hr className="border-gray-700 w-full" />
       <div className="flex items-center gap-2">
         <Text weight="light" size="2" align="center">
-          Elegantly developed using{" "}
+          <Code2 size={20} className="inline-block mr-1" />
+          {" with"}
         </Text>
         <FaHandPointUp className="text-yellow-500 animate-bounce" />
       </div>

@@ -10,7 +10,7 @@ import { ProjectDetail } from "../../data/type";
 export default function ProjectCard(data: ProjectDetail) {
   return (
     <Link to={data.url} className="hover:no-underline">
-      <Card className="flex flex-col bg-accent size-full max-w-sm p-5 rounded-2xl text-background space-y-3 border border-transparent hover:border-secondary transition-all duration-300">
+      <Card className="flex flex-col bg-black size-full max-w-sm p-5 rounded-2xl text-background space-y-3 border border-transparent hover:border-secondary transition-all duration-300">
         {/* PROJECT IMAGE */}
         <div className="w-full aspect-video bg-muted flex items-center justify-center rounded-lg overflow-hidden">
           {data.image ? (
@@ -23,10 +23,10 @@ export default function ProjectCard(data: ProjectDetail) {
         {/* CONTENT */}
         <div className="flex flex-col gap-3">
           {/* TITLE */}
-          <p className="text-lg font-medium text-secondary">{data.title}</p>
+          <Text weight="medium" size={"4"} className=" text-secondary">{data.title}</Text>
 
           {/* DESCRIPTION */}
-          <Text weight="light" className="font-extralight text-sm">
+          <Text weight="light" size={"2"} className="font-extralight ">
             {data.description}
           </Text>
 

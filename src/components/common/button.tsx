@@ -12,9 +12,9 @@ export default function Button({ ...props }: ButtonProps) {
   const onPress = props.onPress;
 
   const styles =
-    "flex flex-row self-center items-center p-2 " +
-    "bg-black text-white border-white border rounded-xl shadow-md " +
-    "hover:cursor-pointer hover:bg-background hover:text-black " +
+    "flex flex-row self-center items-center p-3 " +
+    "bg-white text-black rounded-lg shadow-md " +
+    "hover:cursor-pointer hover:bg-opacity-80 " +
     "transition-all duration-300 ease-in-out "
   return (
     <a href={props.href} target="_blank" rel="noreferrer">
