@@ -2,6 +2,8 @@ import MenuItem from "./MenuItem";
 import MobileMenu from "./MobileMenu";
 import { OtherLogos } from "../../data/data";
 import { Flex } from "@radix-ui/themes";
+import { MenuLinks } from "./links";
+import { Code2 } from "lucide-react";
 
 export default function Header() {
   return (
@@ -9,16 +11,21 @@ export default function Header() {
       {/* Desktop Menu */}
       <div className="hidden sm:flex flex-row justify-center">
         <Flex className="mr-6" align="center">
-          <MenuItem title="About" to="/" scrollTo="about-section"/>
-          <MenuItem title="Projects" to="/" scrollTo="projects-section" />
+          {MenuLinks.slice(0, 2).map((link) => (
+            <MenuItem key={link.title} title={link.title} scrollTo={link.scrollTo} />
+          ))}
           <img src={OtherLogos["compsci"]} className="max-h-[30px] max-w-[30px]" />
-          <MenuItem title="Contributions" to="/" scrollTo="contributions-section" />
-          <MenuItem title="Toolkit" to="/" scrollTo="toolkit-section" />
+          {MenuLinks.slice(2, 4).map((link) => (
+            <MenuItem key={link.title} title={link.title} scrollTo={link.scrollTo} />
+          ))}
         </Flex>
       </div>
 
       {/* Mobile Menu */}
-      <MobileMenu />
+      {/* <MobileMenu /> */}
+      <div className="sm:hidden flex justify-center items-center p-4 text-white">
+        <img src={OtherLogos["compsci"]} className="max-h-[30px] max-w-[30px]" alt="Logo" />
+      </div>
     </header>
   );
 }
