@@ -11,7 +11,7 @@ export default function MenuItem(props: MenuItemProps) {
 
   const handleClick = (e: React.MouseEvent) => {
     // If we're on the home page and there's a scrollTo prop, scroll instead of navigate
-    if (location.pathname === "/" && props.scrollTo) {
+    if (props.scrollTo) {
       e.preventDefault();
       const element = document.getElementById(props.scrollTo);
       if (element) {
