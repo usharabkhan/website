@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -17,17 +17,18 @@ html {
 
 /* Style the scrollbar track (the background area) */
 ::-webkit-scrollbar-track {
-  background: white;
+  background: #0A0E1A;
 }
 
 /* Style the scrollbar thumb (the draggable part) */
 ::-webkit-scrollbar-thumb {
-  background: #6b6b6b;
+  background: #2D3A4F;
+  border-radius: 6px;
 }
 
 /* Style the scrollbar when hovered */
 ::-webkit-scrollbar-thumb:hover {
-  background: #868686;
+  background: #4F9CED;
   cursor: pointer;
 }
 
@@ -93,5 +94,43 @@ html {
   }
   body {
     @apply bg-background text-foreground;
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(79, 156, 237, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(100, 181, 246, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 40% 10%, rgba(79, 156, 237, 0.05) 0%, transparent 40%);
+    background-attachment: fixed;
+  }
+}
+
+/* Animated gradient mesh background */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Floating particles effect */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  33% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  66% {
+    transform: translateY(-10px) translateX(-10px);
+  }
+}
+
+/* Glow pulse animation */
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
   }
 }

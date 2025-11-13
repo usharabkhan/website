@@ -40,10 +40,10 @@ export default function RollingText() {
   return (
     <div
       id="sub-heading"
-      className="flex flex-col md:flex-row flex-wrap justify-center text-white text-2xl"
+      className="flex flex-col md:flex-row flex-wrap justify-center text-text text-2xl"
     >
-      <p className="font-light">I am Usharab, an Early-Career&nbsp;</p>
-      <p id="rolling-text" className="font-medium text-secondary" />
+      <p className="font-light text-regular">I am Usharab, an Early-Career&nbsp;</p>
+      <p id="rolling-text" className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary" />
     </div>
   );
 }

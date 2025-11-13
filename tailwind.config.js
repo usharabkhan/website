@@ -9,21 +9,28 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				sans: [
-					'Quicksand',
+					'Inter',
+					'system-ui',
+					'-apple-system',
+					'sans-serif'
+				],
+				display: [
+					'Inter',
+					'system-ui',
 					'sans-serif'
 				]
 			},
 			colors: {
-				text: '#090e13',
-				background: '#fbfcfd',
-				primary: '#65BEFD',
-				secondary: '#93CEFE',
-				accent: '#1A1A1A',
-				container: '#EDEDE9',
-				subContainer: '#FBFBFA',
-				regular: '#5B514A',
-				button: '#52B788',
-				borderColor: '#666666',
+				text: '#E8EEF2',
+				background: '#0A0E1A',
+				primary: '#4F9CED',
+				secondary: '#64B5F6',
+				accent: '#1E2A3A',
+				container: '#162033',
+				subContainer: '#1A2537',
+				regular: '#B8C5D6',
+				button: '#4F9CED',
+				borderColor: '#2D3A4F',
 				foreground: 'hsl(var(--foreground))',
 				card: {
 					DEFAULT: 'hsl(var(--card))',
@@ -81,7 +88,17 @@ module.exports = {
 			},
 			animation: {
 				wave: 'wave 2.5s infinite',
-				bounce: 'bounce 2s infinite'
+				bounce: 'bounce 2s infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'glow-pulse': 'glowPulse 3s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'dots-pattern': 'radial-gradient(circle, rgba(79, 156, 237, 0.1) 1px, transparent 1px)',
+				'grid-pattern': 'linear-gradient(rgba(79, 156, 237, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(79, 156, 237, 0.05) 1px, transparent 1px)'
+			},
+			backgroundSize: {
+				'dots': '20px 20px',
+				'grid': '30px 30px'
 			},
 			screens: {
 				xs: '480px',

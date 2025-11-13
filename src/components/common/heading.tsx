@@ -2,15 +2,15 @@ import { Text } from "@radix-ui/themes";
 
 export function Heading({ children }: { children?: React.ReactNode }) {
   return (
-    <p className=" text-primary text-4xl mb-10 text-center font-bold">
+    <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-4xl md:text-5xl mb-12 text-center font-medium tracking-tight">
       {children}
-    </p>
+    </h2>
   );
 }
 
 export function SubHeading({ children }: { children?: React.ReactNode }) {
   return (
-    <Text size="5" className=" text-white text-center lg:text-left">
+    <Text size="5" className="text-text font-medium text-center lg:text-left">
       {children}
     </Text>
   );

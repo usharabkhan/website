@@ -42,7 +42,7 @@ export const projects: ProjectDetail[] = [
     ],
     image: msa_website,
     logo: "",
-    progress: "In Progress",
+    progress: "October 2025",
     type: ["Fullstack", "Data"]
   },
   {

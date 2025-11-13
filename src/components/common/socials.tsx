@@ -5,16 +5,16 @@ import MyButton from "../common/button";
 
 export default function Socials() {
   return (
-    <div className="flex flex-col justify-center items-center gap-5 text-lg">
-      <Flex justify="center" align="center" gap="6">
-        <MyButton customStyle="rounded-full" href="https://www.linkedin.com/in/usharabkhan/">
-          <AiOutlineLinkedin />
+    <div className="flex flex-col justify-center items-center gap-5 text-xl">
+      <Flex justify="center" align="center" gap="4">
+        <MyButton customStyle="rounded-full p-3" href="https://www.linkedin.com/in/usharabkhan/">
+          <AiOutlineLinkedin size={24} />
         </MyButton>
-        <MyButton customStyle="rounded-full" href="https://github.com/usharabkhan/">
-          <AiOutlineGithub />
+        <MyButton customStyle="rounded-full p-3" href="https://github.com/usharabkhan/">
+          <AiOutlineGithub size={24} />
         </MyButton>
-        <MyButton customStyle="rounded-full" href="mailto:usharabkhan@gmail.com">
-          <MdOutlineMail />
+        <MyButton customStyle="rounded-full p-3" href="mailto:usharabkhan@gmail.com">
+          <MdOutlineMail size={24} />
         </MyButton>
       </Flex>
     </div>

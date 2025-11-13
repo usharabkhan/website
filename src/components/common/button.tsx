@@ -12,10 +12,11 @@ export default function Button({ ...props }: ButtonProps) {
   const onPress = props.onPress;
 
   const styles =
-    "flex flex-row self-center items-center p-3 " +
-    "bg-white text-black rounded-lg shadow-md " +
-    "hover:cursor-pointer hover:bg-opacity-80 " +
-    "transition-all duration-300 ease-in-out "
+    "flex flex-row self-center items-center px-6 py-3 font-medium " +
+    "bg-gradient-to-r from-primary to-secondary text-white rounded-lg shadow-lg " +
+    "hover:cursor-pointer hover:shadow-xl hover:shadow-primary/30 hover:scale-105 " +
+    "transition-all duration-300 ease-in-out border border-primary/20 " +
+    "disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 "
   return (
     <a href={props.href} target="_blank" rel="noreferrer">
       <button

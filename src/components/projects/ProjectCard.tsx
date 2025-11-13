@@ -9,24 +9,27 @@ import { ProjectDetail } from "../../data/type";
 
 export default function ProjectCard(data: ProjectDetail) {
   return (
-    <Link to={data.url} className="hover:no-underline">
-      <Card className="flex flex-col bg-black size-full max-w-sm p-5 rounded-2xl text-background space-y-3 border border-transparent hover:border-secondary transition-all duration-300">
+    <Link to={data.url} className="hover:no-underline group">
+      <Card className="flex flex-col bg-gradient-to-br from-container via-accent to-container size-full max-w-sm p-6 rounded-2xl text-text space-y-4 border border-borderColor hover:border-primary transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-primary/20 transform hover:-translate-y-1 relative overflow-hidden">
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+        
         {/* PROJECT IMAGE */}
-        <div className="w-full aspect-video bg-muted flex items-center justify-center rounded-lg overflow-hidden">
+        <div className="w-full aspect-video bg-subContainer flex items-center justify-center rounded-xl overflow-hidden border border-borderColor">
           {data.image ? (
-            <img src={data.image} alt={data.title} className="w-full h-full object-cover" />
+            <img src={data.image} alt={data.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           ) : (
-            <ImageOff className="w-12 h-12 text-gray-400" />
+            <ImageOff className="w-12 h-12 text-regular" />
           )}
         </div>
 
         {/* CONTENT */}
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 flex-grow relative z-10">
           {/* TITLE */}
-          <Text weight="medium" size={"4"} className=" text-secondary">{data.title}</Text>
+          <Text weight="medium" size={"4"} className="text-primary font-semibold">{data.title}</Text>
 
           {/* DESCRIPTION */}
-          <Text weight="light" size={"2"} className="font-extralight ">
+          <Text weight="light" size={"2"} className="text-regular leading-relaxed">
             {data.description}
           </Text>
 
@@ -37,13 +40,13 @@ export default function ProjectCard(data: ProjectDetail) {
             ))}
           </div>
         </div>
-        <div className="flex items-end justify-end w-full flex-grow ">
+        <div className="flex items-end justify-end w-full relative z-10">
           <Badge
             color={data.progress[0] === "I" ? "yellow" : "jade"}
             variant="solid"
             className="w-fit"
           >
-            <Text weight="light">{data.progress}</Text>
+            <Text weight="light" size="1">{data.progress}</Text>
           </Badge>
         </div>
       </Card>

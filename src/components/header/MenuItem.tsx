@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 interface MenuItemProps {
   title: string;
@@ -8,26 +8,44 @@ interface MenuItemProps {
 
 export default function MenuItem(props: MenuItemProps) {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const handleClick = (e: React.MouseEvent) => {
-    // If we're on the home page and there's a scrollTo prop, scroll instead of navigate
-    if (props.scrollTo) {
-      e.preventDefault();
-      const element = document.getElementById(props.scrollTo);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
+    e.preventDefault();
+    
+    // If we're not on the home page, navigate to home first, then scroll
+    if (location.pathname !== "/website/" && location.pathname !== "/website") {
+      navigate("/website/");
+      // Wait for navigation to complete, then scroll
+      setTimeout(() => {
+        if (props.scrollTo) {
+          const element = document.getElementById(props.scrollTo);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }
+      }, 100);
+    } else {
+      // We're already on home page, just scroll
+      if (props.scrollTo) {
+        const element = document.getElementById(props.scrollTo);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
       }
     }
+    
     // Always call onPress for any additional handling (like closing drawer)
     props.onPress?.();
   };
 
   return (
     <p
-      className={`p-4 mx-2 cursor-pointer text-lg h-full w-full transition-all duration-300 ease-in-out hover:opacity-50 text-white`}
+      className={`px-4 py-2 mx-1 cursor-pointer text-sm font-medium h-full flex items-center transition-all duration-300 ease-in-out text-regular hover:text-primary relative group`}
       onClick={handleClick}
     >
       {props.title}
+      <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary transform scale-x-0 transition-transform duration-300 ease-in-out group-hover:scale-x-100" />
     </p>
   );
 }
