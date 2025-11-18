@@ -1,6 +1,6 @@
 import Header from "./components/header/Header";
 import Footer from "./components/Footer";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
@@ -19,9 +19,10 @@ function App() {
         <Header />
         <div className="mt-16">
           <Routes>
-            <Route path="/website/" element={<HomePage />} />
-            <Route path="/website/projects" element={<ProjectsPage />} />
-            <Route path="/website/projects/:id" element={<ProjectDetailPage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/projects/:id" element={<ProjectDetailPage />} />
+            <Route path="/website" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
 

@@ -14,8 +14,8 @@ export default function MenuItem(props: MenuItemProps) {
     e.preventDefault();
     
     // If we're not on the home page, navigate to home first, then scroll
-    if (location.pathname !== "/website/" && location.pathname !== "/website") {
-      navigate("/website/");
+    if (location.pathname !== "/" && location.pathname !== "") {
+      navigate("/");
       // Wait for navigation to complete, then scroll
       setTimeout(() => {
         if (props.scrollTo) {
