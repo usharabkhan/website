@@ -72,6 +72,7 @@ export const ToolkitImages: Record<string, string> = {
   PySpark: "apachespark/apachespark-original.svg",
   Django: "django/django-plain.svg",
   "Tailwind CSS": "tailwindcss/tailwindcss-original.svg",
+  Vercel: "vercel/vercel-original.svg",
   // TOOLS
   Figma: "figma/figma-original.svg",
   Azure: "azure/azure-original.svg",
@@ -97,6 +98,8 @@ export const OtherLogos: Record<string, string> = {
   GSAP: "https://i.vimeocdn.com/portrait/34768143_640x640?sig=f177f398fbd6f943578b3368c2fc677a1cafac361651c4b8c693f228a59fc819&v=1",
   Tableau:
     "https://w7.pngwing.com/pngs/815/646/png-transparent-tableau-full-logo-tech-companies-thumbnail.png",
+  OpenAI: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS3PwERLLNB9XKFpeMgAMPxl5VvN3HRJnXQQ&s",
+  Copilot: "https://img.icons8.com/fluent/1200/github-copilot.jpg",
 };
 
 export const baseUrl = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/";

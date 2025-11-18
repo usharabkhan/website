@@ -16,8 +16,8 @@ export default function TechnologyPill({ text, img }: TechnologyPillProps) {
   return (
     <div className="bg-subContainer w-fit h-fit px-3 py-1.5 rounded-full border-borderColor border hover:border-primary/50 transition-colors duration-200">
       <Flex gap="2" className="items-center">
-        {url && <img src={url} height={15} width={15} />}
-        {img && <img src={img} className="h-4 w-4" />}
+        {url && <img src={url} height={15} width={15} className="rounded-lg"/>}
+        {img && <img src={img} className="h-4 w-4 rounded-lg" />}
         <Text weight="light" size="1" className="text-regular font-medium">
           {text}
         </Text>
